@@ -2,9 +2,14 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { hexToRgb, luminance, contrast, cssTokens } from '../build/contrast.js';
 
-test('hexToRgb handles 6 and 3 digit hex', () => {
+test('hexToRgb handles 6 and 3 digit hex and rejects anything else', () => {
   assert.deepEqual(hexToRgb('#1863dc'), [24, 99, 220]);
   assert.deepEqual(hexToRgb('#fff'), [255, 255, 255]);
+  assert.deepEqual(hexToRgb('#abc'), [170, 187, 204]);
+  assert.deepEqual(hexToRgb(' FFFFFF '), [255, 255, 255]);
+  for (const bad of ['#abcd', '#abcde', '#11223344', '#zzz', '', 'red']) {
+    assert.throws(() => hexToRgb(bad), /Invalid hex color/);
+  }
 });
 
 test('luminance of black and white', () => {
@@ -22,4 +27,9 @@ test('contrast ratios match WCAG reference values', () => {
 test('cssTokens extracts first hex value per custom property', () => {
   const css = `:root { --bg: #ffffff; --fg:#212121 ; --accent: #1863dc; --radius: 8px; }\n.x { --bg: #000000; }`;
   assert.deepEqual(cssTokens(css), { bg: '#ffffff', fg: '#212121', accent: '#1863dc' });
+});
+
+test('cssTokens accepts only 6-digit hex values and tolerates missing semicolons', () => {
+  const css = ':root { --a: #abcd; --b: #fff; --c: #11223344; --d: #ABCDEF; --e: #000000 !important; --f: #123456 }';
+  assert.deepEqual(cssTokens(css), { d: '#abcdef', e: '#000000', f: '#123456' });
 });

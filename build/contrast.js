@@ -1,5 +1,6 @@
 export function hexToRgb(hex) {
-  let h = hex.replace('#', '').trim();
+  let h = String(hex).trim().replace(/^#/, '');
+  if (!/^(?:[0-9a-f]{3}|[0-9a-f]{6})$/i.test(h)) throw new Error(`Invalid hex color "${hex}"`);
   if (h.length === 3) h = h.split('').map((c) => c + c).join('');
   const n = parseInt(h, 16);
   return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
@@ -20,8 +21,8 @@ export function contrast(a, b) {
 
 export function cssTokens(css) {
   const out = {};
-  for (const m of css.matchAll(/--([a-z0-9-]+)\s*:\s*(#[0-9a-fA-F]{3,6})\s*;/g)) {
-    if (!(m[1] in out)) out[m[1]] = m[2].toLowerCase();
+  for (const m of css.matchAll(/--([a-z0-9-]+)\s*:\s*(#[0-9a-fA-F]{6})\s*(?=[;!}])/g)) {
+    if (!Object.hasOwn(out, m[1])) out[m[1]] = m[2].toLowerCase();
   }
   return out;
 }
