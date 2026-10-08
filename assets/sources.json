@@ -1,0 +1,21 @@
+{
+  "video": {
+    "trailer.mp4": "https://www.s01-pm.de/wp-content/uploads/s01-webtrailer-fullhd-rf35.mp4",
+    "trailer.webp": "https://www.s01-pm.de/wp-content/uploads/s01-webtrailer-fullhd-rf30-poster2.webp",
+    "powerlines.mp4": "https://videos.pexels.com/video-files/9813696/9813696-hd_1280_720_30fps.mp4",
+    "windfarm.mp4": "https://videos.pexels.com/video-files/7048403/hd_30fps.mp4",
+    "substation.mp4": "https://videos.pexels.com/video-files/10058463/10058463-hd_1280_720_25fps.mp4"
+  },
+  "img": {
+    "logo-lang.svg": "https://www.s01-pm.de/wp-content/uploads/s01-pm-lang.svg",
+    "logo-kurz.svg": "https://www.s01-pm.de/wp-content/uploads/s01-pm-kurz.svg",
+    "substation.jpg": "https://images.pexels.com/photos/236089/pexels-photo-236089.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "substation-sunrise.jpg": "https://images.pexels.com/photos/18468536/pexels-photo-18468536.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "powerlines-landscape.jpg": "https://images.pexels.com/photos/12005160/pexels-photo-12005160.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "tower-fog.jpg": "https://images.pexels.com/photos/95719/pexels-photo-95719.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "engineers.jpg": "https://images.pexels.com/photos/8961007/pexels-photo-8961007.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "engineer-substation.jpg": "https://images.pexels.com/photos/33915172/pexels-photo-33915172.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "windfarm.jpg": "https://images.pexels.com/photos/26589957/pexels-photo-26589957.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "office.jpg": "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1600"
+  }
+}

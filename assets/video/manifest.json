@@ -1,0 +1,30 @@
+{
+  "trailer": {
+    "src": "video/trailer.mp4",
+    "poster": "video/trailer.webp",
+    "label": "S01 web trailer",
+    "credit": "S01 Projektmanagement GmbH",
+    "url": "https://www.s01-pm.de/"
+  },
+  "powerlines": {
+    "src": "video/powerlines.mp4",
+    "poster": "video/powerlines.jpg",
+    "label": "Power lines on transmission towers",
+    "credit": "Pexels",
+    "url": "https://www.pexels.com/video/power-lines-on-transmission-towers-9813696/"
+  },
+  "windfarm": {
+    "src": "video/windfarm.mp4",
+    "poster": "video/windfarm.jpg",
+    "label": "Drone footage of wind turbines",
+    "credit": "ROMAN ODINTSOV / Pexels",
+    "url": "https://www.pexels.com/video/drone-footage-of-wind-turbines-7048403/"
+  },
+  "substation": {
+    "src": "video/substation.mp4",
+    "poster": "video/substation.jpg",
+    "label": "Close-up shot of insulators in a substation",
+    "credit": "Andrey Kirievskiy / Pexels",
+    "url": "https://www.pexels.com/video/close-up-shot-of-insulators-in-substation-10058463/"
+  }
+}
