@@ -46,6 +46,7 @@
       "allDemos": "Alle Demos",
       "demo": "Demo",
       "sections": "Abschnitte",
+      "sectionNames": { "hero": "Start", "intro": "Einführung", "services": "Leistungen", "closing": "Unser Versprechen", "feature": "Struktur", "faq": "Fragen und Antworten", "cta": "Kontakt" },
       "breadcrumbHome": "Startseite",
       "breadcrumb": "Brotkrümelnavigation",
       "emailLabel": "E-Mail",

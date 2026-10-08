@@ -32,8 +32,9 @@ export function scrollCue(ctx) {
 
 function snapDots(ctx) {
   const ids = ['hero', 'intro', 'services', 'closing', 'feature', 'faq', 'cta'];
+  const names = ctx.t.meta.ui.sectionNames;
   return `<nav class="snap-dots" aria-label="${esc(ctx.t.meta.ui.sections)}">${ids
-    .map((id) => `<a href="#${id}" aria-label="${id}"><span></span></a>`)
+    .map((id) => `<a href="#${id}" aria-label="${esc(names[id])}"><span></span></a>`)
     .join('')}</nav>`;
 }
 
