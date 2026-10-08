@@ -7,10 +7,13 @@ export function loadJson(path) {
 
 export function keyPaths(value, prefix = '') {
   if (Array.isArray(value)) {
+    if (value.length === 0) return [prefix];
     return value.flatMap((v, i) => keyPaths(v, `${prefix}[${i}]`));
   }
   if (value && typeof value === 'object') {
-    return Object.keys(value).flatMap((k) => keyPaths(value[k], prefix ? `${prefix}.${k}` : k));
+    const keys = Object.keys(value);
+    if (keys.length === 0) return [prefix];
+    return keys.flatMap((k) => keyPaths(value[k], prefix ? `${prefix}.${k}` : k));
   }
   return [prefix];
 }

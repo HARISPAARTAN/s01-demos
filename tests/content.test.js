@@ -16,6 +16,12 @@ test('parityErrors reports keys missing on either side', () => {
   assert.deepEqual(parityErrors(de, de), []);
 });
 
+test('empty arrays and objects count as leaves for parity', () => {
+  assert.deepEqual(keyPaths({ a: { lines: [], meta: {} } }), ['a.lines', 'a.meta']);
+  assert.deepEqual(parityErrors({ a: { lines: [] } }, { a: {} }), ['missing in en: a.lines', 'missing in de: a']);
+  assert.deepEqual(parityErrors({ a: { lines: [] } }, { a: { lines: [] } }), []);
+});
+
 function fixtureRoot(de, en) {
   const root = mkdtempSync(join(tmpdir(), 's01-content-'));
   mkdirSync(join(root, 'content'));
