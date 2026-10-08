@@ -299,7 +299,7 @@ listed with author in `CREDITS.md` and in the gallery footer.
   correct `lang`, six nav links, toggle target exists; no `undefined`,
   `[object Object]` or `NaN` in HTML; contrast rule from section 10.
 - `node build/shots.js`: starts `serve.js`, opens every demo home in DE at
-  1440×900 and 390×844 and one subpage per demo, asserts no console errors,
+  1440×900 and 390×844 plus the services page per demo, asserts no console errors,
   `video` present, at least 6 nav links; saves `assets/thumbs/<id>.jpg`.
 - Live: after the workflow succeeds, `curl -I` on the gallery and three deep
   links per demo returns 200; manual pass in Chrome on five demos (video
