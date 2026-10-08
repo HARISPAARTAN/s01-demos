@@ -1,0 +1,476 @@
+{
+  "meta": {
+    "siteName": "S01 Projektmanagement",
+    "legalName": "S01 Projektmanagement GmbH",
+    "tagline": "Shaping sustainable grids",
+    "company": {
+      "street": "Alfred-Herrhausen-Allee 3-5",
+      "city": "65760 Eschborn",
+      "email": "info@s01-pm.de",
+      "phone": "+49 61 9658 655-556",
+      "phoneHref": "+4961965865556",
+      "phoneMobile": "+49 157 3002 1089",
+      "phoneMobileHref": "+4915730021089",
+      "recruitingEmail": "recruiting@s01-pm.de",
+      "iso": "ISO 9001:2015 zertifiziert"
+    },
+    "nav": [
+      { "page": "home", "label": "Startseite" },
+      { "page": "services", "label": "Services" },
+      { "page": "projects", "label": "Projekte" },
+      { "page": "company", "label": "Unternehmen" },
+      { "page": "careers", "label": "Karriere" },
+      { "page": "contact", "label": "Kontakt" }
+    ],
+    "footerNav": [
+      { "page": "careers", "label": "Karriere" },
+      { "page": "contact", "label": "Kontakt" },
+      { "page": "imprint", "label": "Impressum" },
+      { "page": "privacy", "label": "Datenschutz" }
+    ],
+    "cta": {
+      "title": "Starten Sie mit einem kostenlosen Erstgespräch",
+      "text": "Kontaktieren Sie uns für eine unverbindliche Erstberatung zu Ihrem Projekt und erfahren Sie, wie wir Sie mit unseren Leistungen unterstützen können.",
+      "button": "Kontakt aufnehmen"
+    },
+    "ui": {
+      "skip": "Zum Inhalt springen",
+      "menu": "Menü",
+      "close": "Schließen",
+      "mainNav": "Hauptnavigation",
+      "footerNav": "Fußzeilennavigation",
+      "switchLang": "Switch to English",
+      "more": "Mehr erfahren",
+      "scrollDown": "Nach unten scrollen",
+      "playVideo": "Video abspielen",
+      "allDemos": "Alle Demos",
+      "demo": "Demo",
+      "sections": "Abschnitte",
+      "breadcrumbHome": "Startseite",
+      "emailLabel": "E-Mail",
+      "phoneLabel": "Telefon",
+      "addressLabel": "Adresse"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Projektsteuerung Netzausbau und Umspannwerke",
+      "description": "S01 Projektmanagement unterstützt Übertragungsnetzbetreiber bei Umspannwerken, Leitungsanbindungen und Netzausbauprojekten mit professioneller Projektsteuerung.",
+      "hero": {
+        "eyebrow": "Projektsteuerung · Energieinfrastruktur",
+        "title": "Projektsteuerung für Energieinfrastruktur.",
+        "bullets": [
+          "Über 10 Jahre Erfahrung im Energiesektor",
+          "PMP®-zertifizierte Projektmanagementmethodik",
+          "Direkter Ansprechpartner während der gesamten Projektlaufzeit"
+        ],
+        "primary": { "label": "Kontakt aufnehmen", "page": "contact" },
+        "secondary": { "label": "Unsere Leistungen", "page": "services", "hash": "" }
+      },
+      "intro": {
+        "title": "S01 Projektmanagement unterstützt Projektleitungen und Projektteams bei der Steuerung komplexer Energieinfrastrukturprojekte.",
+        "text": "Mit strukturierter Projektsteuerung, Terminplanmanagement und bewährten Projektmanagementmethoden schafft S01 Transparenz und klare Entscheidungsgrundlagen. Das Ziel ist eine effiziente Projektabwicklung und die gezielte Entlastung von Projektleitungen in anspruchsvollen Projektumgebungen."
+      },
+      "services": {
+        "eyebrow": "Was wir tun",
+        "title": "Unsere Leistungen",
+        "items": [
+          {
+            "id": "project-controls",
+            "title": "Projektsteuerung",
+            "text": "S01 Projektmanagement unterstützt Projektleitungen bei der Planung, Koordination und Steuerung komplexer Energieinfrastrukturprojekte. Der Fokus liegt auf Transparenz, Nachverfolgbarkeit und einer strukturierten Projektabwicklung.",
+            "imageAlt": "Zwei Ingenieure mit Schutzhelmen auf einer Baustelle"
+          },
+          {
+            "id": "scheduling",
+            "title": "Terminplanmanagement",
+            "text": "S01 Projektmanagement unterstützt bei Aufbau, Pflege und Fortschreibung von Projektterminplänen sowie der Nachverfolgung von Meilensteinen und kritischen Vorgängen. Dadurch entstehen Transparenz und belastbare Entscheidungsgrundlagen für die Projektleitung.",
+            "imageAlt": "Team bespricht Projektunterlagen an einem Schreibtisch"
+          },
+          {
+            "id": "interfaces",
+            "title": "Schnittstellenmanagement",
+            "text": "S01 Projektmanagement unterstützt die Koordination zwischen Projektbeteiligten, Auftragnehmern und Fachbereichen. Ziel ist ein strukturierter Informationsfluss und die frühzeitige Identifikation von Abstimmungsbedarfen.",
+            "imageAlt": "Hochspannungsleitungen in einer offenen Landschaft"
+          },
+          {
+            "id": "risk",
+            "title": "Risikomanagement",
+            "text": "S01 Projektmanagement unterstützt bei der systematischen Erfassung, Bewertung und Nachverfolgung projektrelevanter Risiken und Maßnahmen. Dadurch können potenzielle Auswirkungen frühzeitig erkannt und adressiert werden.",
+            "imageAlt": "Strommast im Nebel vor einer Bergkulisse"
+          },
+          {
+            "id": "documentation",
+            "title": "Dokumentationsmanagement",
+            "text": "S01 Projektmanagement unterstützt beim Aufbau und der Pflege strukturierter Dokumentations- und Ablagesysteme. So bleiben Informationen nachvollziehbar, aktuell und für alle Projektbeteiligten verfügbar.",
+            "imageAlt": "Umspannwerk im Morgenlicht"
+          },
+          {
+            "id": "consulting",
+            "title": "Beratung & operative Unterstützung",
+            "text": "S01 Projektmanagement begleitet Sie in allen Projektphasen. Dazu zählen Teilprojektleitungen, die Umsetzung von Maßnahmen wie ökologische und Kompensationsmaßnahmen, Stakeholdermanagement sowie organisatorische Aufgaben und der Aufbau administrativer Strukturen.",
+            "imageAlt": "Ingenieur mit Schutzhelm vor einem Umspannwerk"
+          }
+        ]
+      },
+      "closing": {
+        "text": "Wir steuern Ihre Teilprojekte und Maßnahmen zuverlässig und eigenverantwortlich, sodass Sie Ihre Ressourcen auf strategische Prioritäten konzentrieren können."
+      },
+      "feature": {
+        "eyebrow": "S01 Projektmanagement",
+        "title": "Komplexe Energieprojekte? Wir bringen Struktur rein.",
+        "pillars": [
+          { "title": "Leistungsfokus", "text": "Operatives Projektmanagement, Terminplanung, Schnittstellen- und Risikomanagement." },
+          { "title": "Branchenfokus", "text": "Stromerzeugung, Stromübertragung und Stromverteilung — Projektentwickler, Netzbetreiber, Versorgungsunternehmen sowie Energieunternehmen." },
+          { "title": "Projektmanagement-Framework", "text": "Wir setzen auf bewährte Standards und Methoden des Projektmanagements." },
+          { "title": "Benefits", "text": "Struktur, Transparenz und Risikominimierung bei komplexen Projekten." }
+        ],
+        "stats": [
+          { "value": "10+", "label": "Jahre Erfahrung im Energiesektor" },
+          { "value": "380 kV", "label": "Umspannwerke und Leitungsanbindungen" },
+          { "value": "ISO 9001", "label": "zertifizierte Arbeitsweise" },
+          { "value": "PMP®", "label": "zertifizierte Methodik" }
+        ]
+      },
+      "faq": {
+        "title": "Häufig gestellte Fragen",
+        "items": [
+          {
+            "q": "Was bedeutet ‚S01 Projektmanagement‘ und wofür steht ‚S01‘?",
+            "a": "S01 Projektmanagement (ausgesprochen es null eins) ist eine spezialisierte Consulting-Firma mit Fokus auf Energieinfrastrukturprojekte.\n\nDer Name „S01“ geht auf ein von uns betreutes Großprojekt zurück: Er bezeichnet den ersten Schaltungsblock, mit dem ein wesentlicher Teil der Anlage erfolgreich in Betrieb genommen wurde. Dieser Abschnitt war nicht nur technisch entscheidend, sondern auch vertraglich ein zentraler Meilenstein für unseren Kunden.\n\nHeute steht „S01“ symbolisch für zwei Aspekte: für die erfolgreiche Bewältigung komplexer Projektphasen und für den nächsten Schritt in unserer eigenen Entwicklung – von der Einzelunternehmung hin zur GmbH, mit dem Ziel, unser Team auszubauen und weitere Energieprojekte auf höchstem Niveau zu begleiten."
+          },
+          {
+            "q": "Was umfasst Ihr Angebot im Bereich Projektmanagement?",
+            "a": "Wir unterstützen Sie umfassend mit unseren Beratungsleistungen in den Bereichen Projektsteuerung, Terminplanung, Stakeholder-Management, Risikoanalyse und Dokumentationsmanagement. Ergänzend übernehmen wir operative Aufgaben wie die Organisation und den Aufbau administrativer Infrastruktur – digital und effizient.\n\nDarüber hinaus begleiten wir unsere Kunden auch vor Ort: bei Abstimmungen mit Projektbeteiligten, der Überwachung und Nachverfolgung von Maßnahmen sowie bei Baustellenabstimmungen."
+          },
+          {
+            "q": "Für welche Branchen oder Projekte bieten Sie Ihre Dienstleistungen an?",
+            "a": "Als Projektmanagement-Consulting-Firma begleiten wir Unternehmen bei der Entwicklung von Energieinfrastrukturprojekten – über alle Projektphasen hinweg: von Planung und Machbarkeitsstudie über Ausführung und Inbetriebnahme bis zur Stilllegung (Decommissioning).\n\nUnsere Zielkunden sind Energieversorger, Übertragungsnetzbetreiber, Kraftwerksbetreiber sowie Unternehmen in den Bereichen Stromübertragung, -verteilung und -erzeugung."
+          },
+          {
+            "q": "Was zeichnet Sie als Projektmanager aus?",
+            "a": "Wir arbeiten strukturiert, methodisch und lösungsorientiert. Unser Fokus liegt auf klarer Kommunikation, präziser Planung und der Fähigkeit, auch in komplexen Situationen fundierte Entscheidungen zu treffen. Dabei kombinieren wir analytisches Denken mit Praxisnähe, um Projekte effizient und zielgerichtet zum Erfolg zu führen."
+          }
+        ]
+      }
+    },
+    "services": {
+      "title": "Services",
+      "description": "Projektsteuerung, Terminplanmanagement, Schnittstellen-, Risiko- und Dokumentenmanagement sowie operative Unterstützung für Energieinfrastrukturprojekte.",
+      "hero": {
+        "title": "Services",
+        "lead": "S01 Projektmanagement unterstützt Projektträger und Auftragnehmer bei der Steuerung komplexer Energieinfrastrukturprojekte."
+      },
+      "eyebrow": "Service",
+      "sectionTitle": "Unsere Leistungen im Detail",
+      "items": [
+        {
+          "id": "project-controls",
+          "title": "Projektmanagement & Projektsteuerung",
+          "text": "S01 Projektmanagement unterstützt Projektleitungen bei der Planung, Koordination und Steuerung von Energieinfrastrukturprojekten. Der Fokus liegt auf Transparenz, Terminverfolgung und der strukturierten Nachverfolgung von Projektaktivitäten.",
+          "bullets": ["Ganzheitliche Steuerung aus einer Hand", "Termintreue und Kostenkontrolle", "Effiziente Umsetzung komplexer Vorhaben"],
+          "imageAlt": "Zwei Ingenieure mit Schutzhelmen auf einer Baustelle"
+        },
+        {
+          "id": "scheduling",
+          "title": "Termin- und Zeitmanagement",
+          "text": "S01 Projektmanagement unterstützt bei der Erstellung, Pflege und Fortschreibung von Terminplänen. Dadurch entstehen belastbare Planungsgrundlagen und Transparenz über Projektfortschritt, Abhängigkeiten und kritische Vorgänge.",
+          "bullets": ["Verlässliche Terminpläne als Planungsgrundlage", "Kontinuierliche Aktualisierung und Steuerung", "Transparenz über kritische Pfade und Terminrisiken"],
+          "imageAlt": "Team bespricht Projektunterlagen an einem Schreibtisch"
+        },
+        {
+          "id": "interfaces",
+          "title": "Schnittstellenmanagement",
+          "text": "S01 Projektmanagement unterstützt die Abstimmung zwischen Projektbeteiligten, Auftragnehmern und Fachbereichen. Ziel ist ein transparenter Informationsfluss und die frühzeitige Identifikation von Abstimmungsbedarfen.",
+          "bullets": ["Reibungsloser Informationsfluss und abgestimmte Abläufe", "Koordination relevanter Schnittstellen", "Frühzeitige Klärung von Konflikten und Abhängigkeiten"],
+          "imageAlt": "Hochspannungsleitungen in einer offenen Landschaft"
+        },
+        {
+          "id": "risk",
+          "title": "Risikomanagement",
+          "text": "S01 Projektmanagement unterstützt bei der systematischen Erfassung, Bewertung und Nachverfolgung von Projektrisiken und Maßnahmen. So werden Risiken frühzeitig sichtbar und können gezielt adressiert werden.",
+          "bullets": ["Frühzeitige Identifikation von Risiken", "Systematische Bewertung und Priorisierung", "Aktive Steuerung für maximale Sicherheit"],
+          "imageAlt": "Strommast im Nebel vor einer Bergkulisse"
+        },
+        {
+          "id": "documentation",
+          "title": "Dokumentenmanagement",
+          "text": "S01 Projektmanagement unterstützt beim Aufbau und der Pflege strukturierter Dokumentations- und Ablagesysteme. Dadurch bleiben Informationen nachvollziehbar, aktuell und für alle Projektbeteiligten verfügbar.",
+          "bullets": ["Zentrale, digitale Dokumentation für maximale Transparenz", "Grundlage für Lessons Learned und Knowledge Base", "Reduziert redundante Arbeit und schafft Standards für kommende Projekte"],
+          "imageAlt": "Umspannwerk im Morgenlicht"
+        },
+        {
+          "id": "consulting",
+          "title": "Beratung & operative Unterstützung",
+          "text": "S01 Projektmanagement unterstützt Projektleitungen und Projektteams bei operativen und koordinativen Aufgaben in anspruchsvollen Projektumgebungen. Dazu zählen PMO-Leistungen, Teilprojektunterstützung, Terminmanagement, Stakeholdermanagement sowie die strukturierte Nachverfolgung von Maßnahmen.",
+          "bullets": ["Operative Unterstützung für Projekt-, Programm- und Portfoliomanagement", "Entlastung Ihrer Teams durch Übernahme operativer Aufgaben", "Proaktive Entwicklung von Lösungen, um neue Herausforderungen zu meistern"],
+          "imageAlt": "Ingenieur mit Schutzhelm vor einem Umspannwerk"
+        }
+      ],
+      "calm": {
+        "title": "Ruhe und Sicherheit für Ihre Entscheidungen",
+        "text": "Durch strukturierte Projektsteuerung, transparente Kommunikation und eine konsequente Nachverfolgung von Aufgaben schafft S01 Projektmanagement die Grundlage für fundierte Entscheidungen und eine erfolgreiche Projektumsetzung.",
+        "button": "Mehr erfahren",
+        "page": "company"
+      },
+      "faq": {
+        "title": "Häufig gestellte Fragen",
+        "items": [
+          {
+            "q": "Sind Ihre Dienstleistungen auch für kleinere Projekte geeignet?",
+            "a": "Ja, wir unterstützen auch bei der Umsetzung kleinerer Projekte, die eine strukturierte Herangehensweise nach etablierten Projektmanagement-Methoden erfordern.\n\nUnser Schwerpunkt liegt auf Projekten im Energie- und Industriesektor – insbesondere bei Hochspannungsanlagen wie Umspannwerken und Stromleitungsanbindungen."
+          },
+          {
+            "q": "Was beinhaltet Stakeholder-Management?",
+            "a": "Stakeholder-Management umfasst die Identifikation, Analyse und Betreuung aller relevanten Projektbeteiligten. Ziel ist es, klare Kommunikation sicherzustellen und Konflikte frühzeitig zu vermeiden."
+          },
+          {
+            "q": "Wie helfen Sie bei der Lösung von Konflikten zwischen Stakeholdern?",
+            "a": "Klare Kommunikationspläne werden entwickelt, Workshops werden geleitet und bei der Moderation von Meetings wird Unterstützung geleistet, damit Konflikte strukturiert und lösungsorientiert angegangen werden können."
+          },
+          {
+            "q": "Was ist Terminplanmanagement, und warum ist es wichtig?",
+            "a": "Terminplanmanagement ist ein zentraler Bestandteil des Projektmanagements. Es umfasst die Erstellung, Pflege und Abstimmung von Projektterminplänen, die Nachverfolgung von Meilensteinen und Vertragsterminen sowie die Koordination mit den Projektbeteiligten. Ziel ist es, realistische Zeitrahmen zu definieren, Abhängigkeiten transparent zu machen und eine verlässliche Grundlage für die Steuerung des Projekts zu schaffen.\n\nAls Beratungsdienstleistung unterstützen wir Sie dabei, diese Prozesse effizient umzusetzen – von der Analyse bis zur operativen Begleitung."
+          },
+          {
+            "q": "Welche Tools verwenden Sie für das Terminplanmanagement?",
+            "a": "Für das Terminplanmanagement setzen wir auf Microsoft Project. Damit erstellen, pflegen und überwachen wir Projektterminpläne, verfolgen Meilensteine und stimmen Zeitpläne effizient mit allen Projektbeteiligten ab."
+          },
+          {
+            "q": "Was versteht man unter technischem Dokumentationsmanagement?",
+            "a": "Das umfasst die Erstellung, Pflege und Verwaltung technischer Dokumente wie Zeichnungen, Berichte, Protokolle oder Handbücher. Ziel ist es, die Einhaltung von Standards und die Nachverfolgbarkeit sicherzustellen."
+          },
+          {
+            "q": "Wie oft sollte eine Risikoanalyse während des Projekts durchgeführt werden?",
+            "a": "Eine Risikoanalyse erfolgt idealerweise zu Beginn des Projekts und wird regelmäßig während der gesamten Laufzeit aktualisiert. Besonders wichtig sind Überprüfungen vor kritischen Phasen oder Meilensteinen – in Abstimmung mit dem Projektleiter und den relevanten Projektbeteiligten auf Auftraggeberseite. So lassen sich neue Risiken frühzeitig erkennen und geeignete Maßnahmen einleiten."
+          },
+          {
+            "q": "Bieten Sie Ihre Dienstleistungen auch vor Ort an?",
+            "a": "Ja, wir arbeiten sowohl vor Ort als auch remote – flexibel und abgestimmt auf die Anforderungen Ihres Projekts. Regelmäßige Meetings und Baustellenbegehungen vor Ort sind Teil unseres Leistungsumfangs und können individuell vereinbart werden.\n\nUnser Hauptsitz in Eschborn bei Frankfurt am Main ermöglicht es uns, Projekte in ganz Deutschland schnell und mit minimalem Aufwand zu erreichen – zentral gelegen und optimal angebunden an Bahn, Autobahn und Flughafen. Wenn möglich, verzichten wir bewusst auf das Auto und nutzen stattdessen die Bahn, um Projektzeit effizienter zu nutzen. Damit schaffen wir nicht nur einen Mehrwert für unsere Kunden, sondern leisten auch einen Beitrag zur Reduktion unseres CO₂-Footprints.\n\nErgänzt wird dieses Vorgehen durch unsere digitale Infrastruktur, die eine reibungslose und effiziente Zusammenarbeit ermöglicht."
+          },
+          {
+            "q": "Wie werden Ihre Dienstleistungen abgerechnet?",
+            "a": "Die Abrechnung erfolgt je nach Projekt entweder auf Stundenbasis oder als Pauschalhonorar. Wir stimmen das Modell individuell mit Ihnen ab, um Transparenz und Planungssicherheit zu gewährleisten."
+          }
+        ]
+      }
+    },
+    "projects": {
+      "title": "Ausgewählte Projekte",
+      "description": "Referenzen von S01 Projektmanagement: Umspannwerke, Leitungsanbindungen, Dokumentationsmanagement und Teilprojektleitungen im Hochspannungsnetz.",
+      "hero": {
+        "title": "Ausgewählte Projekte",
+        "lead": "Referenzen aus Projektsteuerung, Terminplanung, Dokumentations- und Stakeholdermanagement im Hochspannungsnetz."
+      },
+      "label": "Projekt",
+      "servicesLabel": "Leistungen",
+      "items": [
+        {
+          "title": "Neubau 380 kV Umspannwerk (inkl. Rückbau)",
+          "services": ["Projektsteuerung & Terminplanung", "Dokumentationsmanagement", "Stakeholder- & Kommunikationsmanagement", "Schnittstellenmanagement"]
+        },
+        {
+          "title": "Machbarkeitsstudie Teilerneuerung 380 kV Umspannwerk",
+          "services": ["Projektsteuerung & Terminplanung", "Dokumentationsmanagement", "Stakeholder- & Kommunikationsmanagement"]
+        },
+        {
+          "title": "Mehrjahresschaltungsplanung (MJSP)",
+          "services": ["Überprüfung, Abstimmung und Nachverfolgung der Projektschaltungen", "Vorbereitung der Mehrjahresschaltungsplanung", "Unterstützung der Projektleitung bei der Beantragung von Schaltungen"]
+        },
+        {
+          "title": "Dokumentationsmanagement Ausführungsplanung",
+          "services": ["Implementierung einer strukturierten Dokumentenverwaltung in SharePoint gemäß den Richtlinien des Bauherrn", "Aufbau einer klaren Ordnerstruktur sowie Durchführung von Planprüfläufen durch Sichtung und Verteilung der Dokumente an Fachexperten", "Pflege und Nachverfolgung der Dokumentenliste"]
+        },
+        {
+          "title": "Teilprojektleitung Ökologische Maßnahmen",
+          "services": ["Steuerung von Nachunternehmern (Bepflanzung, CEF, ÖBB)", "Terminplanmanagement", "Rechnungsmanagement und Budgetplanung", "Nachverfolgung von Nebenbestimmungen (BImSchG)"]
+        },
+        {
+          "title": "Koordination von Transport und Montage zweier Transformatoren",
+          "services": ["Koordination der Vorbereitungsmaßnahmen (inkl. Dokumentation)", "Durchführung von Begehungen vor Ort mit Transportfirma, Montagefirma und Herstellern", "Stakeholder- und Kommunikationsmanagement"]
+        },
+        {
+          "title": "Anschluss für Batteriespeicher (Vorplanungsphase)",
+          "services": ["Projektsteuerung & Terminplanung", "Dokumentationsmanagement", "Stakeholder- & Kommunikationsmanagement"]
+        }
+      ]
+    },
+    "company": {
+      "title": "Unternehmen",
+      "description": "Über S01 Projektmanagement: Mission, Vision, Werte, Arbeitsweise sowie ISO 9001:2015- und PMP®-zertifizierte Qualität und Methodik.",
+      "hero": { "title": "Unternehmen", "lead": "Komplexe Energieprojekte brauchen Struktur." },
+      "about": {
+        "eyebrow": "Über uns",
+        "title": "S01 Projektmanagement unterstützt Projektleitungen und Projektteams bei der Steuerung anspruchsvoller Energieinfrastrukturprojekte. Mit strukturierter Projektsteuerung, Terminmanagement und PMO-Unterstützung schaffen wir Transparenz und klare Entscheidungsgrundlagen."
+      },
+      "mission": {
+        "title": "Unsere Mission",
+        "text": "Komplexität reduzieren, Transparenz schaffen und Projektleitungen bei der erfolgreichen Umsetzung anspruchsvoller Energieinfrastrukturprojekte unterstützen."
+      },
+      "vision": {
+        "title": "Unsere Vision",
+        "text": "Unser Ziel ist es, für unsere Kunden ein verlässlicher Ansprechpartner für Projektsteuerung, Terminmanagement und PMO-Leistungen im Energiesektor zu sein."
+      },
+      "values": {
+        "eyebrow": "Dafür stehen wir",
+        "title": "Unsere Werte",
+        "items": ["Klarheit", "Struktur", "Verbindlichkeit", "Innovation"],
+        "text": "Bei S01 Projektmanagement stehen Klarheit, Verlässlichkeit und Struktur im Mittelpunkt. Erfolgreiche Energieinfrastrukturprojekte erfordern transparente Entscheidungen, klar definierte Verantwortlichkeiten und eine konsequente Nachverfolgung von Themen und Maßnahmen.\n\nWir hinterfragen bestehende Abläufe kritisch und suchen nach pragmatischen, effizienten Lösungen für die jeweiligen Projektanforderungen. Dabei verlieren wir uns nicht in Problemen, sondern konzentrieren uns auf eine strukturierte und umsetzbare Projektsteuerung."
+      },
+      "method": {
+        "eyebrow": "So arbeiten wir",
+        "title": "Unsere Arbeitsweise",
+        "items": ["methodisch", "systematisch", "standardisiert", "digital"],
+        "text": "Unsere Rolle geht über Beratung hinaus – wir sind Teil des Teams. Mit einem übergreifenden Blick auf alle Schnittstellen sorgen wir dafür, dass selbst komplexe Zusammenhänge beherrschbar bleiben.\n\nDigitale Tools ermöglichen uns, Effizienz und Transparenz mit der Flexibilität zu kombinieren, die kritische Projekte verlangen."
+      },
+      "quality": {
+        "eyebrow": "Ein freiwilliges Plus an Qualität",
+        "title": "Qualität und Methodik",
+        "text": "S01 Projektmanagement verbindet praktische Projekterfahrung mit international anerkannten Standards. Die freiwillige ISO-9001:2015-Zertifizierung und die PMP®-Zertifizierung stehen für strukturierte Prozesse, nachvollziehbare Arbeitsweisen und einen hohen Qualitätsanspruch in der Projektsteuerung.",
+        "items": ["ISO 9001:2015-zertifizierte Arbeitsweise", "PMBOK®-basierte Projektmanagementmethodik (PMP®)", "Strukturierte Projektsteuerung mit klaren Prozessen und nachvollziehbaren Entscheidungen"]
+      }
+    },
+    "careers": {
+      "title": "Karriere",
+      "description": "Karriere bei S01 Projektmanagement: offene Stellen, Initiativbewerbung, Kultur, Benefits und Bewerbungsprozess.",
+      "hero": { "title": "Karriere", "lead": "Ihre Karriere bei S01" },
+      "intro": {
+        "eyebrow": "Ihre Karriere bei S01",
+        "title": "Bei S01 Projektmanagement arbeiten wir an Projekten, die die Energieversorgung von morgen sichern. Wir suchen Menschen, die Verantwortung übernehmen, Klarheit schaffen und gemeinsam mit uns komplexe Herausforderungen meistern. Gestalte die Zukunft – mit uns."
+      },
+      "jobs": {
+        "title": "Aktuelle Stellenangebote",
+        "text": "Falls Sie Fragen oder Anmerkungen zu unseren Stellenangeboten oder zum Bewerbungsprozess haben, schreiben Sie uns gerne an",
+        "items": [
+          {
+            "location": "Eschborn/Frankfurt am Main",
+            "title": "Projektmanager/ Projektsteuerer (m/w/d) – Energieinfrastruktur",
+            "about": "Die S01 Projektmanagement GmbH (ausgesprochen Es Null Eins) ist ein modernes, wachstumsorientiertes Projektmanagement- und Consultingunternehmen mit Fokus auf Energieinfrastrukturprojekte.\n\nWir suchen Persönlichkeiten, die Energie spürbar machen wollen – durch Denken in Lösungen, Leidenschaft für Fortschritt und den Mut, Verantwortung zu übernehmen.",
+            "tasksTitle": "Ihre Aufgaben",
+            "tasks": ["Steuerung von Projekten im Strommarkt (Umspannwerke, Leitungsanbindungen)", "Terminplanung und -überwachung (MS Project)", "Koordination von Schnittstellen und Projektbeteiligten", "Dokumentationsmanagement", "Aktive Begleitung des gesamten Vertriebszyklus sowie Unterstützung bei der Geschäftsentwicklung"],
+            "profileTitle": "Sie bringen mit",
+            "profile": ["Abgeschlossenes Hochschulstudium im Bereich Ingenieurwissenschaften, BWL mit technischem Schwerpunkt oder eine vergleichbare Qualifikation", "Mehrjährige Erfahrung im Projektmanagement, idealerweise im Energiesektor", "Sicherer Umgang mit MS 365, MS Project und gängigen PM-Tools", "Kenntnisse in Projektmanagement-Methoden und Standards (PMI, IPMA)"],
+            "benefitsTitle": "Benefits",
+            "benefits": ["Flexible Arbeitszeiten", "Entwicklungsperspektiven in einem wachsenden Unternehmen", "Strukturiertes Onboarding & Weiterbildungsbudget", "Projekte mit gesellschaftlicher Relevanz"],
+            "apply": { "label": "Jetzt über Join.com bewerben", "href": "https://join.com/companies/s01-pmde/15542712" },
+            "pdf": { "label": "Stellenanzeige als PDF", "href": "https://www.s01-pm.de/wp-content/uploads/Stelenanzeige_Sr-PM.pdf" }
+          },
+          {
+            "location": "Eschborn/Frankfurt am Main",
+            "title": "Initiativbewerbung",
+            "about": "Die S01 Projektmanagement GmbH ist ein wachstumsorientiertes Unternehmen mit Fokus auf Energieinfrastruktur. Wenn aktuell keine passende Position ausgeschrieben ist, freuen wir uns über Ihre Initiativbewerbung.\n\nZeigen Sie uns Ihre Stärken in Projektmanagement, Administration oder anderen relevanten Bereichen und gestalten Sie mit uns die Zukunft der Energieversorgung.",
+            "apply": { "label": "Per Mail bewerben", "href": "mailto:recruiting@s01-pm.de?subject=Initiativbewerbung%20Eschborn" }
+          },
+          {
+            "location": "Remote",
+            "title": "Initiativbewerbung",
+            "about": "Die S01 Projektmanagement GmbH ist ein wachstumsorientiertes Unternehmen mit Fokus auf Energieinfrastruktur. Wenn aktuell keine passende Position ausgeschrieben ist, freuen wir uns über Ihre Initiativbewerbung.\n\nZeigen Sie uns Ihre Stärken in Projektmanagement, Administration oder anderen relevanten Bereichen und gestalten Sie mit uns die Zukunft der Energieversorgung.",
+            "apply": { "label": "Per Mail bewerben", "href": "mailto:recruiting@s01-pm.de?subject=Initiativbewerbung%20Remote" }
+          },
+          {
+            "location": "Freelance & Partnerschaften",
+            "title": "Zusammenarbeit als Freelancer/in",
+            "about": "Die Stellenanzeigen sind in Bearbeitung und werden bald veröffentlicht. Sie möchten nicht warten? Kontaktieren Sie uns für eine Initiativbewerbung.",
+            "apply": { "label": "Initiativbewerbung senden", "href": "mailto:recruiting@s01-pm.de?subject=Freelance" }
+          }
+        ]
+      },
+      "why": {
+        "eyebrow": "Zukunft gestalten",
+        "title": "Warum bei S01 arbeiten?",
+        "text": "S01 Projektmanagement ist ein dynamisch wachsendes Unternehmen, das ein strukturiertes und verlässliches Arbeitsumfeld mit Offenheit und Raum für Eigeninitiative verbindet.\n\nAls schlanke, spezialisierte Organisation erhalten Sie bei uns die Möglichkeit, direkt an Projekten mitzuwirken und Verantwortung zu übernehmen.\n\nStatt in anonymen Großstrukturen zu agieren, profitieren Sie von klarer Kommunikation, kurzen Entscheidungswegen und der Chance, Ihre Ideen aktiv einzubringen und umzusetzen."
+      },
+      "culture": {
+        "eyebrow": "Das sind wir",
+        "title": "Unsere Kultur",
+        "items": [
+          { "title": "Methodisch & klar", "text": "Wir arbeiten mit präzisen Prozessen und anerkannten Standards, ohne bürokratisch zu sein." },
+          { "title": "Verlässlich & fokussiert", "text": "Auf uns können Kunden und Kollegen zählen – wir stehen zu unserem Wort." },
+          { "title": "Teamorientiert & respektvoll", "text": "Wir sehen uns als Partner, nicht nur als Kollegen. Zusammenarbeit auf Augenhöhe ist für uns selbstverständlich." },
+          { "title": "Innovativ & lernbereit", "text": "Wir nutzen moderne Tools, entwickeln Abläufe weiter und fördern Weiterbildung." }
+        ]
+      },
+      "benefits": {
+        "eyebrow": "Das bieten wir Ihnen",
+        "title": "Benefits",
+        "items": [
+          "Gestalte unser Wachstum aktiv mit – wir bieten dir Raum für Ideen, Eigeninitiative und die Chance, neue Geschäftsfelder zu entwickeln und dich in Richtung Project Management, Product Management oder Business Development zu entfalten",
+          "Verantwortung und Gestaltungsspielraum ab dem ersten Tag",
+          "Professionelles Onboarding",
+          "Kurze Entscheidungswege und direkter Austausch mit der Geschäftsführung",
+          "Flexible Arbeitsmodelle und Homeoffice-Möglichkeiten",
+          "Moderne Tools und Arbeitsmethoden nach internationalen Standards",
+          "Projekte mit gesellschaftlicher Relevanz – Beitrag zur Energiewende und Versorgungssicherheit"
+        ]
+      },
+      "process": {
+        "eyebrow": "Bewerbungsprozess",
+        "title": "So läuft der Bewerbungsprozess ab",
+        "items": [
+          { "title": "Online-Bewerbung", "text": "Wir haben ein Stellenangebot, das genau zu Ihnen passt? Senden Sie uns Ihre vollständigen Unterlagen per E-Mail an recruiting@s01-pm.de." },
+          { "title": "Prüfung und Rückmeldung", "text": "Wir prüfen Ihre Bewerbungsunterlagen und melden uns in der Regel innerhalb von 1–2 Wochen bei Ihnen zurück." },
+          { "title": "Persönliches Gespräch", "text": "Passt Ihr Profil zu S01, vereinbaren wir ein erstes Gespräch und tauschen uns beispielsweise über Berufserfahrungen, Qualifikationen, Erwartungen und Motivation aus. Das Gespräch findet in der Regel als Videocall statt und dauert 30–60 Minuten." },
+          { "title": "Entscheidung", "text": "Wenn Sie uns überzeugt haben, wird sich unser Team mit Ihnen in Verbindung setzen, um die nächsten Schritte zu besprechen. Wenn alles passt, erhalten Sie ein verbindliches Angebot." }
+        ]
+      },
+      "faq": {
+        "title": "Häufig gestellte Fragen",
+        "items": [
+          { "q": "Welche Projekte betreut S01 Projektmanagement?", "a": "Wir sind spezialisiert auf Projektmanagement für Energieinfrastrukturprojekte – insbesondere Stromerzeugung, -übertragung und -verteilung." },
+          { "q": "Welche Qualifikationen sind für eine Bewerbung erforderlich?", "a": "Wir suchen engagierte Profile in den Bereichen Ingenieurwesen, BWL, Jura und Finanzen, um sowohl technische Projekte als auch die Entwicklung und das Management bestimmter Unternehmensbereiche voranzutreiben. Sehr gute Deutsch- und Englischkenntnisse sind für alle Positionen erforderlich." },
+          { "q": "Gibt es Remote-Arbeitsmöglichkeiten?", "a": "Ja, einige Rollen sind remote möglich.\n\nAndere Positionen – insbesondere im Projektmanagement und in der Administration – erfordern überwiegend Präsenz vor Ort, nicht nur im Büro, sondern auch auf Baustellen, um eine enge Abstimmung mit dem Team und den Kunden sicherzustellen. Details finden Sie in der jeweiligen Stellenbeschreibung." },
+          { "q": "Wie läuft der Bewerbungsprozess ab?", "a": "Bewerbung per E-Mail an recruiting@s01-pm.de. Rückmeldung innerhalb von 1–2 Wochen. Erstes Videointerview (30–60 Minuten), zweites Interview vor Ort, anschließend Entscheidung und Angebot." },
+          { "q": "Welche Benefits bietet S01 Projektmanagement?", "a": "Flexible Arbeitsmodelle, kurze Entscheidungswege, moderne Tools und professionelles Onboarding sowie die Chance, aktiv zum Wachstum und zur Erweiterung des Unternehmens beizutragen und neue Rollen zu übernehmen." }
+        ]
+      },
+      "apply": {
+        "title": "Jetzt bei S01 bewerben",
+        "text": "Gestalte mit uns die Energieinfrastruktur von morgen. Bewirb dich jetzt und werde Teil von S01 Projektmanagement."
+      }
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Kontakt zu S01 Projektmanagement in Eschborn: E-Mail, Telefon und Kontaktformular für Ihre Projektanfrage.",
+      "hero": { "title": "Kontakt", "lead": "Jetzt Kontakt aufnehmen und Projekt starten" },
+      "email": { "value": "info@s01-pm.de", "text": "Wir freuen uns auf Ihre Nachricht, Projektanfrage oder Anregung per E-Mail." },
+      "phone": { "value": "+49 6196 58655-556", "href": "+49619658655556", "text": "Unsere Experten stehen Ihnen für eine Erstberatung telefonisch zur Verfügung." },
+      "form": {
+        "title": "Kontaktformular",
+        "name": "Name",
+        "company": "Unternehmen",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "message": "Nachricht",
+        "consent": "Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung. Ich habe diese zur Kenntnis genommen und stimme der Verarbeitung meiner Daten ausdrücklich zu.",
+        "consentLink": "Zur Datenschutzerklärung",
+        "submit": "Senden",
+        "success": "Vielen Dank! Dies ist eine Demo – Ihre Nachricht wurde nicht gesendet.",
+        "demoNote": "Demo-Formular: Es werden keine Daten übermittelt."
+      }
+    },
+    "imprint": {
+      "title": "Impressum",
+      "description": "Impressum der S01 Projektmanagement GmbH, Eschborn.",
+      "hero": { "title": "Impressum", "lead": "" },
+      "notice": "",
+      "blocks": [
+        { "title": "Name und Anschrift", "lines": ["S01 Projektmanagement GmbH", "Mergenthalerallee 15–21", "65760 Eschborn", "Sitz der Gesellschaft: Eschborn", "Handelsregister: HRB 139040", "Registergericht: Amtsgericht Frankfurt am Main", "Umsatzsteueridentifikationsnummer: DE 454939481", "Geschäftsführer: Theodor Victor Nuñez Perelygin", "Inhaltlich verantwortlich: Theodor Victor Nuñez Perelygin"], "text": "" },
+        { "title": "Kontaktmöglichkeit", "lines": ["Mail: info@s01-pm.de", "Telefon: +49 6196 58655-556"], "text": "" },
+        { "title": "Haftungsausschluss", "lines": [], "text": "Die S01 Projektmanagement GmbH übernimmt keine Garantie dafür, dass die auf dieser Website bereitgestellten Informationen vollständig, richtig und in jedem Fall aktuell sind. Insbesondere übernimmt die S01 Projektmanagement GmbH keine Haftung für Inhalte, die ausdrücklich als fremde Inhalte gekennzeichnet sind. Die S01 Projektmanagement GmbH ist nicht dafür verantwortlich, dass solche Inhalte vollständig, richtig, aktuell und rechtmäßig sind und nicht in unzulässiger Weise in Rechtsgüter Dritter eingreifen. Dies gilt auch für Inhalte von Webseiten, auf die durch einen Link verwiesen wird.\n\nDie S01 Projektmanagement GmbH behält sich das Recht vor, ohne vorherige Ankündigung Änderungen oder Ergänzungen der bereitgestellten Informationen vorzunehmen oder diese zu entfernen.\n\nAuf keinen Fall haftet die S01 Projektmanagement GmbH für Schäden, die durch fehlende Nutzungsmöglichkeiten oder Datenverluste im Zusammenhang mit der Nutzung von Dokumenten oder Informationen bzw. der Erbringung von Dienstleistungen entstehen, die auf dieser Website zugänglich sind." },
+        { "title": "Design", "lines": ["Diemer & Schweig Designstudio", "www.diemerschweig.de"], "text": "" }
+      ]
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "description": "Datenschutzhinweise der S01 Projektmanagement GmbH (Demo-Platzhalter).",
+      "hero": { "title": "Datenschutzerklärung", "lead": "" },
+      "notice": "Demo – der rechtsverbindliche Text wird von S01 bereitgestellt.",
+      "blocks": [
+        { "title": "Verantwortlicher", "lines": ["S01 Projektmanagement GmbH", "Alfred-Herrhausen-Allee 3-5", "65760 Eschborn", "E-Mail: info@s01-pm.de", "Telefon: +49 6196 58655-556"], "text": "" },
+        { "title": "Hosting", "lines": [], "text": "Diese Demo-Seite wird als statische Website ausgeliefert. Es werden keine Cookies gesetzt und keine Analyse- oder Tracking-Werkzeuge eingesetzt." },
+        { "title": "Kontaktformular", "lines": [], "text": "Das Kontaktformular dieser Demo übermittelt keine Daten. Auf der späteren Website werden die im Formular eingegebenen Angaben ausschließlich zur Bearbeitung der Anfrage verarbeitet (Art. 6 Abs. 1 lit. b DSGVO)." },
+        { "title": "Ihre Rechte", "lines": [], "text": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Zudem steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu." }
+      ]
+    }
+  }
+}
