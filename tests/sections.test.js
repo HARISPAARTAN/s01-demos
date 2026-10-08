@@ -18,8 +18,9 @@ test('pageHero renders breadcrumb, h1, optional lead and image', () => {
   const ctx = makeCtx({ page: 'services' });
   const html = pageHero(ctx, ctx.t.pages.services.hero, 'substation.jpg');
   assert.ok(html.includes('<h1>Services</h1>'));
+  assert.ok(html.includes('<nav class="breadcrumb" aria-label="Brotkrümelnavigation">'));
   assert.ok(html.includes('<a href="index.html">Startseite</a>'));
-  assert.ok(html.includes('<img src="../../assets/img/substation.jpg" alt=""'));
+  assert.ok(html.includes('<img src="../../assets/img/substation.jpg" alt="">'));
   assert.ok(html.includes('class="page-hero has-media"'));
   const plain = pageHero(makeCtx({ page: 'imprint' }), { title: 'Impressum', lead: '' });
   assert.ok(!plain.includes('<img'));

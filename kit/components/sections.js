@@ -13,10 +13,10 @@ export function closing(ctx) {
 export function pageHero(ctx, data, imageFile = '') {
   const u = ctx.t.meta.ui;
   const media = imageFile
-    ? `<div class="page-hero-media" aria-hidden="true"><img src="${ctx.paths.asset(`img/${imageFile}`)}" alt="" width="1600" height="1067"></div>`
+    ? `<div class="page-hero-media" aria-hidden="true"><img src="${ctx.paths.asset(`img/${imageFile}`)}" alt=""></div>`
     : '';
   const lead = data.lead ? `<p class="lead">${esc(data.lead)}</p>` : '';
-  return `<section class="page-hero${imageFile ? ' has-media' : ''}">${media}<div class="container"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="${ctx.paths.toPage('home')}">${esc(u.breadcrumbHome)}</a><span aria-hidden="true">→</span><span aria-current="page">${esc(data.title)}</span></nav><h1>${esc(data.title)}</h1>${lead}</div></section>`;
+  return `<section class="page-hero${imageFile ? ' has-media' : ''}">${media}<div class="container"><nav class="breadcrumb" aria-label="${esc(u.breadcrumb)}"><a href="${ctx.paths.toPage('home')}">${esc(u.breadcrumbHome)}</a><span aria-hidden="true">→</span><span aria-current="page">${esc(data.title)}</span></nav><h1>${esc(data.title)}</h1>${lead}</div></section>`;
 }
 
 export function cta(ctx) {

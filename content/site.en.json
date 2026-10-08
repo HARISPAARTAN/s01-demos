@@ -47,6 +47,7 @@
       "demo": "Demo",
       "sections": "Sections",
       "breadcrumbHome": "Home",
+      "breadcrumb": "Breadcrumb",
       "emailLabel": "Email",
       "phoneLabel": "Phone",
       "addressLabel": "Address"

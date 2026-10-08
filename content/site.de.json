@@ -47,6 +47,7 @@
       "demo": "Demo",
       "sections": "Abschnitte",
       "breadcrumbHome": "Startseite",
+      "breadcrumb": "Brotkrümelnavigation",
       "emailLabel": "E-Mail",
       "phoneLabel": "Telefon",
       "addressLabel": "Adresse"
