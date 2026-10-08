@@ -23,7 +23,7 @@ function form(ctx) {
 </div>
 <label><span>${esc(f.message)}</span><textarea name="message" rows="6" required></textarea></label>
 <label class="check"><input type="checkbox" name="consent" required><span>${esc(f.consent)} <a href="${ctx.paths.toPage('privacy')}">${esc(f.consentLink)}</a></span></label>
-<button class="btn btn-primary" type="submit">${esc(f.submit)}</button>
+<button class="btn btn-primary" type="submit" disabled>${esc(f.submit)}</button>
 <p class="form-success" data-form-success hidden role="status">${esc(f.success)}</p>
 <p class="form-note">${esc(f.demoNote)}</p>
 </form>`;

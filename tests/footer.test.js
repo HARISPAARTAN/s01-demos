@@ -22,4 +22,13 @@ test('mega footer repeats the main navigation and a CTA button', () => {
   assert.ok(html.includes('href="projects.html">Projects</a>'));
   assert.ok(html.includes('class="btn btn-primary" href="contact.html">Get in touch</a>'));
   assert.equal(count(html, /<nav /g), 2);
+  assert.ok(html.includes('<nav aria-label="Pages (footer)">'));
+  assert.ok(html.includes('<nav aria-label="Footer navigation">'));
+  assert.ok(!html.includes('aria-label="Main navigation"'));
+});
+
+test('the English tagline is marked as English on German pages only', () => {
+  assert.ok(footer.columns(makeCtx()).includes('<p class="tagline" lang="en">Shaping sustainable grids</p>'));
+  assert.ok(footer.columns(makeCtx({ lang: 'en' })).includes('<p class="tagline">Shaping sustainable grids</p>'));
+  assert.ok(footer.mega(makeCtx()).includes('<p class="tagline-big" lang="en">Shaping sustainable grids</p>'));
 });

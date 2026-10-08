@@ -14,7 +14,7 @@ for (const variant of ['split', 'centered']) {
     assert.ok(html.includes('<input type="email" name="email" required'));
     assert.ok(html.includes('<input type="checkbox" name="consent" required>'));
     assert.ok(html.includes('<p class="form-success" data-form-success hidden role="status">'));
-    assert.ok(html.includes('<button class="btn btn-primary" type="submit">Senden</button>'));
+    assert.ok(html.includes('<button class="btn btn-primary" type="submit" disabled>Senden</button>'));
     assert.ok(html.includes('href="datenschutz.html"'));
   });
 }
