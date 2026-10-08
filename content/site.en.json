@@ -1,0 +1,476 @@
+{
+  "meta": {
+    "siteName": "S01 Projektmanagement",
+    "legalName": "S01 Projektmanagement GmbH",
+    "tagline": "Shaping sustainable grids",
+    "company": {
+      "street": "Alfred-Herrhausen-Allee 3-5",
+      "city": "65760 Eschborn, Germany",
+      "email": "info@s01-pm.de",
+      "phone": "+49 61 9658 655-556",
+      "phoneHref": "+49619658655556",
+      "phoneMobile": "+49 157 3002 1089",
+      "phoneMobileHref": "+4915730021089",
+      "recruitingEmail": "recruiting@s01-pm.de",
+      "iso": "ISO 9001:2015 certified"
+    },
+    "nav": [
+      { "page": "home", "label": "Home" },
+      { "page": "services", "label": "Services" },
+      { "page": "projects", "label": "Projects" },
+      { "page": "company", "label": "Company" },
+      { "page": "careers", "label": "Careers" },
+      { "page": "contact", "label": "Contact" }
+    ],
+    "footerNav": [
+      { "page": "careers", "label": "Careers" },
+      { "page": "contact", "label": "Contact" },
+      { "page": "imprint", "label": "Imprint" },
+      { "page": "privacy", "label": "Privacy" }
+    ],
+    "cta": {
+      "title": "Start with a free initial consultation",
+      "text": "Contact us for a non-binding initial consultation about your project and find out how our services can support you.",
+      "button": "Get in touch"
+    },
+    "ui": {
+      "skip": "Skip to content",
+      "menu": "Menu",
+      "close": "Close",
+      "mainNav": "Main navigation",
+      "footerNav": "Footer navigation",
+      "switchLang": "Zur deutschen Version wechseln",
+      "more": "Learn more",
+      "scrollDown": "Scroll down",
+      "playVideo": "Play video",
+      "allDemos": "All demos",
+      "demo": "Demo",
+      "sections": "Sections",
+      "breadcrumbHome": "Home",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "addressLabel": "Address"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Project Controls for Grid Expansion and Substations",
+      "description": "S01 Projektmanagement supports transmission system operators with substations, line connections and grid expansion projects through professional project controls.",
+      "hero": {
+        "eyebrow": "Project controls · Energy infrastructure",
+        "title": "Project controls for energy infrastructure.",
+        "bullets": [
+          "More than 10 years of experience in the energy sector",
+          "PMP®-certified project management methodology",
+          "A direct point of contact throughout the entire project"
+        ],
+        "primary": { "label": "Get in touch", "page": "contact" },
+        "secondary": { "label": "Our services", "page": "services", "hash": "" }
+      },
+      "intro": {
+        "title": "S01 Projektmanagement supports project leads and project teams in steering complex energy infrastructure projects.",
+        "text": "With structured project controls, schedule management and proven project management methods, S01 creates transparency and a clear basis for decisions. The goal is efficient project delivery and targeted relief for project leads in demanding project environments."
+      },
+      "services": {
+        "eyebrow": "What we do",
+        "title": "Our services",
+        "items": [
+          {
+            "id": "project-controls",
+            "title": "Project controls",
+            "text": "S01 Projektmanagement supports project leads in planning, coordinating and steering complex energy infrastructure projects. The focus is on transparency, traceability and structured project delivery.",
+            "imageAlt": "Two engineers wearing hard hats on a construction site"
+          },
+          {
+            "id": "scheduling",
+            "title": "Schedule management",
+            "text": "S01 Projektmanagement supports the set-up, maintenance and updating of project schedules as well as the tracking of milestones and critical activities. This creates transparency and a reliable basis for decisions by the project lead.",
+            "imageAlt": "Team discussing project documents at a desk"
+          },
+          {
+            "id": "interfaces",
+            "title": "Interface management",
+            "text": "S01 Projektmanagement supports coordination between project participants, contractors and departments. The goal is a structured flow of information and the early identification of coordination needs.",
+            "imageAlt": "High-voltage power lines in an open landscape"
+          },
+          {
+            "id": "risk",
+            "title": "Risk management",
+            "text": "S01 Projektmanagement supports the systematic recording, assessment and tracking of project risks and measures. Potential impacts can therefore be identified and addressed early.",
+            "imageAlt": "Transmission tower in fog in front of mountains"
+          },
+          {
+            "id": "documentation",
+            "title": "Documentation management",
+            "text": "S01 Projektmanagement supports the set-up and maintenance of structured documentation and filing systems, keeping information traceable, current and available to all project participants.",
+            "imageAlt": "Substation in morning light"
+          },
+          {
+            "id": "consulting",
+            "title": "Consulting & operational support",
+            "text": "S01 Projektmanagement accompanies you through every project phase, including sub-project leadership, the implementation of measures such as ecological and compensation measures, stakeholder management, organisational tasks and the set-up of administrative structures.",
+            "imageAlt": "Engineer wearing a hard hat in front of a substation"
+          }
+        ]
+      },
+      "closing": {
+        "text": "We steer your sub-projects and measures reliably and on our own responsibility, so that you can focus your resources on strategic priorities."
+      },
+      "feature": {
+        "eyebrow": "S01 Projektmanagement",
+        "title": "Complex energy projects? We bring structure.",
+        "pillars": [
+          { "title": "Service focus", "text": "Operational project management, scheduling, interface and risk management." },
+          { "title": "Industry focus", "text": "Power generation, transmission and distribution — project developers, grid operators, utilities and energy companies." },
+          { "title": "Project management framework", "text": "We rely on established project management standards and methods." },
+          { "title": "Benefits", "text": "Structure, transparency and risk minimisation in complex projects." }
+        ],
+        "stats": [
+          { "value": "10+", "label": "years of experience in the energy sector" },
+          { "value": "380 kV", "label": "substations and line connections" },
+          { "value": "ISO 9001", "label": "certified way of working" },
+          { "value": "PMP®", "label": "certified methodology" }
+        ]
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "items": [
+          {
+            "q": "What does ‘S01 Projektmanagement’ mean, and what does ‘S01’ stand for?",
+            "a": "S01 Projektmanagement (pronounced “es null eins”) is a specialised consulting firm focused on energy infrastructure projects.\n\nThe name “S01” goes back to a major project we supported: it designates the first switching block with which a substantial part of the facility was successfully commissioned. This section was not only technically decisive but also a central contractual milestone for our client.\n\nToday “S01” stands symbolically for two things: the successful mastering of complex project phases, and the next step in our own development – from a sole proprietorship to a GmbH, with the aim of growing our team and supporting further energy projects at the highest level."
+          },
+          {
+            "q": "What does your project management offering include?",
+            "a": "We provide comprehensive consulting in project controls, scheduling, stakeholder management, risk analysis and documentation management. In addition, we take on operational tasks such as organising and setting up administrative infrastructure – digitally and efficiently.\n\nWe also support our clients on site: in coordination with project participants, in monitoring and tracking measures, and in construction site coordination."
+          },
+          {
+            "q": "Which industries or projects do you serve?",
+            "a": "As a project management consultancy we support companies in developing energy infrastructure projects across all project phases: from planning and feasibility study through execution and commissioning to decommissioning.\n\nOur target clients are utilities, transmission system operators, power plant operators and companies in power transmission, distribution and generation."
+          },
+          {
+            "q": "What distinguishes you as project managers?",
+            "a": "We work in a structured, methodical and solution-oriented way. Our focus is on clear communication, precise planning and the ability to make well-founded decisions even in complex situations. We combine analytical thinking with practical experience to lead projects to success efficiently and purposefully."
+          }
+        ]
+      }
+    },
+    "services": {
+      "title": "Services",
+      "description": "Project controls, schedule management, interface, risk and documentation management, and operational support for energy infrastructure projects.",
+      "hero": {
+        "title": "Services",
+        "lead": "S01 Projektmanagement supports project owners and contractors in steering complex energy infrastructure projects."
+      },
+      "eyebrow": "Service",
+      "sectionTitle": "Our services in detail",
+      "items": [
+        {
+          "id": "project-controls",
+          "title": "Project management & project controls",
+          "text": "S01 Projektmanagement supports project leads in planning, coordinating and steering energy infrastructure projects. The focus is on transparency, schedule tracking and the structured follow-up of project activities.",
+          "bullets": ["Integrated steering from a single source", "Schedule adherence and cost control", "Efficient delivery of complex undertakings"],
+          "imageAlt": "Two engineers wearing hard hats on a construction site"
+        },
+        {
+          "id": "scheduling",
+          "title": "Schedule and time management",
+          "text": "S01 Projektmanagement supports the creation, maintenance and updating of schedules. This creates a reliable planning basis and transparency about project progress, dependencies and critical activities.",
+          "bullets": ["Reliable schedules as a planning basis", "Continuous updating and control", "Transparency about critical paths and schedule risks"],
+          "imageAlt": "Team discussing project documents at a desk"
+        },
+        {
+          "id": "interfaces",
+          "title": "Interface management",
+          "text": "S01 Projektmanagement supports coordination between project participants, contractors and departments. The goal is a transparent flow of information and the early identification of coordination needs.",
+          "bullets": ["Smooth information flow and aligned processes", "Coordination of relevant interfaces", "Early resolution of conflicts and dependencies"],
+          "imageAlt": "High-voltage power lines in an open landscape"
+        },
+        {
+          "id": "risk",
+          "title": "Risk management",
+          "text": "S01 Projektmanagement supports the systematic recording, assessment and tracking of project risks and measures. Risks become visible early and can be addressed in a targeted way.",
+          "bullets": ["Early identification of risks", "Systematic assessment and prioritisation", "Active control for maximum security"],
+          "imageAlt": "Transmission tower in fog in front of mountains"
+        },
+        {
+          "id": "documentation",
+          "title": "Document management",
+          "text": "S01 Projektmanagement supports the set-up and maintenance of structured documentation and filing systems. Information stays traceable, current and available to all project participants.",
+          "bullets": ["Central digital documentation for maximum transparency", "Basis for lessons learned and a knowledge base", "Reduces redundant work and sets standards for future projects"],
+          "imageAlt": "Substation in morning light"
+        },
+        {
+          "id": "consulting",
+          "title": "Consulting & operational support",
+          "text": "S01 Projektmanagement supports project leads and teams with operational and coordination tasks in demanding project environments, including PMO services, sub-project support, schedule management, stakeholder management and the structured tracking of measures.",
+          "bullets": ["Operational support for project, programme and portfolio management", "Relief for your teams by taking over operational tasks", "Proactive development of solutions to master new challenges"],
+          "imageAlt": "Engineer wearing a hard hat in front of a substation"
+        }
+      ],
+      "calm": {
+        "title": "Calm and certainty for your decisions",
+        "text": "Through structured project controls, transparent communication and consistent follow-up of tasks, S01 Projektmanagement creates the basis for well-founded decisions and successful project delivery.",
+        "button": "Learn more",
+        "page": "company"
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "items": [
+          {
+            "q": "Are your services also suitable for smaller projects?",
+            "a": "Yes, we also support smaller projects that require a structured approach based on established project management methods.\n\nOur focus is on projects in the energy and industrial sectors – particularly high-voltage facilities such as substations and power line connections."
+          },
+          {
+            "q": "What does stakeholder management include?",
+            "a": "Stakeholder management covers the identification, analysis and engagement of all relevant project participants. The aim is to ensure clear communication and to avoid conflicts early."
+          },
+          {
+            "q": "How do you help resolve conflicts between stakeholders?",
+            "a": "We develop clear communication plans, lead workshops and support the moderation of meetings so that conflicts can be addressed in a structured, solution-oriented way."
+          },
+          {
+            "q": "What is schedule management, and why does it matter?",
+            "a": "Schedule management is a central part of project management. It covers the creation, maintenance and alignment of project schedules, the tracking of milestones and contractual dates, and coordination with project participants. The goal is to define realistic timeframes, make dependencies transparent and create a reliable basis for steering the project.\n\nAs a consulting service we help you implement these processes efficiently – from analysis to operational support."
+          },
+          {
+            "q": "Which tools do you use for schedule management?",
+            "a": "We rely on Microsoft Project. With it we create, maintain and monitor project schedules, track milestones and align timelines efficiently with all project participants."
+          },
+          {
+            "q": "What is technical documentation management?",
+            "a": "It covers the creation, maintenance and administration of technical documents such as drawings, reports, minutes and manuals. The goal is to ensure compliance with standards and traceability."
+          },
+          {
+            "q": "How often should a risk analysis be carried out during a project?",
+            "a": "A risk analysis is ideally performed at the start of the project and updated regularly throughout its duration. Reviews before critical phases or milestones are especially important – in coordination with the project lead and the relevant stakeholders on the client side. This allows new risks to be identified early and suitable measures to be initiated."
+          },
+          {
+            "q": "Do you also work on site?",
+            "a": "Yes, we work both on site and remotely – flexibly and aligned with the requirements of your project. Regular meetings and site visits are part of our scope and can be arranged individually.\n\nOur headquarters in Eschborn near Frankfurt am Main allows us to reach projects throughout Germany quickly and with minimal effort – centrally located with excellent rail, motorway and airport connections. Wherever possible we deliberately leave the car behind and travel by train to use project time more efficiently. This adds value for our clients and reduces our CO₂ footprint.\n\nThis approach is complemented by our digital infrastructure, which enables smooth and efficient collaboration."
+          },
+          {
+            "q": "How are your services billed?",
+            "a": "Depending on the project, billing is either hourly or as a fixed fee. We agree the model individually with you to ensure transparency and planning certainty."
+          }
+        ]
+      }
+    },
+    "projects": {
+      "title": "Selected Projects",
+      "description": "References of S01 Projektmanagement: substations, line connections, documentation management and sub-project leadership in the high-voltage grid.",
+      "hero": {
+        "title": "Selected projects",
+        "lead": "References from project controls, scheduling, documentation and stakeholder management in the high-voltage grid."
+      },
+      "label": "Project",
+      "servicesLabel": "Services",
+      "items": [
+        {
+          "title": "New 380 kV substation (incl. dismantling)",
+          "services": ["Project controls & scheduling", "Documentation management", "Stakeholder & communication management", "Interface management"]
+        },
+        {
+          "title": "Feasibility study for partial renewal of a 380 kV substation",
+          "services": ["Project controls & scheduling", "Documentation management", "Stakeholder & communication management"]
+        },
+        {
+          "title": "Multi-year switching planning (MJSP)",
+          "services": ["Review, coordination and tracking of project switching operations", "Preparation of the multi-year switching plan", "Support for the project lead in applying for switching operations"]
+        },
+        {
+          "title": "Documentation management for detailed design",
+          "services": ["Implementation of structured document management in SharePoint according to the client’s guidelines", "Set-up of a clear folder structure and execution of plan review cycles by screening and distributing documents to specialists", "Maintenance and tracking of the document list"]
+        },
+        {
+          "title": "Sub-project lead for ecological measures",
+          "services": ["Management of subcontractors (planting, CEF, ÖBB)", "Schedule management", "Invoice management and budget planning", "Tracking of permit conditions (BImSchG)"]
+        },
+        {
+          "title": "Coordination of transport and installation of two transformers",
+          "services": ["Coordination of preparatory measures (incl. documentation)", "On-site inspections with the transport company, installer and manufacturers", "Stakeholder and communication management"]
+        },
+        {
+          "title": "Grid connection for battery storage (preliminary planning phase)",
+          "services": ["Project controls & scheduling", "Documentation management", "Stakeholder & communication management"]
+        }
+      ]
+    },
+    "company": {
+      "title": "Company",
+      "description": "About S01 Projektmanagement: mission, vision, values, way of working, and ISO 9001:2015 and PMP® certified quality and methodology.",
+      "hero": { "title": "Company", "lead": "Complex energy projects need structure." },
+      "about": {
+        "eyebrow": "About us",
+        "title": "S01 Projektmanagement supports project leads and project teams in steering demanding energy infrastructure projects. With structured project controls, schedule management and PMO support, we create transparency and a clear basis for decisions."
+      },
+      "mission": {
+        "title": "Our mission",
+        "text": "Reduce complexity, create transparency and support project leads in successfully delivering demanding energy infrastructure projects."
+      },
+      "vision": {
+        "title": "Our vision",
+        "text": "Our goal is to be a reliable partner for our clients in project controls, schedule management and PMO services in the energy sector."
+      },
+      "values": {
+        "eyebrow": "What we stand for",
+        "title": "Our values",
+        "items": ["Clarity", "Structure", "Reliability", "Innovation"],
+        "text": "At S01 Projektmanagement, clarity, reliability and structure take centre stage. Successful energy infrastructure projects require transparent decisions, clearly defined responsibilities and consistent follow-up of topics and measures.\n\nWe critically question existing processes and look for pragmatic, efficient solutions for each project’s requirements. We do not get lost in problems; we concentrate on structured, actionable project controls."
+      },
+      "method": {
+        "eyebrow": "How we work",
+        "title": "Our way of working",
+        "items": ["methodical", "systematic", "standardised", "digital"],
+        "text": "Our role goes beyond consulting – we are part of the team. With an overarching view of all interfaces, we make sure that even complex relationships remain manageable.\n\nDigital tools allow us to combine efficiency and transparency with the flexibility that critical projects demand."
+      },
+      "quality": {
+        "eyebrow": "A voluntary plus in quality",
+        "title": "Quality and methodology",
+        "text": "S01 Projektmanagement combines hands-on project experience with internationally recognised standards. Our voluntary ISO 9001:2015 certification and PMP® certification stand for structured processes, traceable ways of working and high quality standards in project controls.",
+        "items": ["ISO 9001:2015-certified way of working", "PMBOK®-based project management methodology (PMP®)", "Structured project controls with clear processes and traceable decisions"]
+      }
+    },
+    "careers": {
+      "title": "Careers",
+      "description": "Careers at S01 Projektmanagement: open positions, unsolicited applications, culture, benefits and the application process.",
+      "hero": { "title": "Careers", "lead": "Your career at S01" },
+      "intro": {
+        "eyebrow": "Your career at S01",
+        "title": "At S01 Projektmanagement we work on projects that secure tomorrow’s energy supply. We are looking for people who take responsibility, create clarity and master complex challenges together with us. Shape the future – with us."
+      },
+      "jobs": {
+        "title": "Current openings",
+        "text": "If you have questions or comments about our openings or the application process, please write to",
+        "items": [
+          {
+            "location": "Eschborn/Frankfurt am Main",
+            "title": "Project Manager / Project Controller (m/f/d) – Energy Infrastructure",
+            "about": "S01 Projektmanagement GmbH (pronounced “es null eins”) is a modern, growth-oriented project management and consulting company focused on energy infrastructure projects.\n\nWe are looking for personalities who want to make energy tangible – through solution-oriented thinking, a passion for progress and the courage to take responsibility.",
+            "tasksTitle": "Your tasks",
+            "tasks": ["Steering projects in the power market (substations, line connections)", "Scheduling and schedule monitoring (MS Project)", "Coordination of interfaces and project participants", "Documentation management", "Active involvement in the entire sales cycle and support for business development"],
+            "profileTitle": "Your profile",
+            "profile": ["University degree in engineering, business administration with a technical focus, or a comparable qualification", "Several years of project management experience, ideally in the energy sector", "Confident use of MS 365, MS Project and common PM tools", "Knowledge of project management methods and standards (PMI, IPMA)"],
+            "benefitsTitle": "Benefits",
+            "benefits": ["Flexible working hours", "Development prospects in a growing company", "Structured onboarding & training budget", "Projects with social relevance"],
+            "apply": { "label": "Apply via Join.com", "href": "https://join.com/companies/s01-pmde/15542712" },
+            "pdf": { "label": "Job posting as PDF (German)", "href": "https://www.s01-pm.de/wp-content/uploads/Stelenanzeige_Sr-PM.pdf" }
+          },
+          {
+            "location": "Eschborn/Frankfurt am Main",
+            "title": "Unsolicited application",
+            "about": "S01 Projektmanagement GmbH is a growth-oriented company focused on energy infrastructure. If no suitable position is currently advertised, we welcome your unsolicited application.\n\nShow us your strengths in project management, administration or other relevant areas and shape the future of energy supply with us.",
+            "apply": { "label": "Apply by email", "href": "mailto:recruiting@s01-pm.de?subject=Unsolicited%20application%20Eschborn" }
+          },
+          {
+            "location": "Remote",
+            "title": "Unsolicited application",
+            "about": "S01 Projektmanagement GmbH is a growth-oriented company focused on energy infrastructure. If no suitable position is currently advertised, we welcome your unsolicited application.\n\nShow us your strengths in project management, administration or other relevant areas and shape the future of energy supply with us.",
+            "apply": { "label": "Apply by email", "href": "mailto:recruiting@s01-pm.de?subject=Unsolicited%20application%20Remote" }
+          },
+          {
+            "location": "Freelance & partnerships",
+            "title": "Working with us as a freelancer",
+            "about": "The postings are being prepared and will be published soon. Don’t want to wait? Contact us with an unsolicited application.",
+            "apply": { "label": "Send unsolicited application", "href": "mailto:recruiting@s01-pm.de?subject=Freelance" }
+          }
+        ]
+      },
+      "why": {
+        "eyebrow": "Shape the future",
+        "title": "Why work at S01?",
+        "text": "S01 Projektmanagement is a dynamically growing company that combines a structured, reliable working environment with openness and room for initiative.\n\nAs a lean, specialised organisation, we give you the opportunity to contribute directly to projects and take responsibility.\n\nInstead of operating in anonymous large structures, you benefit from clear communication, short decision paths and the chance to actively contribute and implement your ideas."
+      },
+      "culture": {
+        "eyebrow": "Who we are",
+        "title": "Our culture",
+        "items": [
+          { "title": "Methodical & clear", "text": "We work with precise processes and recognised standards, without being bureaucratic." },
+          { "title": "Reliable & focused", "text": "Clients and colleagues can count on us – we keep our word." },
+          { "title": "Team-oriented & respectful", "text": "We see ourselves as partners, not just colleagues. Working together as equals is a matter of course for us." },
+          { "title": "Innovative & eager to learn", "text": "We use modern tools, keep developing our workflows and support further training." }
+        ]
+      },
+      "benefits": {
+        "eyebrow": "What we offer",
+        "title": "Benefits",
+        "items": [
+          "Actively shape our growth – we offer room for ideas, initiative and the chance to develop new business areas and grow towards project management, product management or business development",
+          "Responsibility and creative freedom from day one",
+          "Professional onboarding",
+          "Short decision paths and direct exchange with management",
+          "Flexible working models and home office options",
+          "Modern tools and working methods according to international standards",
+          "Projects with social relevance – contributing to the energy transition and security of supply"
+        ]
+      },
+      "process": {
+        "eyebrow": "Application process",
+        "title": "How the application process works",
+        "items": [
+          { "title": "Online application", "text": "Found an opening that fits you perfectly? Send us your complete documents by email to recruiting@s01-pm.de." },
+          { "title": "Review and feedback", "text": "We review your application documents and usually get back to you within 1–2 weeks." },
+          { "title": "Personal conversation", "text": "If your profile matches S01, we arrange a first conversation to talk about professional experience, qualifications, expectations and motivation. It usually takes place as a video call and lasts 30–60 minutes." },
+          { "title": "Decision", "text": "If you have convinced us, our team will contact you to discuss the next steps. If everything fits, you receive a binding offer." }
+        ]
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "items": [
+          { "q": "Which projects does S01 Projektmanagement work on?", "a": "We specialise in project management for energy infrastructure projects – in particular power generation, transmission and distribution." },
+          { "q": "Which qualifications are required for an application?", "a": "We are looking for committed profiles in engineering, business administration, law and finance to drive both technical projects and the development and management of specific business areas. Very good German and English skills are required for all positions." },
+          { "q": "Are there remote working options?", "a": "Yes, some roles can be performed remotely.\n\nOther positions – particularly in project management and administration – mostly require on-site presence, not only in the office but also on construction sites, to ensure close coordination with the team and clients. Details are given in each job description." },
+          { "q": "How does the application process work?", "a": "Application by email to recruiting@s01-pm.de. Feedback within 1–2 weeks. A first video interview (30–60 minutes), a second interview on site, then decision and offer." },
+          { "q": "Which benefits does S01 Projektmanagement offer?", "a": "Flexible working models, short decision paths, modern tools and professional onboarding, and the chance to actively contribute to the growth and expansion of the company and take on new roles." }
+        ]
+      },
+      "apply": {
+        "title": "Apply to S01 now",
+        "text": "Shape tomorrow’s energy infrastructure with us. Apply now and become part of S01 Projektmanagement."
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact S01 Projektmanagement in Eschborn: email, phone and contact form for your project enquiry.",
+      "hero": { "title": "Contact", "lead": "Get in touch now and start your project" },
+      "email": { "value": "info@s01-pm.de", "text": "We look forward to your message, project enquiry or suggestion by email." },
+      "phone": { "value": "+49 6196 58655-556", "href": "+49619658655556", "text": "Our experts are available by phone for an initial consultation." },
+      "form": {
+        "title": "Contact form",
+        "name": "Name",
+        "company": "Company",
+        "email": "Email",
+        "phone": "Phone",
+        "message": "Message",
+        "consent": "Detailed information on how we handle user data can be found in our privacy policy. I have taken note of it and expressly consent to the processing of my data.",
+        "consentLink": "Read the privacy policy",
+        "submit": "Send",
+        "success": "Thank you! This is a demo – your message was not sent.",
+        "demoNote": "Demo form: no data is transmitted."
+      }
+    },
+    "imprint": {
+      "title": "Imprint",
+      "description": "Imprint of S01 Projektmanagement GmbH, Eschborn.",
+      "hero": { "title": "Imprint", "lead": "" },
+      "notice": "",
+      "blocks": [
+        { "title": "Name and address", "lines": ["S01 Projektmanagement GmbH", "Mergenthalerallee 15–21", "65760 Eschborn, Germany", "Registered office: Eschborn", "Commercial register: HRB 139040", "Register court: Amtsgericht Frankfurt am Main", "VAT ID: DE 454939481", "Managing director: Theodor Victor Nuñez Perelygin", "Responsible for content: Theodor Victor Nuñez Perelygin"], "text": "" },
+        { "title": "Contact", "lines": ["Email: info@s01-pm.de", "Phone: +49 6196 58655-556"], "text": "" },
+        { "title": "Disclaimer", "lines": [], "text": "S01 Projektmanagement GmbH does not guarantee that the information provided on this website is complete, correct and up to date in every case. In particular, S01 Projektmanagement GmbH accepts no liability for content that is expressly marked as third-party content. S01 Projektmanagement GmbH is not responsible for such content being complete, correct, current and lawful, or for it not infringing the rights of third parties. This also applies to the content of websites referred to by a link.\n\nS01 Projektmanagement GmbH reserves the right to change, supplement or remove the information provided without prior notice.\n\nUnder no circumstances is S01 Projektmanagement GmbH liable for damages arising from the inability to use, or from loss of data in connection with the use of, documents or information or the provision of services accessible on this website." },
+        { "title": "Design", "lines": ["Diemer & Schweig Designstudio", "www.diemerschweig.de"], "text": "" }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "Privacy notice of S01 Projektmanagement GmbH (demo placeholder).",
+      "hero": { "title": "Privacy policy", "lead": "" },
+      "notice": "Demo – the legally binding text will be provided by S01.",
+      "blocks": [
+        { "title": "Controller", "lines": ["S01 Projektmanagement GmbH", "Alfred-Herrhausen-Allee 3-5", "65760 Eschborn, Germany", "Email: info@s01-pm.de", "Phone: +49 6196 58655-556"], "text": "" },
+        { "title": "Hosting", "lines": [], "text": "This demo site is delivered as a static website. No cookies are set and no analytics or tracking tools are used." },
+        { "title": "Contact form", "lines": [], "text": "The contact form of this demo does not transmit any data. On the future website, the details entered in the form will be processed solely to handle the enquiry (Art. 6(1)(b) GDPR)." },
+        { "title": "Your rights", "lines": [], "text": "You have the right to access, rectification, erasure, restriction of processing, data portability and objection. You also have the right to lodge a complaint with the competent supervisory authority." }
+      ]
+    }
+  }
+}
