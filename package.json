@@ -1,0 +1,19 @@
+{
+  "name": "s01-demos",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "24 shareable demo redesigns of s01-pm.de, generated from one content source",
+  "scripts": {
+    "build": "node build/build.js",
+    "check": "node build/check.js",
+    "serve": "node build/serve.js dist 8080",
+    "fetch-assets": "node build/fetch-assets.js",
+    "posters": "node build/posters.js",
+    "shots": "node build/shots.js",
+    "test": "node --test \"tests/**/*.test.js\""
+  },
+  "devDependencies": {
+    "playwright": "^1.50.0"
+  }
+}
