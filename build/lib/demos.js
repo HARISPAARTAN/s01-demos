@@ -5,6 +5,7 @@ export const VARIANT_KEYS = ['nav', 'hero', 'services', 'feature', 'projects', '
 
 export function validateDemo(demo, folder, registry, videoKeys) {
   const where = `demos/${folder}`;
+  if (!demo || typeof demo !== 'object' || Array.isArray(demo)) throw new Error(`${where}/demo.json: must be a JSON object`);
   if (demo.id !== folder) throw new Error(`${where}/demo.json: id "${demo.id}" must equal folder name "${folder}"`);
   if (typeof demo.name !== 'string' || !demo.name) throw new Error(`${where}: name missing`);
   if (!demo.description || typeof demo.description.de !== 'string') throw new Error(`${where}: description.de missing`);
@@ -28,11 +29,18 @@ export function validateDemo(demo, folder, registry, videoKeys) {
 export function loadDemos(root, registry, videoKeys) {
   const dir = join(root, 'demos');
   const folders = readdirSync(dir, { withFileTypes: true })
-    .filter((e) => e.isDirectory() && existsSync(join(dir, e.name, 'demo.json')))
+    .filter((e) => e.isDirectory())
     .map((e) => e.name)
     .sort();
   return folders.map((folder) => {
-    const demo = JSON.parse(readFileSync(join(dir, folder, 'demo.json'), 'utf8'));
+    const file = join(dir, folder, 'demo.json');
+    if (!existsSync(file)) throw new Error(`demos/${folder}: demo.json missing`);
+    let demo;
+    try {
+      demo = JSON.parse(readFileSync(file, 'utf8'));
+    } catch (err) {
+      throw new Error(`demos/${folder}/demo.json: invalid JSON (${err.message})`);
+    }
     validateDemo(demo, folder, registry, videoKeys);
     if (!existsSync(join(dir, folder, 'theme.css'))) throw new Error(`demos/${folder}: theme.css missing`);
     demo.dir = join(dir, folder);

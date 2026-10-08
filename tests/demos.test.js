@@ -57,3 +57,12 @@ test('loadDemos reads folders sorted and requires theme.css', () => {
   const r2 = root({ '01-a': { json: { ...good, id: '01-a' }, theme: null } });
   assert.throws(() => loadDemos(r2, registry, videoKeys), /demos\/01-a: theme\.css missing/);
 });
+
+test('loadDemos names the folder for missing or invalid demo.json', () => {
+  const r1 = root({ '01-a': { json: null } });
+  assert.throws(() => loadDemos(r1, registry, videoKeys), /demos\/01-a: demo\.json missing/);
+  const r2 = root({ '01-a': { json: { ...good, id: '01-a' } } });
+  writeFileSync(join(r2, 'demos', '01-a', 'demo.json'), '{ bad json');
+  assert.throws(() => loadDemos(r2, registry, videoKeys), /demos\/01-a\/demo\.json: invalid JSON/);
+  assert.throws(() => validateDemo(null, '01-a', registry, videoKeys), /demos\/01-a\/demo\.json: must be a JSON object/);
+});
