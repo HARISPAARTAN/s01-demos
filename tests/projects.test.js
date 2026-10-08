@@ -7,7 +7,12 @@ for (const variant of ['cards', 'timeline', 'table', 'masonry']) {
   test(`projects.${variant} renders all seven references`, () => {
     const html = projects[variant](makeCtx({ page: 'projects' }));
     assert.ok(html.includes(`<section id="projects" class="section projects projects-${variant}">`));
-    assert.equal(count(html, /<h2>/g), 7);
+    if (variant === 'table') {
+      assert.equal(count(html, /<h2>/g), 0);
+      assert.equal(count(html, /<th scope="row">/g), 7);
+    } else {
+      assert.equal(count(html, /<h2>/g), 7);
+    }
     assert.ok(html.includes('Neubau 380 kV Umspannwerk (inkl. Rückbau)'));
     assert.ok(html.includes('Nachverfolgung von Nebenbestimmungen (BImSchG)'));
     assert.equal(count(html, /<li>/g), 23);
