@@ -37,3 +37,9 @@ test('makePaths rejects unknown language or page', () => {
   assert.throws(() => makePaths({ lang: 'fr', page: 'home', slugs }), /Unknown language "fr"/);
   assert.throws(() => makePaths({ lang: 'de', page: 'x', slugs }), /Unknown page "x"/);
 });
+
+test('makePaths rejects a page missing from the other language table', () => {
+  const oneSided = { de: { home: 'index.html', extra: 'extra.html' }, en: { home: 'index.html' } };
+  assert.throws(() => makePaths({ lang: 'de', page: 'extra', slugs: oneSided }), /Unknown page "extra" for language "en"/);
+  assert.doesNotThrow(() => makePaths({ lang: 'de', page: 'home', slugs: oneSided }));
+});
