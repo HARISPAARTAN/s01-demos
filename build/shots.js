@@ -19,6 +19,11 @@ const demos = readdirSync(out, { withFileTypes: true })
   .map((e) => e.name)
   .sort()
   .filter((id) => !only.length || only.includes(id));
+const unknown = only.filter((id) => !demos.includes(id));
+if (unknown.length) {
+  console.error(`Unknown demo id(s): ${unknown.join(', ')}`);
+  process.exit(1);
+}
 
 const server = await startServer({ dir: out });
 const browser = await launchBrowser();
@@ -27,7 +32,12 @@ const problems = [];
 async function open(context, url) {
   const page = await context.newPage();
   const errors = [];
-  page.on('console', (m) => { if (m.type() === 'error') errors.push(`console: ${m.text()}`); });
+  page.on('console', (m) => {
+    if (m.type() !== 'error') return;
+    const where = m.location() && m.location().url ? m.location().url : '';
+    if (/fonts\.(googleapis|gstatic)\.com/.test(where) || /fonts\.(googleapis|gstatic)\.com/.test(m.text())) return;
+    errors.push(`console: ${m.text()}`);
+  });
   page.on('pageerror', (e) => errors.push(`pageerror: ${e.message}`));
   page.on('requestfailed', (r) => {
     const f = r.failure();
@@ -53,21 +63,31 @@ for (const id of demos) {
   const navLinks = await home.page.locator('#site-menu a').count();
   if (videos !== 1) home.errors.push(`expected 1 hero video, found ${videos}`);
   if (navLinks < 6) home.errors.push(`expected at least 6 nav links, found ${navLinks}`);
-  await home.page.screenshot({ path: join(root, 'assets/thumbs', `${id}.jpg`), type: 'jpeg', quality: 80 });
+  // Thumbnails must be reproducible: show the poster frame instead of the live video, hide the demo badge.
+  await home.page.evaluate(() => {
+    const badge = document.querySelector('[data-badge]');
+    if (badge) badge.hidden = true;
+    const v = document.querySelector('video.hero-video');
+    if (v) {
+      v.pause();
+      v.style.display = 'none';
+    }
+  });
+  await home.page.screenshot({ path: join(root, 'assets/thumbs', `${id}.jpg`), type: 'jpeg', quality: 80, animations: 'disabled' });
   problems.push(...home.errors.map(label));
   await home.page.close();
 
   const services = await open(desktop, `${server.url}/${id}/en/${slugs.en.services}`);
   const anchors = await services.page.locator('#risk').count();
   if (anchors !== 1) services.errors.push(`services page: expected id="risk", found ${anchors}`);
-  problems.push(...services.errors.map((s) => label(`services ${s}`)));
+  problems.push(...services.errors.map((s) => label(`services page: ${s}`)));
   await services.page.close();
 
   const m = await open(mobile, `${server.url}/${id}/de/${slugs.de.home}`);
   const burgerVisible = await m.page.locator('.nav-burger').isVisible();
-  if (!burgerVisible) m.errors.push('mobile: burger button not visible');
+  if (!burgerVisible) m.errors.push('burger button not visible');
   await m.page.screenshot({ path: join(root, '.shots', `${id}-mobile.png`), fullPage: false });
-  problems.push(...m.errors.map((s) => label(`mobile ${s}`)));
+  problems.push(...m.errors.map((s) => label(`mobile home: ${s}`)));
   await m.page.close();
 
   await desktop.close();

@@ -216,6 +216,9 @@ body.nav-transparent-layout:not(.page-home) .nav-transparent:not(.is-scrolled), 
 .scroll-cue span { width: 4px; height: 8px; margin-top: 8px; border-radius: 2px; background: #fff; animation: cue 1.8s infinite; }
 @keyframes cue { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(14px); opacity: 0; } 100% { opacity: 0; } }
 .hero-split .scroll-cue { display: none; }
+@media (max-width: 639px) { .scroll-cue { display: none; } }
+.hero-centered .hero-bullets li { padding-left: 0; }
+.hero-centered .hero-bullets li::before { position: static; display: inline-block; margin-right: 8px; vertical-align: middle; }
 
 /* snap mode */
 html:has(body.snap-home) { scroll-snap-type: y proximity; scroll-padding-top: 0; }
