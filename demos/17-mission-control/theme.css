@@ -1,0 +1,42 @@
+:root {
+  --bg: #0b0f14;
+  --fg: #d7e3ee;
+  --muted: #86a0b8;
+  --surface: #10171f;
+  --surface-2: #15202b;
+  --border: #22303e;
+  --accent: #4ade80;
+  --accent-fg: #0b0f14;
+  --accent-2: #22c55e;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(11, 15, 20, 0.35), rgba(11, 15, 20, 0.85));
+  --radius: 3px;
+  --radius-lg: 6px;
+  --shadow: none;
+  --font-heading: "IBM Plex Sans", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+}
+.eyebrow, .hero-eyebrow, .num, .label, .stat-value, .breadcrumb, .lang-toggle, .footer-iso, .tl-marker, .site-nav a, .btn, .hero-bullets { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+.eyebrow::before, .hero-eyebrow::before { content: "[ "; }
+.eyebrow::after, .hero-eyebrow::after { content: " ]"; }
+.eyebrow, .hero-eyebrow { color: var(--accent); letter-spacing: 0.1em; }
+.hero-overlay { background: var(--hero-overlay), repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.18) 0 2px, transparent 2px 4px); }
+.hero-title::after { content: "_"; color: var(--accent); animation: blink 1s steps(2) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.hero-bullets li::before { background: var(--accent); border-radius: 0; }
+.site-header { border-bottom: 1px solid var(--border); background: var(--bg); }
+.site-nav a { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.btn { border-radius: var(--radius); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; }
+.btn-ghost { border-color: rgba(215, 227, 238, 0.5); }
+.num-item { border-color: var(--border); }
+.num-item .num::before { content: "> "; }
+.card, .stat, .feature .pillar, .form, .step { background: var(--surface); border-color: var(--border); }
+.stat { border-left: 3px solid var(--accent); }
+.stat-value { color: var(--accent); }
+.tl::before { background: var(--border); }
+.tl-marker { background: var(--bg); color: var(--accent); border: 1px solid var(--accent); border-radius: 3px; }
+.cta-box { background: var(--surface); border: 1px solid var(--accent); color: var(--fg); }
+.cta-box .btn-primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.site-footer { background: #070a0e; }
+.page-hero { background: var(--surface); }
+.form input:not([type="checkbox"]), .form textarea { background: #0b0f14; font-family: "IBM Plex Mono", ui-monospace, monospace; }

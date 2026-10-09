@@ -1,0 +1,41 @@
+:root {
+  --bg: #f7f8fa;
+  --fg: #111827;
+  --muted: #6b7280;
+  --surface: #ffffff;
+  --surface-2: #eceff3;
+  --border: #e2e6ea;
+  --accent: #111827;
+  --accent-fg: #ffffff;
+  --accent-2: #2563eb;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(17, 24, 39, 0.3), rgba(17, 24, 39, 0.7));
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 1px 3px rgba(17, 24, 39, 0.06), 0 10px 30px rgba(17, 24, 39, 0.06);
+  --font-heading: "Rubik", system-ui, sans-serif;
+  --font-body: "Rubik", system-ui, sans-serif;
+  --section-y: 72px;
+  --h1: clamp(2rem, 4.5vw, 3.8rem);
+}
+.eyebrow { color: var(--accent-2); }
+.card, .feature .pillar, .form, .step, .stat { box-shadow: var(--shadow); }
+.stat-value { color: var(--accent-2); }
+.btn-primary:hover { background: var(--accent-2); border-color: var(--accent-2); }
+.hero-bullets li::before { background: var(--accent-2); }
+.hero-split .hero-content { background: var(--bg); }
+.table { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+.table tbody tr:nth-child(even) { background: var(--surface-2); }
+.table thead { background: var(--accent); color: var(--accent-fg); }
+.table thead th { color: var(--accent-fg); }
+.cta-box { background: var(--accent); }
+.cta-box .btn-primary { background: var(--accent-2); color: #ffffff; border-color: var(--accent-2); }
+.site-footer { background: var(--surface); }
+.page-hero { background: var(--surface); }
+@media (min-width: 1024px) {
+  .nav-sidebar { background: var(--accent); color: var(--accent-fg); border-right: 0; }
+  .nav-sidebar .site-nav li a[aria-current="page"] { background: var(--accent-2); color: #ffffff; }
+  .nav-sidebar .site-nav a:hover { color: #93c5fd; }
+  .nav-sidebar .nav-contact a { color: #cbd5e1; }
+  .nav-sidebar .lang-toggle { border-color: rgba(255, 255, 255, 0.5); }
+}

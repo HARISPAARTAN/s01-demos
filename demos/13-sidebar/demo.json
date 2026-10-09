@@ -1,0 +1,25 @@
+{
+  "id": "13-sidebar",
+  "order": 13,
+  "name": "Sidebar",
+  "description": {
+    "de": "Feste Seitenleiste links, Dashboard-Anmutung, kompakte Abstände, Leistungen als Akkordeon.",
+    "en": "Fixed left sidebar, dashboard feel, compact spacing, services as an accordion."
+  },
+  "scheme": "light",
+  "accent": "#4f46e5",
+  "fonts": [
+    "Outfit:wght@400;600;800"
+  ],
+  "variants": {
+    "nav": "sidebar",
+    "hero": "split",
+    "services": "accordion",
+    "feature": "tabs",
+    "projects": "table",
+    "faq": "accordion",
+    "footer": "minimal",
+    "contact": "split"
+  },
+  "video": "substation"
+}

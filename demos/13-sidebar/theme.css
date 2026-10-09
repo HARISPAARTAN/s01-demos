@@ -1,0 +1,36 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1f2937;
+  --muted: #6b7280;
+  --surface: #f8fafc;
+  --surface-2: #eef2f7;
+  --border: #e5e7eb;
+  --accent: #4f46e5;
+  --accent-fg: #ffffff;
+  --accent-2: #a5b4fc;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(31, 41, 55, 0.25), rgba(31, 41, 55, 0.6));
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(31, 41, 55, 0.06);
+  --font-heading: "Outfit", system-ui, sans-serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+  --section-y: 64px;
+  --h1: clamp(2.2rem, 4.5vw, 3.6rem);
+  --h2: clamp(1.5rem, 2.6vw, 2.1rem);
+}
+.card, .feature .pillar, .form, .step, .stat, .tabs [role="tabpanel"] { box-shadow: var(--shadow); }
+.eyebrow { color: var(--accent); }
+.hero-split .hero-content { background: var(--surface); }
+.hero-bullets li::before { background: var(--accent); }
+.acc-list { border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; background: var(--surface); }
+.acc { border-color: var(--border); padding: 0 20px; }
+.acc:last-child { border-bottom: 0; }
+.table { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+.table thead { background: var(--surface-2); }
+.cta-box { background: var(--accent); }
+.site-footer { background: var(--surface); }
+.page-hero { background: var(--surface); }
+.nav-sidebar .site-nav li a[aria-current="page"] { background: var(--accent); }
+.nav-contact a { color: var(--muted); text-decoration: none; }
+.form input:not([type="checkbox"]), .form textarea { background: #ffffff; }

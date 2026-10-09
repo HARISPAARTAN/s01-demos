@@ -1,0 +1,25 @@
+{
+  "id": "20-sidebar-dark",
+  "order": 20,
+  "name": "Sidebar Dark",
+  "description": {
+    "de": "Dunkle Seitenleiste, heller Inhalt, Enterprise-Tabellen mit Zebrastreifen, blauer Aktiv-Marker.",
+    "en": "Dark sidebar, light content, enterprise tables with zebra rows, blue active marker."
+  },
+  "scheme": "light",
+  "accent": "#111827",
+  "fonts": [
+    "Rubik:wght@400;500;700"
+  ],
+  "variants": {
+    "nav": "sidebar",
+    "hero": "split",
+    "services": "grid",
+    "feature": "stats",
+    "projects": "table",
+    "faq": "two-column",
+    "footer": "minimal",
+    "contact": "split"
+  },
+  "video": "powerlines"
+}

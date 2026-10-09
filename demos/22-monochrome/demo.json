@@ -1,0 +1,26 @@
+{
+  "id": "22-monochrome",
+  "order": 22,
+  "name": "Monochrome",
+  "description": {
+    "de": "Schwarz-Weiß-Fotografie, Video in Graustufen, riesige Ränder, Caslon-Headlines, Overlay-Menü.",
+    "en": "Black-and-white photography, grayscale video, huge margins, Caslon headlines, overlay menu."
+  },
+  "scheme": "light",
+  "accent": "#0a0a0a",
+  "fonts": [
+    "Libre+Caslon+Text:ital,wght@0,400;0,700;1,400",
+    "Work+Sans:wght@400;500;600"
+  ],
+  "variants": {
+    "nav": "hamburger",
+    "hero": "bottom-left",
+    "services": "rows",
+    "feature": "columns",
+    "projects": "masonry",
+    "faq": "two-column",
+    "footer": "minimal",
+    "contact": "centered"
+  },
+  "video": "powerlines"
+}

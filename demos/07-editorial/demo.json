@@ -1,0 +1,26 @@
+{
+  "id": "07-editorial",
+  "order": 7,
+  "name": "Editorial",
+  "description": {
+    "de": "Magazin-Anmutung: Creme, Serifen-Headlines, Initiale, alternierende Bild-Text-Reihen.",
+    "en": "Magazine feel: cream paper, serif headlines, a drop cap, alternating image and text rows."
+  },
+  "scheme": "light",
+  "accent": "#7a1f1f",
+  "fonts": [
+    "Fraunces:ital,wght@0,500;0,700;1,500",
+    "Source+Serif+4:wght@400;600"
+  ],
+  "variants": {
+    "nav": "solid",
+    "hero": "split",
+    "services": "rows",
+    "feature": "columns",
+    "projects": "masonry",
+    "faq": "two-column",
+    "footer": "columns",
+    "contact": "split"
+  },
+  "video": "trailer"
+}

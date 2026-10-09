@@ -1,0 +1,35 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1c1c28;
+  --muted: #5c5c6e;
+  --surface: #f6f6fa;
+  --surface-2: #ececf4;
+  --border: #e0e0ea;
+  --accent: #6d28d9;
+  --accent-fg: #ffffff;
+  --accent-2: #c4b5fd;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(28, 28, 40, 0.2), rgba(109, 40, 217, 0.55));
+  --radius: 12px;
+  --radius-lg: 18px;
+  --shadow: 0 16px 40px rgba(109, 40, 217, 0.1);
+  --font-heading: "Red Hat Display", system-ui, sans-serif;
+  --font-body: "Red Hat Text", system-ui, sans-serif;
+}
+h1, h2 { font-weight: 900; letter-spacing: -0.02em; }
+.eyebrow { color: var(--accent); }
+.hero-bullets li::before { background: var(--accent-2); }
+.tl::before { background: linear-gradient(var(--accent), var(--accent-2)); left: 23px; width: 3px; }
+.tl-item { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 24px; padding: 0 0 56px; }
+.tl-marker { position: sticky; top: 100px; align-self: start; width: 48px; height: 48px; font-size: 1rem; box-shadow: 0 0 0 6px var(--bg); }
+.tl-body { padding-top: 8px; }
+.tl-body h3 { font-size: clamp(1.4rem, 2.4vw, 2rem); }
+.tl-body p { color: var(--muted); }
+body.page-home .intro { position: relative; }
+body.page-home .intro::after { content: ""; display: block; width: 3px; height: 72px; background: linear-gradient(var(--accent), transparent); margin: 40px auto 0; }
+.card, .feature .pillar, .form, .step { border: 0; box-shadow: var(--shadow); background: var(--surface); }
+.btn { border-radius: 999px; }
+.cta-box { background: linear-gradient(135deg, var(--accent), #4c1d95); }
+.site-footer { background: var(--surface); border-top: 0; }
+.nav-transparent.is-scrolled { background: rgba(255, 255, 255, 0.94); }
+.page-hero { background: var(--surface); }

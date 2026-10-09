@@ -1,0 +1,37 @@
+:root {
+  --bg: #fffdfa;
+  --fg: #2d2a32;
+  --muted: #6e6977;
+  --surface: #fff3ea;
+  --surface-2: #e9f1ff;
+  --border: #f0e4da;
+  --accent: #c2410c;
+  --accent-fg: #ffffff;
+  --accent-2: #93c5fd;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(45, 42, 50, 0.2), rgba(194, 65, 12, 0.45));
+  --radius: 24px;
+  --radius-lg: 32px;
+  --shadow: 0 20px 50px rgba(194, 65, 12, 0.1);
+  --font-heading: "Nunito", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
+}
+h1, h2 { font-weight: 900; letter-spacing: -0.02em; }
+.section { position: relative; overflow: hidden; }
+.section:nth-of-type(odd)::before { content: ""; position: absolute; width: 420px; height: 420px; right: -160px; top: -120px; border-radius: 50%; background: radial-gradient(circle, var(--surface-2), transparent 70%); z-index: 0; }
+.section:nth-of-type(even)::before { content: ""; position: absolute; width: 380px; height: 380px; left: -140px; bottom: -120px; border-radius: 50%; background: radial-gradient(circle, var(--surface), transparent 70%); z-index: 0; }
+.section > .container { position: relative; z-index: 1; }
+.section:nth-of-type(even) { background: var(--surface-2); }
+.card, .feature .pillar, .form, .step, .stat { border: 0; box-shadow: var(--shadow); background: #ffffff; }
+.card-media img { border-radius: 0; }
+.btn { border-radius: 999px; padding: 16px 30px; font-weight: 900; }
+.eyebrow { color: var(--accent); background: var(--surface); display: inline-block; padding: 4px 12px; border-radius: 999px; }
+.hero-bullets li::before { background: var(--accent-2); }
+.glass-panel { border-radius: var(--radius-lg); background: rgba(255, 255, 255, 0.16); }
+.cta-box { border-radius: 48px; background: linear-gradient(135deg, var(--accent), #ea580c); }
+.word-grid li { border-left: 0; background: #ffffff; box-shadow: var(--shadow); text-align: center; }
+.site-footer { background: var(--surface); border-top: 0; border-radius: 48px 48px 0 0; }
+.page-hero { background: var(--surface); border-radius: 0 0 48px 48px; }
+.acc { border: 0; background: #ffffff; border-radius: var(--radius); margin-bottom: 12px; padding: 0 20px; box-shadow: var(--shadow); }
+.acc-list { border-top: 0; }
+.nav-pill .nav-inner::before { border: 0; box-shadow: var(--shadow); }

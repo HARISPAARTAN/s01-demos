@@ -1,0 +1,34 @@
+:root {
+  --bg: #05080f;
+  --fg: #e6f1ff;
+  --muted: #8ea2bf;
+  --surface: #0b1220;
+  --surface-2: #111a2d;
+  --border: #1c2a44;
+  --accent: #22d3ee;
+  --accent-fg: #05080f;
+  --accent-2: #0ea5e9;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(5, 8, 15, 0.3), rgba(5, 8, 15, 0.85));
+  --radius: 4px;
+  --radius-lg: 8px;
+  --shadow: 0 0 0 1px rgba(34, 211, 238, 0.15), 0 20px 50px rgba(0, 0, 0, 0.5);
+  --font-heading: "Sora", system-ui, sans-serif;
+  --font-body: "Sora", system-ui, sans-serif;
+}
+body { background-image: linear-gradient(rgba(34, 211, 238, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 211, 238, 0.06) 1px, transparent 1px); background-size: 48px 48px; }
+.eyebrow, .hero-eyebrow, .num, .label, .stat-value, .breadcrumb, .lang-toggle, .footer-iso, .tl-marker { font-family: "JetBrains Mono", ui-monospace, monospace; }
+.eyebrow::before, .hero-eyebrow::before { content: "// "; opacity: 0.6; }
+.hero-overlay { background: var(--hero-overlay), repeating-linear-gradient(0deg, rgba(34, 211, 238, 0.05) 0 1px, transparent 1px 48px); }
+.btn-primary { box-shadow: 0 0 24px rgba(34, 211, 238, 0.35); }
+.btn-ghost { border-color: rgba(230, 241, 255, 0.5); }
+.card, .scroll-card, .stat, .feature .pillar, .form, .step, .bento-item { background: rgba(11, 18, 32, 0.85); border-color: var(--border); }
+.stat-value { text-shadow: 0 0 20px rgba(34, 211, 238, 0.5); }
+.tl::before { background: linear-gradient(var(--accent), transparent); }
+.tl-marker { background: var(--surface); color: var(--accent); border: 1px solid var(--accent); }
+.cta-box { background: var(--surface); border: 1px solid var(--accent); color: var(--fg); box-shadow: var(--shadow); }
+.cta-box .btn-primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.site-footer { background: #03060b; }
+.nav-transparent.is-scrolled { background: rgba(5, 8, 15, 0.9); color: var(--fg); border-bottom: 1px solid var(--border); }
+.page-hero { background: var(--surface); }
+.form input:not([type="checkbox"]), .form textarea { background: #05080f; }

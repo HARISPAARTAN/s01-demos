@@ -1,0 +1,25 @@
+{
+  "id": "23-energy-green",
+  "order": 23,
+  "name": "Energy Green",
+  "description": {
+    "de": "Smaragd und Limette, Nachhaltigkeits-Fokus, Windpark-Video, Kennzahlen und grüner Verlauf-CTA.",
+    "en": "Emerald and lime, sustainability focus, wind-farm video, key figures and a green gradient CTA."
+  },
+  "scheme": "light",
+  "accent": "#047857",
+  "fonts": [
+    "Lexend:wght@400;600;800"
+  ],
+  "variants": {
+    "nav": "solid",
+    "hero": "centered",
+    "services": "grid",
+    "feature": "stats",
+    "projects": "cards",
+    "faq": "accordion",
+    "footer": "columns",
+    "contact": "split"
+  },
+  "video": "windfarm"
+}

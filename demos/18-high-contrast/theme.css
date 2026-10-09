@@ -1,0 +1,51 @@
+:root {
+  --bg: #ffffff;
+  --fg: #000000;
+  --muted: #333333;
+  --surface: #f0f0f0;
+  --surface-2: #e0e0e0;
+  --border: #000000;
+  --accent: #000000;
+  --accent-fg: #ffff00;
+  --accent-2: #ffff00;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.82));
+  --radius: 4px;
+  --radius-lg: 4px;
+  --shadow: none;
+  --font-heading: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --lh: 1.7;
+}
+html { font-size: 112.5%; }
+a { text-decoration: underline; text-decoration-thickness: 2px; }
+.site-nav a, .btn, .logo, .link-more, .footer-links a { text-decoration: none; }
+.site-nav a:hover, .footer-links a:hover, .link-more:hover { text-decoration: underline; }
+:focus-visible { outline: 4px solid #000000; outline-offset: 3px; box-shadow: 0 0 0 8px var(--accent-2); }
+.eyebrow { color: #000000; background: var(--accent-2); display: inline-block; padding: 2px 8px; }
+.hero-eyebrow { background: var(--accent-2); color: #000000; display: inline-block; padding: 4px 10px; }
+.hero-bullets li::before { background: var(--accent-2); }
+.btn { border: 3px solid #000000; font-size: 1rem; }
+.btn-primary { background: #000000; color: var(--accent-2); }
+.btn-ghost { background: #ffffff; color: #000000; }
+.hero .btn-ghost { color: #000000; }
+.site-header { border-bottom: 3px solid #000000; }
+.site-nav a[aria-current="page"] { color: #000000; background: var(--accent-2); padding: 4px 8px; }
+.card, .feature .pillar, .form, .step, .stat { border: 2px solid #000000; background: #ffffff; }
+@media (max-width: 639px) { .num-item h3 { font-size: 1.25rem; } }
+.num-item, .acc, .acc-list, .table th, .table td { border-color: #000000; }
+.num-item .num { color: #000000; }
+.acc-trigger { font-size: 1.1rem; }
+.acc-panel { color: #000000; }
+.pillar p, .lead, .stat-label, .faq-item p, .services .card-body p, .step p, .contact-block p:last-child, .footer-copy, .form-note { color: #000000; }
+.cta-box { background: #000000; color: #ffffff; border-radius: 0; }
+.cta-box .btn-primary { background: var(--accent-2); color: #000000; border-color: var(--accent-2); }
+.site-footer { background: #ffffff; border-top: 3px solid #000000; }
+.iso-badge { border-color: #000000; color: #000000; }
+.word-grid li { border: 2px solid #000000; background: #ffffff; }
+.page-hero { background: #ffffff; border-bottom: 3px solid #000000; }
+.page-hero.has-media { color: #ffffff; }
+.form input:not([type="checkbox"]), .form textarea { border: 2px solid #000000; }
+.demo-badge-wrap { background: var(--accent-2); color: #000000; border: 2px solid #000000; }
+.demo-badge { color: #000000; }
+.demo-badge-close { background: #000000; color: var(--accent-2); }

@@ -1,0 +1,32 @@
+:root {
+  --bg: #f4f7fb;
+  --fg: #0f172a;
+  --muted: #475569;
+  --surface: #ffffff;
+  --surface-2: #e9eef6;
+  --border: #dde4ee;
+  --accent: #0f766e;
+  --accent-fg: #ffffff;
+  --accent-2: #2563eb;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(160deg, rgba(15, 118, 110, 0.55), rgba(37, 99, 235, 0.45));
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow: 0 18px 50px rgba(15, 23, 42, 0.1);
+  --font-heading: "Albert Sans", system-ui, sans-serif;
+  --font-body: "Albert Sans", system-ui, sans-serif;
+}
+body { background: radial-gradient(900px 500px at 0% 10%, rgba(15, 118, 110, 0.18), transparent 60%), radial-gradient(800px 500px at 100% 40%, rgba(37, 99, 235, 0.16), transparent 60%), radial-gradient(700px 400px at 50% 100%, rgba(168, 85, 247, 0.12), transparent 60%), var(--bg); background-attachment: fixed; }
+h1, h2 { font-weight: 800; letter-spacing: -0.03em; }
+.page-hero h1, .section-head h2, .faq h2 { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; display: inline-block; }
+.card, .bento-item, .stat, .feature .pillar, .form, .step, .tabs [role="tabpanel"] { border: 0; box-shadow: var(--shadow); background: #ffffff; }
+.btn { border-radius: 999px; }
+.btn-primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); border: 0; }
+.glass-panel { background: rgba(255, 255, 255, 0.14); }
+.eyebrow { color: var(--accent); }
+.hero-bullets li::before { background: #ffffff; }
+.tabs [role="tab"] { background: #ffffff; }
+.tabs [role="tab"][aria-selected="true"] { background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-color: transparent; }
+.cta-box { background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+.site-footer { background: #ffffff; border-top: 0; }
+.page-hero { background: transparent; }

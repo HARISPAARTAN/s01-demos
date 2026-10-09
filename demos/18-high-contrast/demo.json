@@ -1,0 +1,25 @@
+{
+  "id": "18-high-contrast",
+  "order": 18,
+  "name": "High Contrast",
+  "description": {
+    "de": "Schwarz, Weiß, Gelb. Große Schrift, starke Fokusrahmen, Atkinson Hyperlegible, WCAG-AAA-Kontraste.",
+    "en": "Black, white, yellow. Large type, strong focus rings, Atkinson Hyperlegible, WCAG AAA contrast."
+  },
+  "scheme": "light",
+  "accent": "#000000",
+  "fonts": [
+    "Atkinson+Hyperlegible:wght@400;700"
+  ],
+  "variants": {
+    "nav": "solid",
+    "hero": "centered",
+    "services": "numbered",
+    "feature": "columns",
+    "projects": "table",
+    "faq": "accordion",
+    "footer": "columns",
+    "contact": "split"
+  },
+  "video": "trailer"
+}

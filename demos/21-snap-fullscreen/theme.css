@@ -1,0 +1,39 @@
+:root {
+  --bg: #0d1117;
+  --fg: #f0f6fc;
+  --muted: #8b949e;
+  --surface: #161b22;
+  --surface-2: #21262d;
+  --border: #30363d;
+  --accent: #58a6ff;
+  --accent-fg: #0d1117;
+  --accent-2: #79c0ff;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(13, 17, 23, 0.25), rgba(13, 17, 23, 0.8));
+  --radius: 10px;
+  --radius-lg: 16px;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --font-heading: "Montserrat", system-ui, sans-serif;
+  --font-body: "Montserrat", system-ui, sans-serif;
+  --h1: clamp(1.75rem, 7vw, 5.6rem);
+  --h2: clamp(1.5rem, 3.4vw, 2.6rem);
+}
+h1, h2 { font-weight: 800; letter-spacing: -0.02em; text-transform: uppercase; }
+@media (max-width: 639px) { h1, h2 { text-transform: none; } }
+.eyebrow, .hero-eyebrow { color: var(--accent-2); }
+body.snap-home .intro { background: linear-gradient(rgba(13, 17, 23, 0.75), rgba(13, 17, 23, 0.75)), url(../assets/img/substation.jpg) center / cover no-repeat; }
+body.snap-home .closing { background: linear-gradient(rgba(13, 17, 23, 0.7), rgba(13, 17, 23, 0.7)), url(../assets/img/powerlines-landscape.jpg) center / cover no-repeat; }
+body.snap-home .feature { background: var(--surface); }
+body.snap-home .faq .container { max-height: 85svh; overflow-y: auto; }
+body.snap-home .section { padding-block: 64px; }
+.statement { font-size: clamp(1.6rem, 3.2vw, 2.6rem); }
+.btn-ghost { border-color: rgba(240, 246, 252, 0.5); }
+.card, .bento-item, .stat, .feature .pillar, .form, .step { background: var(--surface); }
+.stat-value { color: var(--accent); }
+.cta-box { background: linear-gradient(135deg, #1f6feb, #388bfd); color: #ffffff; }
+.cta-box .btn-primary { background: #ffffff; color: #1f6feb; border-color: #ffffff; }
+.snap-dots span { background: #ffffff; }
+.site-footer { background: #010409; }
+.nav-transparent.is-scrolled { background: rgba(13, 17, 23, 0.92); color: var(--fg); }
+.page-hero { background: var(--surface); }
+.form input:not([type="checkbox"]), .form textarea { background: #0d1117; }

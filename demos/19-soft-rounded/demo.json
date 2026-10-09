@@ -1,0 +1,25 @@
+{
+  "id": "19-soft-rounded",
+  "order": 19,
+  "name": "Soft Rounded",
+  "description": {
+    "de": "Pastelltöne in Pfirsich und Hellblau, weiche Blobs, 32-px-Radien, runde Buttons, Glas-Hero.",
+    "en": "Pastel peach and light blue, soft blobs, 32px radii, round buttons, glass hero."
+  },
+  "scheme": "light",
+  "accent": "#c2410c",
+  "fonts": [
+    "Nunito:wght@400;700;900"
+  ],
+  "variants": {
+    "nav": "pill",
+    "hero": "glass",
+    "services": "grid",
+    "feature": "columns",
+    "projects": "cards",
+    "faq": "accordion",
+    "footer": "minimal",
+    "contact": "centered"
+  },
+  "video": "trailer"
+}

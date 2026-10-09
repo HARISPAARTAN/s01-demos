@@ -1,0 +1,25 @@
+{
+  "id": "14-carousel",
+  "order": 14,
+  "name": "Carousel",
+  "description": {
+    "de": "Dunkel mit Orange, riesige Konturziffern, Leistungen als horizontaler Snap-Karussell-Track.",
+    "en": "Dark with orange, giant outlined numerals, services as a horizontal snap-scrolling track."
+  },
+  "scheme": "dark",
+  "accent": "#ff6b35",
+  "fonts": [
+    "Space+Grotesk:wght@400;500;700"
+  ],
+  "variants": {
+    "nav": "transparent",
+    "hero": "bottom-left",
+    "services": "scroll",
+    "feature": "stats",
+    "projects": "cards",
+    "faq": "accordion",
+    "footer": "columns",
+    "contact": "split"
+  },
+  "video": "powerlines"
+}

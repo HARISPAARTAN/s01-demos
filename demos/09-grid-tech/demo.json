@@ -1,0 +1,26 @@
+{
+  "id": "09-grid-tech",
+  "order": 9,
+  "name": "Grid Tech",
+  "description": {
+    "de": "Fast schwarz, Cyan, Rasterlinien, Monospace-Labels, Kennzahlen und horizontal scrollende Leistungen.",
+    "en": "Near-black, cyan, grid lines, monospace labels, key figures and horizontally scrolling services."
+  },
+  "scheme": "dark",
+  "accent": "#22d3ee",
+  "fonts": [
+    "Sora:wght@400;600;800",
+    "JetBrains+Mono:wght@400;600"
+  ],
+  "variants": {
+    "nav": "transparent",
+    "hero": "bottom-left",
+    "services": "scroll",
+    "feature": "stats",
+    "projects": "timeline",
+    "faq": "accordion",
+    "footer": "columns",
+    "contact": "split"
+  },
+  "video": "powerlines"
+}

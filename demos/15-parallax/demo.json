@@ -1,0 +1,25 @@
+{
+  "id": "15-parallax",
+  "order": 15,
+  "name": "Parallax",
+  "description": {
+    "de": "Fixierte Foto-Hintergründe zwischen den Abschnitten, schwebende Kennzahlen-Karten, Teal-Akzent.",
+    "en": "Fixed photo backgrounds between sections, floating stat cards, teal accent."
+  },
+  "scheme": "light",
+  "accent": "#0e7490",
+  "fonts": [
+    "Urbanist:wght@400;600;800"
+  ],
+  "variants": {
+    "nav": "solid",
+    "hero": "centered",
+    "services": "grid",
+    "feature": "stats",
+    "projects": "masonry",
+    "faq": "accordion",
+    "footer": "columns",
+    "contact": "split"
+  },
+  "video": "trailer"
+}

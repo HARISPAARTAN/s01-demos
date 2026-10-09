@@ -1,0 +1,26 @@
+{
+  "id": "12-neo-classical",
+  "order": 12,
+  "name": "Neo-Classical",
+  "description": {
+    "de": "Elfenbein, Anthrazit, goldene Doppellinien, zentrierte Garamond-Headlines, zweispaltige FAQ.",
+    "en": "Ivory, charcoal, gold double rules, centered Garamond headlines, two-column FAQ."
+  },
+  "scheme": "light",
+  "accent": "#2b2b2b",
+  "fonts": [
+    "Cormorant+Garamond:wght@500;600;700",
+    "Lato:wght@400;700"
+  ],
+  "variants": {
+    "nav": "solid",
+    "hero": "centered",
+    "services": "grid",
+    "feature": "columns",
+    "projects": "cards",
+    "faq": "two-column",
+    "footer": "minimal",
+    "contact": "centered"
+  },
+  "video": "trailer"
+}

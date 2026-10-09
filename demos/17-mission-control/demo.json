@@ -1,0 +1,26 @@
+{
+  "id": "17-mission-control",
+  "order": 17,
+  "name": "Mission Control",
+  "description": {
+    "de": "Dunkles Kontrollraum-Design: Monospace-Datenlabels in Klammern, Scanlines, Projekte als Zeitstrahl.",
+    "en": "Dark control-room design: monospace data labels in brackets, scanlines, projects as a timeline."
+  },
+  "scheme": "dark",
+  "accent": "#4ade80",
+  "fonts": [
+    "IBM+Plex+Sans:wght@400;600;700",
+    "IBM+Plex+Mono:wght@400;500"
+  ],
+  "variants": {
+    "nav": "solid",
+    "hero": "bottom-left",
+    "services": "numbered",
+    "feature": "stats",
+    "projects": "timeline",
+    "faq": "accordion",
+    "footer": "columns",
+    "contact": "split"
+  },
+  "video": "substation"
+}

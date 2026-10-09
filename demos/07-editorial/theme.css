@@ -1,0 +1,37 @@
+:root {
+  --bg: #f8f4ec;
+  --fg: #1d1a16;
+  --muted: #5f584d;
+  --surface: #f1ebdf;
+  --surface-2: #e8e0d0;
+  --border: #d9cfbd;
+  --accent: #7a1f1f;
+  --accent-fg: #ffffff;
+  --accent-2: #b08968;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(29, 26, 22, 0.2), rgba(29, 26, 22, 0.55));
+  --radius: 2px;
+  --radius-lg: 4px;
+  --shadow: none;
+  --font-heading: "Fraunces", Georgia, serif;
+  --font-body: "Source Serif 4", Georgia, serif;
+  --h1: clamp(1.8rem, 6.5vw, 5.4rem);
+  --lh: 1.7;
+}
+h1, h2 { font-weight: 500; letter-spacing: -0.01em; }
+h1 em, .hero-title { font-style: italic; }
+.eyebrow { font-family: var(--font-heading); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 1rem; color: var(--accent); }
+.intro .lead::first-letter { float: left; font-family: var(--font-heading); font-size: 4.2em; line-height: 0.8; padding: 0.1em 0.12em 0 0; color: var(--accent); font-weight: 700; }
+.statement { font-family: var(--font-heading); font-weight: 500; }
+.section { border-top: 1px solid var(--border); }
+.hero-split .hero-content { background: var(--bg); }
+.hero-split .hero-eyebrow { color: var(--accent); }
+.card, .feature .pillar, .form, .step { background: transparent; border: 1px solid var(--border); }
+.row { border-top: 1px dotted var(--border); }
+.btn { border-radius: 0; font-family: var(--font-heading); font-style: italic; font-weight: 500; }
+.hero-bullets li::before { background: var(--accent-2); }
+.cta-box { background: transparent; border-top: 3px double var(--accent); border-bottom: 3px double var(--accent); border-radius: 0; color: var(--fg); }
+.cta-box .btn-primary { background: var(--accent); color: #ffffff; border-color: var(--accent); }
+.faq-grid p { column-count: 1; }
+.site-footer { background: var(--surface); }
+.page-hero { background: var(--surface); }

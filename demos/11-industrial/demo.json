@@ -1,0 +1,26 @@
+{
+  "id": "11-industrial",
+  "order": 11,
+  "name": "Industrial",
+  "description": {
+    "de": "Betongrau, Sicherheitsorange, schmale Versalien, Warnstreifen und diagonale Schnitte.",
+    "en": "Concrete gray, safety orange, condensed uppercase type, hazard stripes and diagonal cuts."
+  },
+  "scheme": "light",
+  "accent": "#e85d04",
+  "fonts": [
+    "Barlow+Condensed:wght@500;700;800",
+    "Barlow:wght@400;600"
+  ],
+  "variants": {
+    "nav": "solid",
+    "hero": "centered",
+    "services": "numbered",
+    "feature": "columns",
+    "projects": "table",
+    "faq": "accordion",
+    "footer": "mega",
+    "contact": "split"
+  },
+  "video": "substation"
+}

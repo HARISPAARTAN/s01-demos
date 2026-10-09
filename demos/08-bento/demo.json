@@ -1,0 +1,25 @@
+{
+  "id": "08-bento",
+  "order": 8,
+  "name": "Bento",
+  "description": {
+    "de": "Helles Grau, 24-px-Radien, weiche Schatten, Bento-Kacheln für Leistungen, zentrierte Pill-Navigation.",
+    "en": "Light gray, 24px radii, soft shadows, bento tiles for the services, centered pill navigation."
+  },
+  "scheme": "light",
+  "accent": "#0071e3",
+  "fonts": [
+    "Plus+Jakarta+Sans:wght@400;600;800"
+  ],
+  "variants": {
+    "nav": "pill",
+    "hero": "centered",
+    "services": "bento",
+    "feature": "stats",
+    "projects": "cards",
+    "faq": "accordion",
+    "footer": "minimal",
+    "contact": "centered"
+  },
+  "video": "windfarm"
+}

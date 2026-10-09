@@ -1,0 +1,25 @@
+{
+  "id": "05-glass",
+  "order": 5,
+  "name": "Glass",
+  "description": {
+    "de": "Tiefblauer Verlauf über dem Video, Milchglas-Panels, schwebende Pill-Navigation und Bento-Kacheln.",
+    "en": "Deep blue gradient over the video, frosted glass panels, floating pill navigation and bento tiles."
+  },
+  "scheme": "dark",
+  "accent": "#6fb1ff",
+  "fonts": [
+    "DM+Sans:wght@400;500;700"
+  ],
+  "variants": {
+    "nav": "pill",
+    "hero": "glass",
+    "services": "bento",
+    "feature": "stats",
+    "projects": "cards",
+    "faq": "accordion",
+    "footer": "columns",
+    "contact": "split"
+  },
+  "video": "windfarm"
+}

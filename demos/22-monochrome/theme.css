@@ -1,0 +1,43 @@
+:root {
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+  --muted: #555555;
+  --surface: #f5f5f5;
+  --surface-2: #ebebeb;
+  --border: #dcdcdc;
+  --accent: #0a0a0a;
+  --accent-fg: #ffffff;
+  --accent-2: #888888;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+  --radius: 0px;
+  --radius-lg: 0px;
+  --shadow: none;
+  --font-heading: "Libre Caslon Text", Georgia, serif;
+  --font-body: "Work Sans", system-ui, sans-serif;
+  --max-width: 1040px;
+  --section-y: 140px;
+  --h1: clamp(1.9rem, 7vw, 6rem);
+  --lh: 1.75;
+}
+img, .hero-video, .hero-media { filter: grayscale(1) contrast(1.05); }
+h1, h2, h3 { font-weight: 400; letter-spacing: -0.01em; }
+.hero-title { font-style: italic; }
+.eyebrow, .hero-eyebrow, .label, .breadcrumb, .site-nav a, .lang-toggle, .btn { font-family: var(--font-body); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.72rem; }
+.eyebrow { color: var(--muted); }
+.section { border-top: 1px solid var(--border); }
+.row { border-top: 0; padding-block: 48px; }
+.row-body .num { color: var(--muted); }
+.card, .feature .pillar, .form, .step { background: transparent; border: 1px solid var(--border); }
+.btn { border-radius: 0; padding: 16px 32px; }
+.btn-primary { background: var(--fg); color: #ffffff; }
+.hero-bullets li::before { background: #ffffff; }
+.cta-box { background: transparent; color: var(--fg); border-top: 1px solid var(--fg); border-bottom: 1px solid var(--fg); }
+.cta-box .btn-primary { background: var(--fg); color: #ffffff; border-color: var(--fg); }
+.word-grid li { background: transparent; border-left: 0; border-top: 1px solid var(--fg); font-weight: 400; font-style: italic; }
+.site-footer { background: #ffffff; }
+.page-hero { background: #ffffff; }
+.page-hero.has-media { color: #ffffff; }
+.nav-overlay a { font-family: var(--font-heading); font-style: italic; text-transform: none; letter-spacing: 0; }
+.nav-hamburger.is-scrolled, body.nav-hamburger-layout:not(.page-home) .nav-hamburger:not(.is-scrolled) { border-bottom: 1px solid var(--border); }
+.masonry .card { padding: 32px; }

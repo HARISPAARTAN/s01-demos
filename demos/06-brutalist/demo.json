@@ -1,0 +1,26 @@
+{
+  "id": "06-brutalist",
+  "order": 6,
+  "name": "Brutalist",
+  "description": {
+    "de": "Schwarz, Gelb, dicke Rahmen, Monospace, Laufschrift. Burger-Menü als Vollbild-Overlay.",
+    "en": "Black, yellow, thick borders, monospace, a marquee. Hamburger menu as a full-screen overlay."
+  },
+  "scheme": "light",
+  "accent": "#000000",
+  "fonts": [
+    "Archivo+Black",
+    "IBM+Plex+Mono:wght@400;600"
+  ],
+  "variants": {
+    "nav": "hamburger",
+    "hero": "bottom-left",
+    "services": "accordion",
+    "feature": "columns",
+    "projects": "table",
+    "faq": "accordion",
+    "footer": "mega",
+    "contact": "centered"
+  },
+  "video": "substation"
+}

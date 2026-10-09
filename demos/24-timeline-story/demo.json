@@ -1,0 +1,26 @@
+{
+  "id": "24-timeline-story",
+  "order": 24,
+  "name": "Timeline Story",
+  "description": {
+    "de": "Startseite als vertikale Geschichte: Leistungen und Projekte auf einem Zeitstrahl mit haftenden Markern, violetter Akzent.",
+    "en": "Home as a vertical story: services and projects on a timeline with sticky markers, violet accent."
+  },
+  "scheme": "light",
+  "accent": "#6d28d9",
+  "fonts": [
+    "Red+Hat+Display:wght@500;700;900",
+    "Red+Hat+Text:wght@400;500"
+  ],
+  "variants": {
+    "nav": "transparent",
+    "hero": "bottom-left",
+    "services": "timeline",
+    "feature": "columns",
+    "projects": "timeline",
+    "faq": "accordion",
+    "footer": "columns",
+    "contact": "split"
+  },
+  "video": "substation"
+}

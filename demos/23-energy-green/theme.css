@@ -1,0 +1,35 @@
+:root {
+  --bg: #f6fbf7;
+  --fg: #10281c;
+  --muted: #4b6356;
+  --surface: #e8f5ec;
+  --surface-2: #d8ecdf;
+  --border: #cfe3d6;
+  --accent: #047857;
+  --accent-fg: #ffffff;
+  --accent-2: #a3e635;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(4, 120, 87, 0.3), rgba(16, 40, 28, 0.75));
+  --radius: 24px 6px;
+  --radius-lg: 28px 8px;
+  --shadow: 0 16px 40px rgba(4, 120, 87, 0.1);
+  --font-heading: "Lexend", system-ui, sans-serif;
+  --font-body: "Lexend", system-ui, sans-serif;
+}
+h1, h2 { font-weight: 800; letter-spacing: -0.02em; }
+.eyebrow { color: var(--fg); background: var(--accent-2); display: inline-block; padding: 4px 12px; border-radius: 999px; }
+.hero-eyebrow { background: var(--accent-2); color: var(--fg); display: inline-block; padding: 6px 14px; border-radius: 999px; }
+.hero-bullets li::before { background: var(--accent-2); }
+.btn { border-radius: 999px; }
+.btn-ghost { border-color: var(--accent-2); color: #ffffff; }
+.card, .feature .pillar, .form, .step, .stat { border: 0; box-shadow: var(--shadow); background: #ffffff; }
+.stat-value { color: var(--accent); }
+.card-media img { border-radius: 0; }
+.cta-box { background: linear-gradient(135deg, var(--accent), #065f46); border-radius: 48px 12px; }
+.cta-box .btn-primary { background: var(--accent-2); color: var(--fg); border-color: var(--accent-2); }
+.word-grid li { border-left-color: var(--accent-2); background: #ffffff; }
+.site-footer { background: #10281c; color: #ffffff; border-top: 0; }
+.site-footer a, .site-footer .footer-copy { color: #ffffff; }
+.site-footer .iso-badge { border-color: var(--accent-2); color: var(--accent-2); }
+.site-footer .logo { color: #ffffff; }
+.page-hero { background: var(--surface); }

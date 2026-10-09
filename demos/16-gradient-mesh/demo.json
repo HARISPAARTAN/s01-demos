@@ -1,0 +1,25 @@
+{
+  "id": "16-gradient-mesh",
+  "order": 16,
+  "name": "Gradient Mesh",
+  "description": {
+    "de": "Teal-zu-Blau-Mesh-Hintergrund, weiße Karten, Glas-Hero, SaaS-Anmutung mit Tabs und Mega-Footer.",
+    "en": "Teal-to-blue mesh background, white cards, glass hero, SaaS feel with tabs and a mega footer."
+  },
+  "scheme": "light",
+  "accent": "#0f766e",
+  "fonts": [
+    "Albert+Sans:wght@400;600;800"
+  ],
+  "variants": {
+    "nav": "pill",
+    "hero": "glass",
+    "services": "bento",
+    "feature": "tabs",
+    "projects": "cards",
+    "faq": "two-column",
+    "footer": "mega",
+    "contact": "centered"
+  },
+  "video": "windfarm"
+}

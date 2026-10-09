@@ -1,0 +1,39 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1a2b3c;
+  --muted: #5a6b7c;
+  --surface: #f3f6f9;
+  --surface-2: #e8edf2;
+  --border: #d8e0e8;
+  --accent: #0e7490;
+  --accent-fg: #ffffff;
+  --accent-2: #67e8f9;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(14, 116, 144, 0.25), rgba(26, 43, 60, 0.7));
+  --radius: 12px;
+  --radius-lg: 18px;
+  --shadow: 0 24px 60px rgba(26, 43, 60, 0.14);
+  --font-heading: "Urbanist", system-ui, sans-serif;
+  --font-body: "Urbanist", system-ui, sans-serif;
+}
+h1, h2 { font-weight: 800; letter-spacing: -0.02em; }
+.eyebrow { color: var(--accent); }
+.feature { position: relative; color: #ffffff; background: linear-gradient(rgba(26, 43, 60, 0.78), rgba(26, 43, 60, 0.78)), url(../assets/img/powerlines-landscape.jpg) center / cover fixed; }
+.feature .eyebrow { color: var(--accent-2); }
+.feature .pillar { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.18); color: #ffffff; backdrop-filter: blur(6px); }
+.feature .pillar p { color: rgba(255, 255, 255, 0.8); }
+.feature .container { display: flex; flex-direction: column; }
+.feature .stats { order: -1; margin-top: calc(-1 * var(--section-y) - 64px); margin-bottom: 48px; }
+.feature .stat { background: #ffffff; color: var(--fg); border: 0; box-shadow: var(--shadow); }
+.feature .stat-label { color: var(--muted); }
+.closing { background: linear-gradient(rgba(14, 116, 144, 0.85), rgba(14, 116, 144, 0.85)), url(../assets/img/windfarm.jpg) center / cover fixed; color: #ffffff; }
+.cta { background: linear-gradient(rgba(26, 43, 60, 0.8), rgba(26, 43, 60, 0.8)), url(../assets/img/substation-sunrise.jpg) center / cover fixed; }
+.cta-box { background: #ffffff; color: var(--fg); box-shadow: var(--shadow); }
+.cta-box .btn-primary { background: var(--accent); color: #ffffff; border-color: var(--accent); }
+.card, .form, .step { border: 0; box-shadow: var(--shadow); }
+.hero-bullets li::before { background: var(--accent-2); }
+.site-footer { background: #1a2b3c; color: #ffffff; border-top: 0; }
+.site-footer a, .site-footer .footer-copy { color: #ffffff; }
+.site-footer .iso-badge { border-color: var(--accent-2); color: var(--accent-2); }
+.site-footer .logo { color: #ffffff; }
+@media (max-width: 1023px) { .feature, .closing, .cta { background-attachment: scroll; } .feature .stats { margin-top: calc(-1 * var(--section-y) - 24px); } }

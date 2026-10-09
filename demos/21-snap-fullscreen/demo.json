@@ -1,0 +1,25 @@
+{
+  "id": "21-snap-fullscreen",
+  "order": 21,
+  "name": "Snap Fullscreen",
+  "description": {
+    "de": "Jeder Startseiten-Abschnitt füllt den Bildschirm und rastet beim Scrollen ein, Punkt-Navigation rechts.",
+    "en": "Every home section fills the screen and snaps into place while scrolling, dot navigation on the right."
+  },
+  "scheme": "dark",
+  "accent": "#58a6ff",
+  "fonts": [
+    "Montserrat:wght@400;600;800"
+  ],
+  "variants": {
+    "nav": "transparent",
+    "hero": "snap-stack",
+    "services": "bento",
+    "feature": "stats",
+    "projects": "cards",
+    "faq": "accordion",
+    "footer": "minimal",
+    "contact": "split"
+  },
+  "video": "windfarm"
+}
