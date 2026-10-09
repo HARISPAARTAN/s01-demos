@@ -57,3 +57,5 @@ h1, h2, h3 { text-transform: uppercase; letter-spacing: -0.01em; font-weight: 40
 /* Phone sizes: the phone rules come last so they win over the uppercase and size rules above. */
 @media (max-width: 639px) { .hero-title { display: block; padding: 0.1em 0.2em; } h1, h2, h3, .acc-trigger { text-transform: none; } }
 @media (max-width: 359px) { .acc-trigger { font-size: 1rem; } }
+@media (max-width: 1023px) { h3 { text-transform: none; } }
+@media (min-width: 1280px) { .pillar h3 { font-size: 1rem; } }

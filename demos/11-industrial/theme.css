@@ -15,7 +15,7 @@
   --shadow: none;
   --font-heading: "Barlow Condensed", Impact, sans-serif;
   --font-body: "Barlow", system-ui, sans-serif;
-  --h1: clamp(2rem, 9vw, 7.5rem);
+  --h1: clamp(2rem, 9vw, 6.8rem);
   --h2: clamp(1.8rem, 5vw, 4rem);
 }
 h1, h2, h3, .btn, .eyebrow, .hero-eyebrow, .site-nav a, .tagline-big { text-transform: uppercase; }

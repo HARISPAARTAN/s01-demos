@@ -17,7 +17,7 @@
   --font-body: "Work Sans", system-ui, sans-serif;
   --max-width: 1040px;
   --section-y: 140px;
-  --h1: clamp(1.9rem, 7vw, 6rem);
+  --h1: clamp(1.9rem, 7vw, 5.6rem);
   --lh: 1.75;
 }
 img, .hero-video, .hero-media { filter: grayscale(1) contrast(1.05); }
