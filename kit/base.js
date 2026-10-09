@@ -120,7 +120,8 @@
       }, { once: true });
     };
     video.addEventListener('error', markFailed, true);
-    if (video.error || video.networkState === 3) markFailed();
+    var checkFailed = function () { if (video.error || video.networkState === 3) markFailed(); };
+    if (doc.readyState === 'complete') checkFailed(); else window.addEventListener('load', checkFailed);
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var save = navigator.connection && navigator.connection.saveData;
     if (reduce || save) {
