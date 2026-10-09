@@ -28,6 +28,12 @@ test('serves files with content types, directory index, ranges and 404', async (
     assert.equal(r4.status, 404);
     const r5 = await fetch(`${s.url}/../package.json`);
     assert.notEqual(r5.status, 200);
+    const r6 = await fetch(`${s.url}/%E0%A4%A`);
+    assert.equal(r6.status, 400);
+    const r7 = await fetch(`${s.url}/a.mp4`, { headers: { Range: 'bytes=999-' } });
+    assert.equal(r7.status, 416);
+    const r8 = await fetch(`${s.url}/a.mp4`);
+    assert.equal(r8.status, 200);
   } finally {
     await s.close();
   }

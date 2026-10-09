@@ -24,7 +24,13 @@ const TYPES = {
 export function startServer({ dir, port = 0 }) {
   const root = resolve(dir);
   const server = createServer((req, res) => {
-    const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    let pathname;
+    try {
+      pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    } catch (err) {
+      res.writeHead(400, { 'Content-Type': 'text/plain' });
+      return res.end('Bad request');
+    }
     let file = normalize(join(root, pathname));
     if (file !== root && !file.startsWith(root + sep)) {
       res.writeHead(403, { 'Content-Type': 'text/plain' });
@@ -42,6 +48,10 @@ export function startServer({ dir, port = 0 }) {
       const [s, e] = range.replace('bytes=', '').split('-');
       const start = parseInt(s, 10) || 0;
       const end = e ? Math.min(parseInt(e, 10), size - 1) : size - 1;
+      if (start >= size || start > end) {
+        res.writeHead(416, { 'Content-Range': `bytes */${size}` });
+        return res.end();
+      }
       res.writeHead(206, { 'Content-Type': type, 'Content-Range': `bytes ${start}-${end}/${size}`, 'Accept-Ranges': 'bytes', 'Content-Length': end - start + 1 });
       return createReadStream(file, { start, end }).pipe(res);
     }
