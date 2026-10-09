@@ -20,6 +20,7 @@
 h1, h2, h3, .eyebrow, .hero-eyebrow, .btn, .site-nav a, .tagline, .lang-toggle, .acc-trigger { text-transform: uppercase; }
 h1 { letter-spacing: 0.02em; font-weight: 900; }
 h2 { letter-spacing: 0.02em; font-weight: 700; }
+@media (max-width: 639px) { h2, h3, .acc-trigger { text-transform: none; letter-spacing: -0.01em; } }
 .page-hero h1 { max-width: none; }
 h3 { letter-spacing: 0.03em; font-size: 1rem; }
 .acc-trigger { letter-spacing: 0.06em; font-size: 0.9rem; }
