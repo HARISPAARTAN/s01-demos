@@ -1,5 +1,5 @@
 import { mkdirSync, rmSync, cpSync, writeFileSync, readFileSync, existsSync } from 'node:fs';
-import { join, dirname } from 'node:path';
+import { join, dirname, basename } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadContent } from './lib/content.js';
 import { loadDemos } from './lib/demos.js';
@@ -30,7 +30,7 @@ export function build({ root = ROOT, out = join(ROOT, 'dist') } = {}) {
 
   rmSync(out, { recursive: true, force: true });
   mkdirSync(join(out, 'kit'), { recursive: true });
-  cpSync(join(root, 'assets'), join(out, 'assets'), { recursive: true, filter: (src) => !src.endsWith('sources.json') });
+  cpSync(join(root, 'assets'), join(out, 'assets'), { recursive: true, filter: (src) => basename(src) !== 'sources.json' });
   cpSync(join(root, 'kit/base.css'), join(out, 'kit/base.css'));
   cpSync(join(root, 'kit/base.js'), join(out, 'kit/base.js'));
 

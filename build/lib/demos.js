@@ -7,6 +7,7 @@ export function validateDemo(demo, folder, registry, videoKeys) {
   const where = `demos/${folder}`;
   if (!demo || typeof demo !== 'object' || Array.isArray(demo)) throw new Error(`${where}/demo.json: must be a JSON object`);
   if (demo.id !== folder) throw new Error(`${where}/demo.json: id "${demo.id}" must equal folder name "${folder}"`);
+  if (!/^\d\d-[a-z0-9-]+$/.test(demo.id)) throw new Error(`${where}/demo.json: id must look like NN-slug (digits, dash, lowercase letters, digits and dashes)`);
   if (typeof demo.name !== 'string' || !demo.name) throw new Error(`${where}: name missing`);
   if (!demo.description || typeof demo.description.de !== 'string') throw new Error(`${where}: description.de missing`);
   if (!demo.description || typeof demo.description.en !== 'string') throw new Error(`${where}: description.en missing`);

@@ -45,6 +45,7 @@ test('validateDemo rejects unknown video, id mismatch, missing fields', () => {
   assert.throws(() => validateDemo({ ...good, video: 'lava' }, '01-original', registry, videoKeys), /unknown video "lava"\. Valid: trailer/);
   assert.throws(() => validateDemo(good, '02-other', registry, videoKeys), /id "01-original" must equal folder name "02-other"/);
   assert.throws(() => validateDemo({ ...good, accent: 'blue' }, '01-original', registry, videoKeys), /accent must be a 6-digit hex/);
+  assert.throws(() => validateDemo({ ...good, id: '01 Original' }, '01 Original', registry, videoKeys), /id must look like NN-slug/);
   assert.throws(() => validateDemo({ ...good, scheme: 'blue' }, '01-original', registry, videoKeys), /scheme must be "light" or "dark"/);
   assert.throws(() => validateDemo({ ...good, description: { de: 'x' } }, '01-original', registry, videoKeys), /description\.en missing/);
 });

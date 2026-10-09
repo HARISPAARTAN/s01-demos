@@ -9,7 +9,7 @@
   --accent-fg: #ffffff;
   --accent-2: #005875;
   --hero-fg: #ffffff;
-  --hero-overlay: linear-gradient(180deg, rgba(0, 88, 117, 0.25) 0%, rgba(33, 33, 33, 0.7) 100%);
+  --hero-overlay: linear-gradient(180deg, rgba(0, 88, 117, 0.45) 0%, rgba(33, 33, 33, 0.75) 100%);
   --radius: 6px;
   --radius-lg: 12px;
   --font-heading: "Manrope", system-ui, sans-serif;

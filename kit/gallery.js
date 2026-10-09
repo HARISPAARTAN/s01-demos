@@ -43,7 +43,7 @@ header h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 8px; letter-spacing
 header p { color: var(--muted); max-width: 70ch; margin: 0 0 6px; }
 .grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
-.thumb { display: block; aspect-ratio: 16 / 10; background: #000; text-decoration: none; }
+.thumb { display: block; aspect-ratio: 16 / 10; background: #000; text-decoration: none; overflow: hidden; }
 .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 .ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--c), #000); font-size: 3rem; font-weight: 800; color: #fff; }
 .body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
