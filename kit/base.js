@@ -110,6 +110,8 @@
     };
     var showPlay = function () {
       if (!play) return;
+      var mediaBox = video.closest('.hero-media');
+      if (mediaBox && mediaBox.classList.contains('video-failed')) return;
       play.hidden = false;
       play.addEventListener('click', function () {
         var attempt = video.play();
