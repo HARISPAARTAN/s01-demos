@@ -19,7 +19,8 @@
 }
 h1, h2, h3, .eyebrow, .hero-eyebrow, .btn, .site-nav a, .tagline, .lang-toggle, .acc-trigger { text-transform: uppercase; }
 h1 { letter-spacing: 0.02em; font-weight: 900; }
-h2 { letter-spacing: 0.04em; font-weight: 700; }
+h2 { letter-spacing: 0.02em; font-weight: 700; }
+.page-hero h1 { max-width: none; }
 h3 { letter-spacing: 0.03em; font-size: 1rem; }
 .acc-trigger { letter-spacing: 0.06em; font-size: 0.9rem; }
 @media (max-width: 639px) { .hero-title { text-transform: none; } }
@@ -32,6 +33,8 @@ h3 { letter-spacing: 0.03em; font-size: 1rem; }
 .num-item .num { color: var(--muted); }
 .cta-box { background: transparent; border: 1px solid var(--border); color: var(--fg); }
 .cta-box .btn-primary { background: #ffffff; color: #000000; border-color: #ffffff; }
+.cta-box :focus-visible { outline-color: var(--fg); }
+.demo-badge-wrap :focus-visible { outline-color: #000000; }
 .site-footer { background: #000000; }
 .page-hero { background: #000000; }
 .nav-transparent.is-scrolled { background: rgba(0, 0, 0, 0.92); color: #ffffff; }
