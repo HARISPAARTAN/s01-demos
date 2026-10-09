@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": { "node": ">=22" },
   "description": "24 shareable demo redesigns of s01-pm.de, generated from one content source",
   "scripts": {
     "build": "node build/build.js",

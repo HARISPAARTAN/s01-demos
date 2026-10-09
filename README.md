@@ -29,3 +29,13 @@ Live gallery: https://harispaartan.github.io/s01-demos/
 - Content lives in `content/site.de.json` and `content/site.en.json`; the build fails if the key trees differ.
 - Forms are demos and send nothing. Datenschutz is a placeholder.
 - Credits for stock footage and photos: `CREDITS.md`.
+
+## Verification tools
+
+Beyond `npm test`, `npm run check` and `npm run shots`, three Playwright scripts in `tools/` reproduce the measurements used during the fix waves. They need a built `dist/` and the installed Chrome:
+
+- `node tools/measure-layout.mjs [demo ids]` reports horizontal overflow, words broken across lines in headings and headline punctuation pushed onto its own line. Set `WIDTHS=320,360,390,768,1024,1280,1440` to choose viewports and `DIST=` to point at another build.
+- `BASE=http://127.0.0.1:8080 node tools/behaviour-pass.mjs` (with `npm run serve` running) checks muted autoplay, the DE/EN toggle landing on the same page, the badge link, the demo form confirmation and the phone menu.
+- `DEMOS=01-original,02-cinematic node tools/hero-contrast.mjs` samples video frames and reports the worst-frame contrast of every hero text line.
+
+Words of 18 letters or more are allowed to hyphenate (`hyphens: auto`); the Playwright Chrome profile has no German dictionary, so such words appear as plain breaks in test screenshots only.

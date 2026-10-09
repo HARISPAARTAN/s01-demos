@@ -45,6 +45,9 @@ async function open(context, url) {
     if (text === 'net::ERR_ABORTED' || /fonts\.(googleapis|gstatic)\.com/.test(r.url())) return;
     errors.push(`request failed: ${r.url()} ${text}`);
   });
+  page.on('response', (r) => {
+    if (r.status() >= 400 && r.request().resourceType() !== 'document' && !/fonts[.](googleapis|gstatic)[.]com/.test(r.url())) errors.push(`status ${r.status()} for ${r.url()}`);
+  });
   const res = await page.goto(url, { waitUntil: 'load' });
   if (!res || res.status() !== 200) errors.push(`status ${res ? res.status() : 'none'} for ${url}`);
   await page.waitForTimeout(800);
@@ -53,6 +56,7 @@ async function open(context, url) {
   return { page, errors };
 }
 
+try {
 for (const id of demos) {
   const label = (s) => `${id}: ${s}`;
   const desktop = await browser.newContext({ viewport: { width: 1440, height: 900 } });
@@ -95,9 +99,10 @@ for (const id of demos) {
   await mobile.close();
   console.log(`${problems.some((p) => p.startsWith(id + ':')) ? 'FAIL' : 'ok  '} ${id}`);
 }
-
-await browser.close();
-await server.close();
+} finally {
+  await browser.close();
+  await server.close();
+}
 if (problems.length) {
   console.error('\n' + problems.join('\n'));
   console.error(`\n${problems.length} problem(s)`);

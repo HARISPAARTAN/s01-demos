@@ -470,7 +470,7 @@
       "notice": "Demo – der rechtsverbindliche Text wird von S01 bereitgestellt.",
       "blocks": [
         { "title": "Verantwortlicher", "lines": ["S01 Projektmanagement GmbH", "Alfred-Herrhausen-Allee 3-5", "65760 Eschborn", "E-Mail: info@s01-pm.de", "Telefon: +49 6196 58655-556"], "text": "" },
-        { "title": "Hosting", "lines": [], "text": "Diese Demo-Seite wird als statische Website ausgeliefert. Es werden keine Cookies gesetzt und keine Analyse- oder Tracking-Werkzeuge eingesetzt." },
+        { "title": "Hosting", "lines": [], "text": "Diese Demo-Seite wird als statische Website ausgeliefert. Es werden keine Cookies gesetzt und keine Analyse- oder Tracking-Werkzeuge eingesetzt. Die Demo wird über GitHub Pages bereitgestellt; Schriften werden von Google Fonts geladen, wobei Ihre IP-Adresse an Google übertragen wird. Im Produktivbetrieb würden die Schriften lokal eingebunden." },
         { "title": "Kontaktformular", "lines": [], "text": "Das Kontaktformular dieser Demo übermittelt keine Daten. Auf der späteren Website werden die im Formular eingegebenen Angaben ausschließlich zur Bearbeitung der Anfrage verarbeitet (Art. 6 Abs. 1 lit. b DSGVO)." },
         { "title": "Ihre Rechte", "lines": [], "text": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Zudem steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu." }
       ]

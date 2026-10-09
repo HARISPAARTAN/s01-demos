@@ -31,6 +31,7 @@ export function renderGallery({ demos, slugs, thumbExists, manifest, credits }) 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>S01 Projektmanagement – Website-Demos</title>
 <meta name="description" content="${demos.length} Design-Demos der Website s01-pm.de, jeweils vollständig navigierbar in Deutsch und Englisch.">
+<meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <style>
 :root { --bg: #0b0d10; --fg: #f3f4f6; --muted: #9aa3ad; --card: #141821; --border: #232a35; --accent: #1d5fd6; }
@@ -63,7 +64,7 @@ footer ul { padding-left: 1.2em; }
 <header>
 <h1>S01 Projektmanagement – Website-Demos</h1>
 <p>${demos.length} Design-Richtungen für s01-pm.de. Jede Demo ist vollständig navigierbar, zweisprachig (DE/EN) und startet mit einem Vollbild-Video.</p>
-<p>${demos.length} design directions for s01-pm.de. Every demo is fully navigable, bilingual (DE/EN) and opens with a full-screen video hero.</p>
+<p lang="en">${demos.length} design directions for s01-pm.de. Every demo is fully navigable, bilingual (DE/EN) and opens with a full-screen video hero.</p>
 </header>
 <div class="grid">
 ${cards}

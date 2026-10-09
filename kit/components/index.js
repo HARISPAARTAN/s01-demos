@@ -13,7 +13,7 @@ export function resolveVariants(demo, reg = registry) {
   const out = {};
   for (const key of Object.keys(reg)) {
     const name = demo.variants[key];
-    const fn = reg[key][name];
+    const fn = Object.hasOwn(reg[key], name) ? reg[key][name] : undefined;
     if (!fn) {
       throw new Error(`demos/${demo.id}: unknown ${key} variant "${name}". Valid: ${Object.keys(reg[key]).join(', ')}`);
     }

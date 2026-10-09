@@ -30,6 +30,7 @@ export function document({ lang, title, description, head = '', bodyClass = '', 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
+<meta name="robots" content="noindex, nofollow">
 ${head}
 </head>
 <body class="${esc(bodyClass)}">

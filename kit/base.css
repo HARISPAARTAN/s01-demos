@@ -145,6 +145,7 @@ img[src$="engineer-substation.jpg"] { object-position: 50% 22%; }
 .nav-hamburger .nav-burger { display: flex; }
 .nav-hamburger .nav-tools { display: flex; align-items: center; gap: 8px; }
 .nav-hamburger .nav-tools .lang-toggle { margin-left: 0; }
+.nav-hamburger .logo, .nav-hamburger .nav-tools { position: relative; z-index: 51; }
 .nav-overlay { position: fixed; inset: 0; background: var(--bg); color: var(--fg); display: none; align-items: center; justify-content: center; flex-direction: column; padding: 80px var(--gutter); z-index: 49; }
 .nav-overlay.is-open { display: flex; }
 .nav-overlay ul { flex-direction: column; gap: 20px; text-align: center; }

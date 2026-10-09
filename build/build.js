@@ -1,5 +1,5 @@
 import { mkdirSync, rmSync, cpSync, writeFileSync, readFileSync, existsSync } from 'node:fs';
-import { join, dirname, basename } from 'node:path';
+import { join, dirname, basename, relative, resolve, isAbsolute } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadContent } from './lib/content.js';
 import { loadDemos } from './lib/demos.js';
@@ -11,7 +11,10 @@ import { renderGallery } from '../kit/gallery.js';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-export function build({ root = ROOT, out = join(ROOT, 'dist') } = {}) {
+export function build({ root = ROOT, out } = {}) {
+  out = out || join(root, 'dist');
+  const rel = relative(resolve(out), resolve(root));
+  if (rel === '' || (!rel.startsWith('..') && !isAbsolute(rel))) throw new Error(`Refusing to build into ${out}: it contains the project root`);
   const { de, en, slugs } = loadContent(root);
   const content = { de, en };
   const manifest = JSON.parse(readFileSync(join(root, 'assets/video/manifest.json'), 'utf8'));
@@ -61,6 +64,7 @@ export function build({ root = ROOT, out = join(ROOT, 'dist') } = {}) {
   const thumbExists = (id) => existsSync(join(root, 'assets/thumbs', `${id}.jpg`));
   writeFileSync(join(out, 'index.html'), renderGallery({ demos, slugs, thumbExists, manifest, credits }));
   writeFileSync(join(out, '.nojekyll'), '');
+  writeFileSync(join(out, 'robots.txt'), ['User-agent: *', 'Disallow: /', ''].join(String.fromCharCode(10)));
   return { demos: demos.length, pages };
 }
 

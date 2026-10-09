@@ -470,7 +470,7 @@
       "notice": "Demo – the legally binding text will be provided by S01.",
       "blocks": [
         { "title": "Controller", "lines": ["S01 Projektmanagement GmbH", "Alfred-Herrhausen-Allee 3-5", "65760 Eschborn, Germany", "Email: info@s01-pm.de", "Phone: +49 6196 58655-556"], "text": "" },
-        { "title": "Hosting", "lines": [], "text": "This demo site is delivered as a static website. No cookies are set and no analytics or tracking tools are used." },
+        { "title": "Hosting", "lines": [], "text": "This demo site is delivered as a static website. No cookies are set and no analytics or tracking tools are used. The demo is hosted on GitHub Pages; fonts are loaded from Google Fonts, which transmits your IP address to Google. A production site would self-host the fonts." },
         { "title": "Contact form", "lines": [], "text": "The contact form of this demo does not transmit any data. On the future website, the details entered in the form will be processed solely to handle the enquiry (Art. 6(1)(b) GDPR)." },
         { "title": "Your rights", "lines": [], "text": "You have the right to access, rectification, erasure, restriction of processing, data portability and objection. You also have the right to lodge a complaint with the competent supervisory authority." }
       ]

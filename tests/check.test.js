@@ -34,7 +34,7 @@ test('checkLinks reports broken files, missing anchors and links leaving dist, s
 
 test('checkDocument enforces h1, title, lang, unique ids and leaked placeholders on any document', () => {
   const out = '/dist';
-  const good = `<html lang="de" class="x"><head><title> T </title></head><body><h1>x</h1><i data-id="a"></i><i data-id="a"></i></body></html>`;
+  const good = `<html lang="de" class="x"><head><title> T </title><meta name="robots" content="noindex, nofollow"></head><body><h1>x</h1><i data-id="a"></i><i data-id="a"></i></body></html>`;
   assert.deepEqual(checkDocument(join(out, 'index.html'), good, { lang: 'de', out }), []);
   const bad = `<html lang="en"><head><title>   </title></head><body><h1>a</h1><h1>b</h1><div id="x"></div><p id="x"></p>undefined [object Object] NaN</body></html>`;
   const errors = checkDocument(join(out, 'index.html'), bad, { lang: 'de', out });
@@ -45,11 +45,12 @@ test('checkDocument enforces h1, title, lang, unique ids and leaked placeholders
   assert.ok(errors.some((e) => /contains "undefined"/.test(e)));
   assert.ok(errors.some((e) => /contains "\[object Object\]"/.test(e)));
   assert.ok(errors.some((e) => /contains "NaN"/.test(e)));
+  assert.ok(errors.some((e) => /robots noindex meta missing/.test(e)));
 });
 
 test('checkPage requires the six links inside the main navigation and a toggle link', () => {
   const out = '/dist';
-  const good = `<html lang="de"><head><title>T</title><link rel="alternate" hreflang="en" href="../en/index.html"></head><body>${navBlock}<h1>x</h1></body></html>`;
+  const good = `<html lang="de"><head><title>T</title><meta name="robots" content="noindex, nofollow"><link rel="alternate" hreflang="en" href="../en/index.html"></head><body>${navBlock}<h1>x</h1></body></html>`;
   assert.deepEqual(checkPage(join(out, '01/de/index.html'), good, { lang: 'de', slugs, out }), []);
   const footerOnly = `<html lang="de"><head><title>T</title><link rel="alternate" hreflang="en" href="../en/index.html"></head><body><nav id="site-menu"></nav><h1>x</h1><footer><a href="index.html">a</a><a href="services.html">b</a><a href="projekte.html">c</a><a href="unternehmen.html">d</a><a href="karriere.html">e</a><a href="kontakt.html">f</a></footer></body></html>`;
   const errors = checkPage(join(out, '01/de/index.html'), footerOnly, { lang: 'de', slugs, out });
@@ -66,8 +67,8 @@ test('checkTheme requires tokens and 4.5:1 contrast in the :root block', () => {
   const missing = checkTheme('x', ':root{--bg:#ffffff;--fg:#212121;}');
   assert.deepEqual(missing, ['demos/x/theme.css: token(s) --accent-fg, --accent missing or not a 6-digit hex color']);
   assert.deepEqual(checkTheme('x', '.a{--bg:#ffffff;}'), ['demos/x/theme.css: no :root block found']);
-  const later = checkTheme('x', ':root{--bg:#ffffff;--fg:#212121;--accent:#1863dc;--accent-fg:#ffffff;} .dark{--fg:#ffffff;}');
-  assert.deepEqual(later, [], 'only the :root block is read');
+  const later = checkTheme('x', ':root{--bg:#ffffff;--fg:#212121;--accent:#1863dc;} .dark{--accent-fg:#ffffff;}');
+  assert.deepEqual(later, ['demos/x/theme.css: token(s) --accent-fg missing or not a 6-digit hex color'], 'tokens outside the :root block are ignored');
 });
 
 const haveAssets = existsSync(join(ROOT, 'assets/video/trailer.mp4')) && existsSync(join(ROOT, 'assets/video/powerlines.jpg'));

@@ -59,6 +59,7 @@ export function checkDocument(file, html, { lang, out }) {
   if (dupes.length) errors.push(`${r}: duplicate id(s) ${dupes.join(', ')}`);
   if (!/<title>\s*\S[^<]*<\/title>/.test(html)) errors.push(`${r}: empty title`);
   if (!new RegExp(`<html\\b[^>]*\\blang="${lang}"`).test(html)) errors.push(`${r}: lang attribute is not "${lang}"`);
+  if (!/<meta name="robots" content="noindex[^"]*">/.test(html)) errors.push(`${r}: robots noindex meta missing`);
   if (/\bundefined\b/.test(html)) errors.push(`${r}: contains "undefined"`);
   if (html.includes('[object Object]')) errors.push(`${r}: contains "[object Object]"`);
   if (/\bNaN\b/.test(html)) errors.push(`${r}: contains "NaN"`);
@@ -115,6 +116,7 @@ export function checkDist({ out, root }) {
   for (const id of expected) if (!built.includes(id)) errors.push(`${id}: demo folder missing from dist (stale build?)`);
   for (const id of built) if (!expected.includes(id)) errors.push(`${id}: dist contains a demo that no longer exists in demos/`);
   if (!built.length) errors.push('no demo folders found in dist');
+  if (!existsSync(join(out, 'robots.txt'))) errors.push('robots.txt missing from dist');
   const galleryFile = join(out, 'index.html');
   const gallery = readFileSync(galleryFile, 'utf8');
   errors.push(...checkDocument(galleryFile, gallery, { lang: 'de', out }));
