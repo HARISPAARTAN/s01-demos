@@ -234,11 +234,11 @@ body.snap-home .site-footer { scroll-snap-align: end; }
 .services .card-body h3 { margin-bottom: 10px; }
 .services .card-body p { color: var(--muted); }
 .num-list { list-style: none; padding: 0; margin: 0; }
-.num-item { display: grid; grid-template-columns: 64px 1fr; gap: 16px; padding: 32px 0; border-top: 1px solid var(--border); }
+.num-item { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; padding: 32px 0; border-top: 1px solid var(--border); }
 .num-item:last-child { border-bottom: 1px solid var(--border); }
 .num-item .num { font-size: 2rem; line-height: 1; }
 .num-item h3 { font-size: clamp(1.3rem, 2.2vw, 1.8rem); }
-@media (min-width: 768px) { .num-item { grid-template-columns: 96px 1fr; gap: 32px; } }
+@media (min-width: 768px) { .num-item { grid-template-columns: 96px minmax(0, 1fr); gap: 32px; } }
 .bento-grid { display: grid; gap: 20px; }
 .bento-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; }
 .bento-body { padding: 28px; display: flex; flex-direction: column; flex: 1; }
