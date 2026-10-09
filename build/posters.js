@@ -23,7 +23,7 @@ for (const [key, v] of Object.entries(manifest)) {
     await page.evaluate(() => new Promise((resolve, reject) => {
       const v = document.getElementById('v');
       v.addEventListener('seeked', () => resolve(), { once: true });
-      v.addEventListener('error', () => reject(new Error('video decode error (Chrome or Edge required for mp4)')), { once: true });
+      v.addEventListener('error', () => reject(new Error(`video error ${v.error ? v.error.code : '?'} (file missing or undecodable; Chrome or Edge required for mp4)`)), { once: true });
       v.addEventListener('loadedmetadata', () => { v.currentTime = Math.min(1.5, v.duration / 3); }, { once: true });
       v.load();
       setTimeout(() => reject(new Error('timeout waiting for a video frame')), 20000);

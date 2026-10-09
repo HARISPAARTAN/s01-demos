@@ -1,5 +1,5 @@
 import { createServer } from 'node:http';
-import { createReadStream, existsSync, statSync } from 'node:fs';
+import { createReadStream, statSync } from 'node:fs';
 import { pipeline } from 'node:stream';
 import { join, extname, normalize, resolve, sep, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -43,15 +43,21 @@ export function parseRange(header, size) {
 }
 
 function statOrNull(file) {
-  return existsSync(file) ? statSync(file) : null;
+  try {
+    return statSync(file, { throwIfNoEntry: false }) || null;
+  } catch {
+    return null;
+  }
 }
 
 export function startServer({ dir, port = 0 }) {
   const root = resolve(dir);
   const server = createServer((req, res) => {
     let pathname;
+    let url;
     try {
-      pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+      url = new URL(req.url, 'http://localhost');
+      pathname = decodeURIComponent(url.pathname);
     } catch {
       res.writeHead(400, { 'Content-Type': 'text/plain' });
       return res.end('Bad request');
@@ -64,7 +70,7 @@ export function startServer({ dir, port = 0 }) {
     let stat = statOrNull(file);
     if (stat && stat.isDirectory()) {
       if (!pathname.endsWith('/')) {
-        res.writeHead(301, { Location: `${pathname}/` });
+        res.writeHead(301, { Location: `${url.pathname}/${url.search}` });
         return res.end();
       }
       file = join(file, 'index.html');
