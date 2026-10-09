@@ -36,7 +36,7 @@ async function open(context, url) {
     if (m.type() !== 'error') return;
     const where = m.location() && m.location().url ? m.location().url : '';
     if (/fonts\.(googleapis|gstatic)\.com/.test(where) || /fonts\.(googleapis|gstatic)\.com/.test(m.text())) return;
-    errors.push(`console: ${m.text()}`);
+    errors.push(`console: ${m.text()}${where ? ` (${where})` : ''}`);
   });
   page.on('pageerror', (e) => errors.push(`pageerror: ${e.message}`));
   page.on('requestfailed', (r) => {
@@ -48,8 +48,8 @@ async function open(context, url) {
   const res = await page.goto(url, { waitUntil: 'load' });
   if (!res || res.status() !== 200) errors.push(`status ${res ? res.status() : 'none'} for ${url}`);
   await page.waitForTimeout(800);
-  const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
-  if (overflow) errors.push(`horizontal overflow at ${await page.evaluate(() => window.innerWidth)}px`);
+  const widths = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));
+  if (widths.scroll > widths.client + 1) errors.push(`horizontal overflow: content ${widths.scroll}px wide in a ${widths.client}px viewport`);
   return { page, errors };
 }
 
@@ -60,7 +60,7 @@ for (const id of demos) {
 
   const home = await open(desktop, `${server.url}/${id}/de/${slugs.de.home}`);
   const videos = await home.page.locator('video.hero-video').count();
-  const navLinks = await home.page.locator('#site-menu a').count();
+  const navLinks = await home.page.locator('#site-menu li a').count();
   if (videos !== 1) home.errors.push(`expected 1 hero video, found ${videos}`);
   if (navLinks < 6) home.errors.push(`expected at least 6 nav links, found ${navLinks}`);
   // Thumbnails must be reproducible: show the poster frame instead of the live video, hide the demo badge.
@@ -73,13 +73,14 @@ for (const id of demos) {
       v.style.display = 'none';
     }
   });
-  await home.page.screenshot({ path: join(root, 'assets/thumbs', `${id}.jpg`), type: 'jpeg', quality: 80, animations: 'disabled' });
+  if (home.errors.length) console.error(`${id}: thumbnail not written because the home page has problems`);
+  else await home.page.screenshot({ path: join(root, 'assets/thumbs', `${id}.jpg`), type: 'jpeg', quality: 80, animations: 'disabled' });
   problems.push(...home.errors.map(label));
   await home.page.close();
 
   const services = await open(desktop, `${server.url}/${id}/en/${slugs.en.services}`);
   const anchors = await services.page.locator('#risk').count();
-  if (anchors !== 1) services.errors.push(`services page: expected id="risk", found ${anchors}`);
+  if (anchors !== 1) services.errors.push(`expected id="risk", found ${anchors}`);
   problems.push(...services.errors.map((s) => label(`services page: ${s}`)));
   await services.page.close();
 
