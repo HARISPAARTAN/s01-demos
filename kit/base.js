@@ -39,9 +39,9 @@
       burger.focus();
     });
     var desktop = window.matchMedia('(min-width: 1024px)');
-    desktop.addEventListener('change', function (e) {
-      if (e.matches) setOpen(false);
-    });
+    var onDesktopChange = function (e) { if (e.matches) setOpen(false); };
+    if (desktop.addEventListener) desktop.addEventListener('change', onDesktopChange);
+    else if (desktop.addListener) desktop.addListener(onDesktopChange);
     menu.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () { setOpen(false); });
     });
@@ -106,6 +106,7 @@
     var markFailed = function () {
       var media = video.closest('.hero-media');
       if (media) media.classList.add('video-failed');
+      if (play) play.hidden = true;
     };
     var showPlay = function () {
       if (!play) return;
@@ -113,11 +114,11 @@
       play.addEventListener('click', function () {
         var attempt = video.play();
         if (attempt && typeof attempt.then === 'function') {
-          attempt.then(function () { play.hidden = true; }).catch(function () { /* keep the button for a retry */ });
+          attempt.then(function () { play.hidden = true; }).catch(function () { /* keep the button so the visitor can try again */ });
         } else {
           play.hidden = true;
         }
-      }, { once: true });
+      });
     };
     video.addEventListener('error', markFailed, true);
     var checkFailed = function () { if (video.error || video.networkState === 3) markFailed(); };
