@@ -1,0 +1,14 @@
+{
+  "id": "04-corporate-navy",
+  "order": 4,
+  "name": "Corporate Navy",
+  "description": {
+    "de": "Klassischer Beratungs-Look in Navy und Himmelblau mit Karten, Tabs und Kontakt-Button in der Navigation.",
+    "en": "Classic consulting look in navy and sky blue with cards, tabs and a contact button in the navigation."
+  },
+  "scheme": "light",
+  "accent": "#0b3d91",
+  "fonts": ["Public+Sans:wght@400;600;700"],
+  "variants": { "nav": "solid", "hero": "centered", "services": "grid", "feature": "tabs", "projects": "cards", "faq": "accordion", "footer": "columns", "contact": "split" },
+  "video": "trailer"
+}

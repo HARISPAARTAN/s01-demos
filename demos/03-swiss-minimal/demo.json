@@ -1,0 +1,14 @@
+{
+  "id": "03-swiss-minimal",
+  "order": 3,
+  "name": "Swiss Minimal",
+  "description": {
+    "de": "Weiß, Schwarz, ein roter Akzent. Haarlinien, riesige Typografie, Tabelle statt Karten.",
+    "en": "White, black, a single red accent. Hairlines, huge typography, a table instead of cards."
+  },
+  "scheme": "light",
+  "accent": "#cc0000",
+  "fonts": ["Inter+Tight:wght@400;600;800"],
+  "variants": { "nav": "solid", "hero": "centered", "services": "grid", "feature": "columns", "projects": "table", "faq": "two-column", "footer": "minimal", "contact": "centered" },
+  "video": "trailer"
+}

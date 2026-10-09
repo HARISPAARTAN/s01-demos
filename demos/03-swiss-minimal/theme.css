@@ -1,0 +1,43 @@
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #666666;
+  --surface: #f7f7f7;
+  --surface-2: #efefef;
+  --border: #111111;
+  --accent: #cc0000;
+  --accent-fg: #ffffff;
+  --accent-2: #111111;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.6));
+  --radius: 0px;
+  --radius-lg: 0px;
+  --shadow: none;
+  --font-heading: "Inter Tight", system-ui, sans-serif;
+  --font-body: "Inter Tight", system-ui, sans-serif;
+  --h1: clamp(3rem, 9vw, 7.5rem);
+  --h2: clamp(2rem, 4.5vw, 3.6rem);
+  --max-width: 1280px;
+}
+h1, h2 { font-weight: 800; letter-spacing: -0.04em; line-height: 0.98; }
+.eyebrow { color: var(--accent); letter-spacing: 0.2em; }
+.section { border-top: 1px solid var(--border); }
+.hero + .section { border-top: 0; }
+.card, .feature .pillar, .form, .step, .stat { background: transparent; border: 0; border-top: 1px solid var(--border); border-radius: 0; }
+.card-body, .card-pad, .project-card, .job { padding: 24px 0; }
+.card-media { display: none; }
+.services .grid-3 { gap: 0 48px; }
+.btn { border-radius: 0; padding: 16px 28px; }
+.btn-primary { background: var(--fg); border-color: var(--fg); color: #ffffff; }
+.btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+.hero-bullets li::before { background: var(--accent); }
+.site-header { border-bottom: 1px solid var(--border); }
+.cta-box { background: var(--fg); color: #ffffff; text-align: left; padding: 64px 0; border-radius: 0; }
+.cta-box h2, .cta-box p { margin-inline: 0; }
+.cta-box .btn-primary { background: var(--accent); color: #ffffff; border-color: var(--accent); }
+.cta .container { max-width: none; padding: 0; }
+.cta-box { padding-inline: var(--gutter); }
+.table th, .table td { border-bottom: 1px solid var(--border); }
+.word-grid li { background: transparent; border-left: 0; border-top: 1px solid var(--border); border-radius: 0; padding-left: 0; }
+.site-footer { background: #ffffff; border-top: 1px solid var(--border); }
+.page-hero { background: #ffffff; border-bottom: 1px solid var(--border); }
