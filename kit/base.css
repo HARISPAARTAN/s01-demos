@@ -44,7 +44,7 @@ h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; color: 
 p { margin: 0 0 1em; }
 h1, h2, h3, h4, p, li, address, .stat-label { overflow-wrap: break-word; }
 .word-grid li { hyphens: auto; }
-.hero-title, h3, .stat-label { hyphens: auto; }
+.hero-title, .hero-eyebrow, .hero-bullets li, h3, .stat-label { hyphens: auto; }
 td.num, .site-nav li, .breadcrumb { white-space: nowrap; }
 @media (max-width: 639px) { h1, h2, h3 { hyphens: auto; } }
 ul, ol { margin: 0 0 1em; padding-left: 1.2em; }
@@ -169,6 +169,8 @@ body.nav-transparent-layout:not(.page-home) .nav-transparent:not(.is-scrolled), 
 }
 @media (min-width: 1024px) and (max-width: 1279px) {
   body.nav-sidebar-layout .grid-3, body.nav-sidebar-layout .grid-4, body.nav-sidebar-layout .stats, body.nav-sidebar-layout .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.nav-sidebar-layout .hero-split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  body.nav-sidebar-layout .hero-split .hero-content { padding-inline: 28px; }
 }
 
 /* ===== Hero ===== */
