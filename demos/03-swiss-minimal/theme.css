@@ -15,7 +15,7 @@
   --shadow: none;
   --font-heading: "Inter Tight", system-ui, sans-serif;
   --font-body: "Inter Tight", system-ui, sans-serif;
-  --h1: clamp(3rem, 9vw, 7.5rem);
+  --h1: clamp(1.8rem, 9vw, 7.5rem);
   --h2: clamp(2rem, 4.5vw, 3.6rem);
   --max-width: 1280px;
 }
