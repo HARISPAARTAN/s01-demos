@@ -34,6 +34,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 16px); }
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); line-height: var(--lh); font-size: 1rem; overflow-x: hidden; }
+body.scheme-dark { color-scheme: dark; }
 img, video, svg { max-width: 100%; display: block; }
 img { height: auto; }
 h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.15; margin: 0 0 0.5em; font-weight: 700; }
@@ -56,6 +57,7 @@ button { font: inherit; color: inherit; }
 figure { margin: 0; }
 table { border-collapse: collapse; width: 100%; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.hero :focus-visible, .page-hero.has-media :focus-visible, .site-footer :focus-visible { outline-color: currentColor; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .skip-link { position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--accent); color: var(--accent-fg); padding: 10px 16px; border-radius: var(--radius); }
 .skip-link:focus { top: 16px; }
@@ -360,7 +362,7 @@ body.snap-home .site-footer { scroll-snap-align: end; }
 .form label:not(.check):has([required]) > span::after { content: " *"; color: var(--accent); }
 .form .check:has([required]) > span::before { content: "* "; color: var(--accent); }
 .form button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
-.form input:not([type="checkbox"]), .form textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); color: var(--fg); font: inherit; }
+.form input:not([type="checkbox"]), .form textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--muted); border-radius: var(--radius); background: var(--bg); color: var(--fg); font: inherit; }
 .form-grid { display: grid; gap: 0 20px; }
 @media (min-width: 640px) { .form-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
 .form .check { display: flex; gap: 12px; align-items: flex-start; font-weight: 400; font-size: 0.9rem; color: var(--muted); }
