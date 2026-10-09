@@ -34,7 +34,13 @@
       setOpen(burger.getAttribute('aria-expanded') !== 'true');
     });
     doc.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') setOpen(false);
+      if (e.key !== 'Escape' || burger.getAttribute('aria-expanded') !== 'true') return;
+      setOpen(false);
+      burger.focus();
+    });
+    var desktop = window.matchMedia('(min-width: 1024px)');
+    desktop.addEventListener('change', function (e) {
+      if (e.matches) setOpen(false);
     });
     menu.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () { setOpen(false); });
@@ -64,6 +70,7 @@
     if (!location.hash) return;
     var target = doc.getElementById(location.hash.slice(1));
     if (!target) return;
+    if (!target.classList.contains('acc')) return;
     var trigger = target.querySelector('.acc-trigger');
     if (trigger && trigger.getAttribute('aria-expanded') !== 'true') trigger.click();
   };
@@ -96,18 +103,24 @@
   var video = doc.querySelector('[data-video]');
   var play = doc.querySelector('[data-video-play]');
   if (video) {
+    var markFailed = function () {
+      var media = video.closest('.hero-media');
+      if (media) media.classList.add('video-failed');
+    };
     var showPlay = function () {
       if (!play) return;
       play.hidden = false;
       play.addEventListener('click', function () {
-        video.play();
-        play.hidden = true;
+        var attempt = video.play();
+        if (attempt && typeof attempt.then === 'function') {
+          attempt.then(function () { play.hidden = true; }).catch(function () { /* keep the button for a retry */ });
+        } else {
+          play.hidden = true;
+        }
       }, { once: true });
     };
-    video.addEventListener('error', function () {
-      var media = video.closest('.hero-media');
-      if (media) media.classList.add('video-failed');
-    }, true);
+    video.addEventListener('error', markFailed, true);
+    if (video.error || video.networkState === 3) markFailed();
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var save = navigator.connection && navigator.connection.saveData;
     if (reduce || save) {
@@ -144,9 +157,9 @@
           d.classList.toggle('is-active', d.getAttribute('href') === '#' + en.target.id);
         });
       });
-    }, { threshold: 0.5 });
+    }, { rootMargin: '-50% 0px -50% 0px', threshold: 0 });
     dots.forEach(function (d) {
-      var s = doc.querySelector(d.getAttribute('href'));
+      var s = doc.getElementById((d.getAttribute('href') || '').slice(1));
       if (s) io.observe(s);
     });
   }

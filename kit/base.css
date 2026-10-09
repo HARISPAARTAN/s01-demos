@@ -206,7 +206,7 @@ body.nav-transparent-layout:not(.page-home) .nav-transparent:not(.is-scrolled), 
   .glass-panel .hero-title { font-size: clamp(2rem, 4.2vw, 3.6rem); }
   body.nav-sidebar-layout .hero-split .hero-title { font-size: clamp(1.8rem, 2.4vw, 2.4rem); }
 }
-.hero-play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2; width: 72px; height: 72px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.7); background: rgba(0, 0, 0, 0.45); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.hero-play { position: absolute; right: 24px; bottom: 28px; z-index: 2; width: 64px; height: 64px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.7); background: rgba(0, 0, 0, 0.45); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; }
 .hero-play[hidden] { display: none; }
 .scroll-cue { position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); z-index: 1; width: 28px; height: 44px; border: 2px solid rgba(255, 255, 255, 0.6); border-radius: 16px; display: flex; justify-content: center; }
 .scroll-cue span { width: 4px; height: 8px; margin-top: 8px; border-radius: 2px; background: #fff; animation: cue 1.8s infinite; }
