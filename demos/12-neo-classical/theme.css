@@ -15,7 +15,7 @@
   --shadow: none;
   --font-heading: "Cormorant Garamond", Georgia, serif;
   --font-body: "Lato", system-ui, sans-serif;
-  --h1: clamp(2.2rem, 7vw, 6rem);
+  --h1: clamp(2.1rem, 7vw, 6rem);
   --h2: clamp(2.2rem, 4.5vw, 3.6rem);
 }
 h1, h2, h3 { font-weight: 600; letter-spacing: 0; }

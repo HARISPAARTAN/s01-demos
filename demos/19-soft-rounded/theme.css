@@ -9,7 +9,7 @@
   --accent-fg: #ffffff;
   --accent-2: #93c5fd;
   --hero-fg: #ffffff;
-  --hero-overlay: linear-gradient(180deg, rgba(45, 42, 50, 0.2), rgba(194, 65, 12, 0.45));
+  --hero-overlay: linear-gradient(180deg, rgba(45, 42, 50, 0.45), rgba(120, 40, 8, 0.6));
   --radius: 24px;
   --radius-lg: 32px;
   --shadow: 0 20px 50px rgba(194, 65, 12, 0.1);

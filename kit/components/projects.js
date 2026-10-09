@@ -22,7 +22,7 @@ export const projects = {
   table(ctx) {
     const p = ctx.t.pages.projects;
     return wrap('projects-table', `<div class="table-wrap"><table class="table"><thead><tr><th scope="col">#</th><th scope="col">${esc(p.label)}</th><th scope="col">${esc(p.servicesLabel)}</th></tr></thead><tbody>${p.items
-      .map((it, i) => `<tr><td class="num">${num(i)}</td><th scope="row">${esc(it.title)}</th><td>${list(it.services, 'plain')}</td></tr>`)
+      .map((it, i) => `<tr><td class="num">${num(i)}</td><th scope="row">${esc(it.title)}</th><td data-label="${esc(p.servicesLabel)}">${list(it.services, 'plain')}</td></tr>`)
       .join('')}</tbody></table></div>`);
   },
   masonry(ctx) {

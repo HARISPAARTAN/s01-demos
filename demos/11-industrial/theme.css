@@ -40,3 +40,4 @@ h3 { font-weight: 700; font-size: 1.5rem; letter-spacing: 0.02em; }
 .site-footer .footer-top { border-bottom-color: #444444; }
 .site-footer .btn-primary { background: var(--accent); color: var(--accent-fg); }
 .word-grid li { border-left: 6px solid var(--accent); border-radius: 0; }
+@media (max-width: 639px) { .page-hero h1 { font-size: 1.6rem; } }

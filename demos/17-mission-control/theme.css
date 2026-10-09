@@ -20,7 +20,7 @@
 .eyebrow::before, .hero-eyebrow::before { content: "[ "; }
 .eyebrow::after, .hero-eyebrow::after { content: " ]"; }
 .eyebrow, .hero-eyebrow { color: var(--accent); letter-spacing: 0.1em; }
-.hero-overlay { background: var(--hero-overlay), repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.18) 0 2px, transparent 2px 4px); }
+.hero-overlay { background: var(--hero-overlay), repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.18) 0 2px, transparent 2px 4px), linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); }
 .hero-title::after { content: "_"; color: var(--accent); animation: blink 1s steps(2) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 .hero-bullets li::before { background: var(--accent); border-radius: 0; }
