@@ -33,7 +33,7 @@ export function renderGallery({ demos, slugs, thumbExists, manifest, credits }) 
 <meta name="description" content="${demos.length} Design-Demos der Website s01-pm.de, jeweils vollständig navigierbar in Deutsch und Englisch.">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <style>
-:root { --bg: #0b0d10; --fg: #f3f4f6; --muted: #9aa3ad; --card: #141821; --border: #232a35; --accent: #4f8cff; }
+:root { --bg: #0b0d10; --fg: #f3f4f6; --muted: #9aa3ad; --card: #141821; --border: #232a35; --accent: #1d5fd6; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.55; }
 a { color: inherit; }
@@ -43,7 +43,7 @@ header h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 8px; letter-spacing
 header p { color: var(--muted); max-width: 70ch; margin: 0 0 6px; }
 .grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
-.thumb { display: block; aspect-ratio: 16 / 10; background: #000; }
+.thumb { display: block; aspect-ratio: 16 / 10; background: #000; text-decoration: none; }
 .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 .ph { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--c), #000); font-size: 3rem; font-weight: 800; color: #fff; }
 .body { padding: 20px; display: flex; flex-direction: column; flex: 1; }

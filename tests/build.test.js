@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, mkdtempSync, readFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { build, ROOT } from '../build/build.js';
@@ -24,8 +24,9 @@ test('renderGallery lists every demo with DE and EN links and placeholders witho
   assert.ok(html.includes('<html lang="de">'));
 });
 
-test('build writes all demos, languages, pages and shared files', { skip: !haveAssets && 'assets not downloaded' }, () => {
+test('build writes all demos, languages, pages and shared files', { skip: !haveAssets && 'assets not downloaded' }, (t) => {
   const out = mkdtempSync(join(tmpdir(), 's01-dist-'));
+  t.after(() => rmSync(out, { recursive: true, force: true }));
   const result = build({ root: ROOT, out });
   assert.ok(result.demos >= 2);
   assert.equal(result.pages, result.demos * 16);
