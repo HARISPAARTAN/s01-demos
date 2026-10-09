@@ -1,0 +1,14 @@
+{
+  "id": "01-original",
+  "order": 1,
+  "name": "Original",
+  "description": {
+    "de": "Der Look der heutigen Website – jetzt mit Vollbild-Video statt eingebettetem Clip.",
+    "en": "The look of the current website, now with a full-screen video hero instead of an embedded clip."
+  },
+  "scheme": "light",
+  "accent": "#1863dc",
+  "fonts": ["Manrope:wght@400;600;800"],
+  "variants": { "nav": "solid", "hero": "centered", "services": "grid", "feature": "columns", "projects": "cards", "faq": "accordion", "footer": "columns", "contact": "split" },
+  "video": "trailer"
+}

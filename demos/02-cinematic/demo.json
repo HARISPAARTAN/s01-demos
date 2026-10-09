@@ -1,0 +1,14 @@
+{
+  "id": "02-cinematic",
+  "order": 2,
+  "name": "Cinematic",
+  "description": {
+    "de": "SpaceX-Stil: Schwarz, Weiß, Versalien-Labels, Text unten links über dem Video, nummerierte Leistungen.",
+    "en": "SpaceX style: black, white, uppercase labels, copy bottom-left over the video, numbered services."
+  },
+  "scheme": "dark",
+  "accent": "#ffffff",
+  "fonts": ["Inter:wght@400;500;700;900"],
+  "variants": { "nav": "transparent", "hero": "bottom-left", "services": "numbered", "feature": "stats", "projects": "cards", "faq": "accordion", "footer": "minimal", "contact": "split" },
+  "video": "powerlines"
+}

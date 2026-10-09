@@ -1,0 +1,26 @@
+:root {
+  --bg: #ffffff;
+  --fg: #212121;
+  --muted: #5b6168;
+  --surface: #f4f4f4;
+  --surface-2: #ebebeb;
+  --border: #dedfe0;
+  --accent: #1863dc;
+  --accent-fg: #ffffff;
+  --accent-2: #005875;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(0, 88, 117, 0.25) 0%, rgba(33, 33, 33, 0.7) 100%);
+  --radius: 6px;
+  --radius-lg: 12px;
+  --font-heading: "Manrope", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+}
+.eyebrow { color: var(--accent-2); }
+.hero-title { font-weight: 800; }
+.cta-box { background: var(--accent-2); }
+.cta-box .btn-primary { color: var(--accent-2); }
+.site-footer { background: #262c30; color: #ffffff; border-top: 0; }
+.site-footer a, .site-footer .footer-copy { color: #ffffff; }
+.site-footer .footer-copy { opacity: 0.7; }
+.site-footer .iso-badge { border-color: #ffffff; color: #ffffff; }
+.site-footer .footer-address { text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.04em; }
