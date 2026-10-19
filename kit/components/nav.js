@@ -46,6 +46,7 @@ ${langToggle(ctx)}
 
 export const nav = {
   transparent: (ctx) => standard(ctx, 'nav-transparent'),
+  spacex: (ctx) => standard(ctx, 'nav-transparent nav-spacex nav-autohide'),
   solid: (ctx) => standard(ctx, 'nav-solid'),
   pill: (ctx) => standard(ctx, 'nav-pill'),
   hamburger: (ctx) => shell('nav-hamburger', `${logo(ctx)}

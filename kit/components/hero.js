@@ -1,4 +1,5 @@
 import { esc } from '../html.js';
+import { pageImages } from '../images.js';
 
 export function heroVideo(ctx) {
   const v = ctx.video;
@@ -44,10 +45,41 @@ ${inner}
 </section>`;
 }
 
+const PANEL_CLIPS = { services: 'windfarm', projects: 'powerlines', company: 'substation' };
+
+function panelMedia(ctx, key) {
+  const clip = PANEL_CLIPS[key];
+  if (clip) {
+    const poster = ctx.paths.asset(`video/${clip}.jpg`);
+    return `<div class="panel-media" style="background-image:url(${poster})" aria-hidden="true"><video class="panel-video" autoplay muted loop playsinline preload="metadata" poster="${poster}"><source src="${ctx.paths.asset(`video/${clip}.mp4`)}" type="video/mp4"></video><div class="panel-overlay"></div></div>`;
+  }
+  const photo = ctx.paths.asset(`img/${pageImages[key]}`);
+  return `<div class="panel-media" style="background-image:url(${photo})" aria-hidden="true"><img class="panel-image" src="${photo}" alt=""><div class="panel-overlay"></div></div>`;
+}
+
+function panel(ctx, key, index) {
+  const p = ctx.t.pages[key];
+  const label = `${String(index).padStart(2, '0')} · ${p.title}`;
+  const button = key === 'contact' ? ctx.t.pages.home.hero.primary.label : ctx.t.meta.ui.more;
+  return `<section id="${key}" class="panel">
+${panelMedia(ctx, key)}
+<div class="panel-content container"><p class="panel-label">${esc(label)}</p><h2 class="panel-title">${esc(p.hero.lead)}</h2><a class="btn btn-ghost" href="${ctx.paths.toPage(key)}">${esc(button)}</a></div>
+</section>`;
+}
+
+function spacexCopy(ctx) {
+  const h = ctx.t.pages.home.hero;
+  return `<p class="hero-eyebrow">${esc(h.eyebrow)}</p>
+<h1 class="hero-title">${esc(h.title)}</h1>
+<div class="hero-actions"><a class="btn btn-primary" href="${ctx.paths.toPage(h.primary.page)}">${esc(h.primary.label)}</a></div>`;
+}
+
 export const hero = {
   'bottom-left': (ctx) => section('hero-bottom-left', `${heroVideo(ctx)}${heroPlay(ctx)}<div class="hero-content container">${heroCopy(ctx)}</div>${scrollCue(ctx)}`),
   centered: (ctx) => section('hero-centered', `${heroVideo(ctx)}${heroPlay(ctx)}<div class="hero-content container">${heroCopy(ctx)}</div>${scrollCue(ctx)}`),
   glass: (ctx) => section('hero-glass', `${heroVideo(ctx)}${heroPlay(ctx)}<div class="hero-content container"><div class="glass-panel">${heroCopy(ctx)}</div></div>${scrollCue(ctx)}`),
   split: (ctx) => section('hero-split', `<div class="hero-split-media">${heroVideo(ctx)}${heroPlay(ctx)}</div><div class="hero-content">${heroCopy(ctx)}</div>`),
+  spacex: (ctx) => section('hero-spacex hero-bottom-left', `${heroVideo(ctx)}${heroPlay(ctx)}<div class="hero-content container">${spacexCopy(ctx)}</div><a class="scroll-cue" href="#services" aria-label="${esc(ctx.t.meta.ui.scrollDown)}"><span></span></a>`)
+    + ['services', 'projects', 'company', 'careers', 'contact'].map((key, i) => panel(ctx, key, i + 1)).join('\n'),
   'snap-stack': (ctx) => section('hero-snap-stack hero-bottom-left', `${heroVideo(ctx)}${heroPlay(ctx)}<div class="hero-content container">${heroCopy(ctx, { bullets: false })}</div>${scrollCue(ctx)}`) + snapDots(ctx),
 };

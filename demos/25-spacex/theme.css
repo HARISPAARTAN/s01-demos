@@ -1,0 +1,48 @@
+:root {
+  --bg: #003c50;
+  --fg: #f6f6f6;
+  --muted: #b7cdd4;
+  --surface: #0a3242;
+  --surface-2: #1a4e60;
+  --border: #2f6072;
+  --accent: #b7cdd4;
+  --accent-fg: #262c30;
+  --accent-2: #8fb2be;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(0, 60, 80, 0.35), rgba(0, 60, 80, 0.8));
+  --radius: 0px;
+  --radius-lg: 0px;
+  --shadow: none;
+  --font-heading: "Geist", "Aptos", system-ui, sans-serif;
+  --font-body: "Geist", "Aptos", system-ui, sans-serif;
+  --h1: clamp(1.7rem, 4.2vw, 3.6rem);
+  --h2: clamp(1.6rem, 3.2vw, 2.6rem);
+}
+/* Stylesheet: Fraktion Mono for labels and functional elements, here its Google fallback Sometype Mono */
+.eyebrow, .hero-eyebrow, .panel-label, .site-nav a, .lang-toggle, .btn, .breadcrumb, .label, .num, .footer-copy, .stat-label, .site-footer, .demo-badge-wrap { font-family: "Sometype Mono", ui-monospace, monospace; }
+h1, h2, h3 { font-weight: 600; letter-spacing: -0.01em; }
+.hero-title, .panel-title { text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.05; }
+.hero-eyebrow, .panel-label, .eyebrow { font-weight: 700; letter-spacing: 0.16em; font-size: 0.8rem; opacity: 1; }
+.hero-content, .panel-content { padding-bottom: 18vh; }
+.hero .scroll-cue { bottom: 36px; }
+/* Navigation: logo left, uppercase mono links right, hides while scrolling down, teal veil when scrolled up */
+.site-nav a { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; font-weight: 700; }
+.nav-transparent.is-scrolled { background: linear-gradient(180deg, rgba(0, 60, 80, 0.92), rgba(0, 60, 80, 0.6)); color: #ffffff; }
+.lang-toggle { border-radius: 0; letter-spacing: 0.14em; font-size: 0.72rem; }
+/* Buttons: squared, uppercase mono, white outline; the hero keeps the one Lime primary */
+.btn { border-radius: 0; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.72rem; font-weight: 700; padding: 15px 30px; border-width: 2px; }
+.btn-ghost { border-color: rgba(255, 255, 255, 0.85); color: #ffffff; background: transparent; }
+.btn-ghost:hover { background: #ffffff; color: #003c50; border-color: #ffffff; }
+.hero .btn-ghost, .panel .btn-ghost { border-color: #ffffff; }
+/* Home: panels snap gently like spacex.com */
+html:has(body.hero-spacex-layout.page-home) { scroll-snap-type: y proximity; }
+body.hero-spacex-layout.page-home .hero, body.hero-spacex-layout.page-home .panel { scroll-snap-align: start; }
+/* Inner pages */
+.page-hero { background: var(--surface); }
+.card, .stat, .form, .step, .feature .pillar, .culture .pillar { background: var(--surface); border-color: var(--border); }
+.num-item { border-color: var(--border); }
+.cta-box { background: var(--surface-2); color: #ffffff; }
+.site-footer { background: #0a3242; border-top: 1px solid var(--border); text-align: center; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; }
+.site-footer a { color: var(--muted); }
+.form input:not([type="checkbox"]), .form textarea { background: #003c50; border-color: var(--border); color: var(--fg); }
+@media (max-width: 639px) { .hero-title, .panel-title { text-transform: none; letter-spacing: -0.01em; } }

@@ -53,6 +53,15 @@
     var onScroll = function () { header.classList.toggle('is-scrolled', window.scrollY > 40); };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
+    if (header.classList.contains('nav-autohide')) {
+      var lastY = window.scrollY;
+      window.addEventListener('scroll', function () {
+        var y = window.scrollY;
+        var menuOpen = doc.querySelector('.nav-burger[aria-expanded="true"]');
+        header.classList.toggle('is-hidden', !menuOpen && y > lastY && y > 120);
+        lastY = y;
+      }, { passive: true });
+    }
   }
 
   // Accordions

@@ -130,7 +130,7 @@ language) and helpers (`esc`, `link`). Variants:
 
 | Component | Variants |
 |---|---|
-| nav | `transparent` (over hero, solid after scroll), `solid`, `sidebar`, `hamburger` (logo + burger, full-screen overlay), `pill` (floating centered) |
+| nav | `transparent` (over hero, solid after scroll), `solid`, `sidebar`, `hamburger` (logo + burger, full-screen overlay), `pill` (floating centered), `spacex` (transparent, hides while scrolling down; added 2026-10-19) |
 | hero | `bottom-left` (SpaceX), `centered` (two CTAs, scroll cue), `glass` (frosted card), `split` (video left, text right), `snap-stack` (home sections become 100vh scroll-snap panels) |
 | services | `grid`, `numbered`, `bento`, `scroll` (horizontal snap), `accordion`, `rows` (alternating image rows), `timeline` |
 | feature | `columns`, `tabs`, `stats` |
@@ -344,3 +344,7 @@ The user asked for all 24 demos to use the S01 corporate design-system colors. L
 | Sand / Amber | #DED0BE / #8A6A2F on #FDF3E0 | available for quiet surfaces and hints; not used by the kit |
 
 Derived values, documented because the palette has no entries for them: `--surface-2` #F5F4F1 (between Surface and Line), dark-theme muted and link color #B7CDD4 (a lighter Teal Light that keeps 4.5:1 on Slate Teal and on #0A3242 cards), dark surfaces #0A3242 / #30383E / #3A434A, dark borders #2F6072 / #46525A, and Muted #646C68 instead of #6E7672 because the corporate value measures 4.39:1 on Surface, below AA for small text. The checker now verifies `--cta-fg` on `--cta-bg` as well. Folder ids such as `04-corporate-navy` and `23-energy-green` keep their names so that shared links stay valid; the demo names and descriptions no longer mention the old colors.
+
+## 16. Demo 25: SpaceX replica (2026-10-19)
+
+The user asked for a demo that duplicates the spacex.com design with the S01 content and the corporate colors. Demo `25-spacex` adds two kit variants: `nav: spacex` (transparent header, uppercase mono links, hides while scrolling down and returns on scrolling up, teal veil once scrolled) and `hero: spacex` (the home page is the video hero followed by one full-screen panel per inner page: services, projects, company, careers, contact; each panel has a clip or photo, a numbered uppercase label, the page lead as uppercase headline and a white outlined button; the hero keeps the single Lime primary button). Inner pages use the standard sections. Type follows the S01 stylesheet v1.0 fallbacks: Geist for headlines and text, Sometype Mono for labels, navigation, buttons, tags and credits. On phones the uppercase headlines switch to mixed case so no word breaks.
