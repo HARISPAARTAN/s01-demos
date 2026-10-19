@@ -1,15 +1,15 @@
 :root {
-  --bg: #fbf8f1;
-  --fg: #2b2b2b;
-  --muted: #6b665c;
-  --surface: #f4efe3;
-  --surface-2: #ebe4d3;
-  --border: #dcd3bf;
-  --accent: #2b2b2b;
-  --accent-fg: #fbf8f1;
-  --accent-2: #7a5f1c;
+  --bg: #f8f8f6;
+  --fg: #262c30;
+  --muted: #676f6b;
+  --surface: #ffffff;
+  --surface-2: #f5f4f1;
+  --border: #e6e2dc;
+  --accent: #003c50;
+  --accent-fg: #ffffff;
+  --accent-2: #8fb2be;
   --hero-fg: #ffffff;
-  --hero-overlay: linear-gradient(180deg, rgba(43, 43, 43, 0.3), rgba(43, 43, 43, 0.6));
+  --hero-overlay: linear-gradient(180deg, rgba(0, 60, 80, 0.4), rgba(38, 44, 48, 0.7));
   --radius: 0px;
   --radius-lg: 0px;
   --shadow: none;
@@ -29,10 +29,8 @@ h2, .section-head, .faq h2, .statement { text-align: center; margin-inline: auto
 .card-body h3 { font-size: 1.6rem; }
 .link-more { margin-inline: auto; color: var(--accent-2); }
 .btn { border-radius: 0; letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.8rem; }
-.btn-primary { background: var(--accent); color: var(--accent-fg); }
 .hero-bullets li::before { background: var(--accent-2); }
 .cta-box { background: transparent; border-top: 3px double var(--accent-2); border-bottom: 3px double var(--accent-2); color: var(--fg); }
-.cta-box .btn-primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
 .word-grid li { border-left: 0; border-top: 1px solid var(--accent-2); border-bottom: 1px solid var(--accent-2); background: transparent; text-align: center; font-weight: 600; }
 .site-footer { background: var(--surface); border-top: 3px double var(--accent-2); }
 .page-hero { background: var(--surface); text-align: center; }

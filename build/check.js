@@ -87,8 +87,9 @@ export function checkTheme(demoId, css) {
   if (!rootBlock) return [`${label}: no :root block found`];
   const t = cssTokens(rootBlock[1]);
   const errors = [];
-  for (const [a, b] of [['fg', 'bg'], ['accent-fg', 'accent']]) {
+  for (const [a, b] of [['fg', 'bg'], ['accent-fg', 'accent'], ['cta-fg', 'cta-bg']]) {
     const missing = [a, b].filter((k) => !t[k]);
+    if (a === 'cta-fg' && missing.length === 2) continue;
     if (missing.length) {
       errors.push(`${label}: token(s) ${missing.map((k) => `--${k}`).join(', ')} missing or not a 6-digit hex color`);
       continue;

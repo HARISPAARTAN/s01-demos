@@ -3,8 +3,8 @@
   "order": 20,
   "name": "Sidebar Dark",
   "description": {
-    "de": "Dunkle Seitenleiste, heller Inhalt, Enterprise-Tabellen mit Zebrastreifen, blauer Aktiv-Marker.",
-    "en": "Dark sidebar, light content, enterprise tables with zebra rows, blue active marker."
+    "de": "Dunkle Seitenleiste, heller Inhalt, Enterprise-Tabellen mit Zebrastreifen, Teal-Aktiv-Marker.",
+    "en": "Dark sidebar, light content, enterprise tables with zebra rows, teal active marker."
   },
   "scheme": "light",
   "accent": "#111827",

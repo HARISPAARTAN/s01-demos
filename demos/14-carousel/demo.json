@@ -3,8 +3,8 @@
   "order": 14,
   "name": "Carousel",
   "description": {
-    "de": "Dunkel mit Orange, riesige Konturziffern, Leistungen als horizontaler Snap-Karussell-Track.",
-    "en": "Dark with orange, giant outlined numerals, services as a horizontal snap-scrolling track."
+    "de": "Dunkel mit hellem Teal, riesige Konturziffern, Leistungen als horizontaler Snap-Karussell-Track.",
+    "en": "Dark with light teal, giant outlined numerals, services as a horizontal snap-scrolling track."
   },
   "scheme": "dark",
   "accent": "#ff6b35",

@@ -1,15 +1,15 @@
 :root {
   --bg: #ffffff;
-  --fg: #212121;
-  --muted: #5b6168;
-  --surface: #f4f4f4;
-  --surface-2: #ebebeb;
-  --border: #dedfe0;
-  --accent: #1863dc;
+  --fg: #262c30;
+  --muted: #676f6b;
+  --surface: #f8f8f6;
+  --surface-2: #f5f4f1;
+  --border: #e6e2dc;
+  --accent: #003c50;
   --accent-fg: #ffffff;
-  --accent-2: #005875;
+  --accent-2: #8fb2be;
   --hero-fg: #ffffff;
-  --hero-overlay: linear-gradient(180deg, rgba(0, 88, 117, 0.45) 0%, rgba(33, 33, 33, 0.75) 100%);
+  --hero-overlay: linear-gradient(180deg, rgba(0, 60, 80, 0.4), rgba(38, 44, 48, 0.7));
   --radius: 6px;
   --radius-lg: 12px;
   --font-heading: "Manrope", system-ui, sans-serif;
@@ -18,7 +18,6 @@
 .eyebrow { color: var(--accent-2); }
 .hero-title { font-weight: 800; }
 .cta-box { background: var(--accent-2); }
-.cta-box .btn-primary { color: var(--accent-2); }
 .site-footer { background: #262c30; color: #ffffff; border-top: 0; }
 .site-footer a, .site-footer .footer-copy { color: #ffffff; }
 .site-footer .footer-copy { opacity: 0.7; }

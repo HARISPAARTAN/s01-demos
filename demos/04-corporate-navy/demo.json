@@ -1,10 +1,10 @@
 {
   "id": "04-corporate-navy",
   "order": 4,
-  "name": "Corporate Navy",
+  "name": "Corporate",
   "description": {
-    "de": "Klassischer Beratungs-Look in Navy und kräftigem Blau mit Karten, Tabs und Kontakt-Button in der Navigation.",
-    "en": "Classic consulting look in navy and strong blue with cards, tabs and a contact button in the navigation."
+    "de": "Klassischer Beratungs-Look in Slate Teal mit Karten, Tabs und Kontakt-Button in der Navigation.",
+    "en": "Classic consulting look in slate teal with cards, tabs and a contact button in the navigation."
   },
   "scheme": "light",
   "accent": "#0b3d91",

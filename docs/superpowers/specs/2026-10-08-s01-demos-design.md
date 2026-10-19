@@ -326,3 +326,21 @@ listed with author in `CREDITS.md` and in the gallery footer.
 - The custom "Frktn" font is replaced by Manrope in demo 01.
 - Live-site iStock photos are not copied; free Pexels photos are used and can be
   swapped by the company later.
+
+## 15. Palette update (2026-10-19)
+
+The user asked for all 24 demos to use the S01 corporate design-system colors. Layouts, typography and variants stay as specified above; only colors change.
+
+| Role | Corporate color | Use in the demos |
+|---|---|---|
+| Slate Teal | #003C50 | `--accent` on light themes (links, eyebrows, active nav, headers, CTA bands), page background of the dark teal themes 02, 05, 21 |
+| Lime Accent | #E6FF80 | `--cta-bg` for the primary button only (`.btn-primary`), with Ink text; one accent per screen |
+| Ink | #262C30 | `--fg` on light themes, `--cta-fg`, page background of the dark themes 09, 14, 17 |
+| Muted | #6E7672 | secondary text; the demos use #646C68 (see note) |
+| Line | #E6E2DC | `--border` |
+| Surface | #F8F8F6 | `--surface` (white-background themes) or `--bg` (off-white themes) |
+| Teal Light | #8FB2BE | `--accent-2` (decorative dots, highlights, mesh blobs) |
+| Deep Teal | #1A4E60 | pressed and hover states, gradient ends, `--surface-2` of dark teal themes |
+| Sand / Amber | #DED0BE / #8A6A2F on #FDF3E0 | available for quiet surfaces and hints; not used by the kit |
+
+Derived values, documented because the palette has no entries for them: `--surface-2` #F5F4F1 (between Surface and Line), dark-theme muted and link color #B7CDD4 (a lighter Teal Light that keeps 4.5:1 on Slate Teal and on #0A3242 cards), dark surfaces #0A3242 / #30383E / #3A434A, dark borders #2F6072 / #46525A, and Muted #646C68 instead of #6E7672 because the corporate value measures 4.39:1 on Surface, below AA for small text. The checker now verifies `--cta-fg` on `--cta-bg` as well. Folder ids such as `04-corporate-navy` and `23-energy-green` keep their names so that shared links stay valid; the demo names and descriptions no longer mention the old colors.

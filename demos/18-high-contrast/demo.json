@@ -3,8 +3,8 @@
   "order": 18,
   "name": "High Contrast",
   "description": {
-    "de": "Schwarz, Weiß, Gelb. Große Schrift, starke Fokusrahmen, Atkinson Hyperlegible, WCAG-AAA-Kontraste.",
-    "en": "Black, white, yellow. Large type, strong focus rings, Atkinson Hyperlegible, WCAG AAA contrast."
+    "de": "Anthrazit, Weiß, Limette. Große Schrift, starke Fokusrahmen, Atkinson Hyperlegible, WCAG-AAA-Kontraste.",
+    "en": "Charcoal, white, lime. Large type, strong focus rings, Atkinson Hyperlegible, WCAG AAA contrast."
   },
   "scheme": "light",
   "accent": "#000000",

@@ -39,3 +39,7 @@ Beyond `npm test`, `npm run check` and `npm run shots`, three Playwright scripts
 - `DEMOS=01-original,02-cinematic node tools/hero-contrast.mjs` samples video frames and reports the worst-frame contrast of every hero text line.
 
 Words of 18 letters or more are allowed to hyphenate (`hyphens: auto`); the Playwright Chrome profile has no German dictionary, so such words appear as plain breaks in test screenshots only.
+
+## Corporate palette
+
+All demos use the S01 corporate colors (Slate Teal #003C50, Lime #E6FF80 for the primary button only, Ink #262C30, Line #E6E2DC, Surface #F8F8F6, Teal Light #8FB2BE, Deep Teal #1A4E60). Each theme sets them as tokens in its `:root` block (`--bg`, `--fg`, `--muted`, `--surface`, `--surface-2`, `--border`, `--accent`, `--accent-fg`, `--accent-2`, `--cta-bg`, `--cta-fg`, `--hero-fg`, `--hero-overlay`); the kit paints the primary button with `--cta-bg`/`--cta-fg`. Section 15 of the design spec lists the mapping and the few derived shades.

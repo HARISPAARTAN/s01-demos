@@ -3,8 +3,8 @@
   "order": 3,
   "name": "Swiss Minimal",
   "description": {
-    "de": "Weiß, Schwarz, ein roter Akzent. Haarlinien, riesige Typografie, Tabelle statt Karten.",
-    "en": "White, black, a single red accent. Hairlines, huge typography, a table instead of cards."
+    "de": "Weiß, Anthrazit, ein Teal-Akzent. Haarlinien, riesige Typografie, Tabelle statt Karten.",
+    "en": "White, charcoal, a single teal accent. Hairlines, huge typography, a table instead of cards."
   },
   "scheme": "light",
   "accent": "#cc0000",

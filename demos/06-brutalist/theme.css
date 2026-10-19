@@ -1,15 +1,15 @@
 :root {
   --bg: #ffffff;
-  --fg: #000000;
-  --muted: #333333;
-  --surface: #f2f2f2;
-  --surface-2: #fff200;
-  --border: #000000;
-  --accent: #000000;
-  --accent-fg: #fff200;
-  --accent-2: #fff200;
+  --fg: #262c30;
+  --muted: #676f6b;
+  --surface: #f8f8f6;
+  --surface-2: #f5f4f1;
+  --border: #e6e2dc;
+  --accent: #003c50;
+  --accent-fg: #ffffff;
+  --accent-2: #8fb2be;
   --hero-fg: #ffffff;
-  --hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35));
+  --hero-overlay: linear-gradient(180deg, rgba(0, 60, 80, 0.4), rgba(38, 44, 48, 0.7));
   --radius: 0px;
   --radius-lg: 0px;
   --shadow: 8px 8px 0 #000000;
@@ -20,38 +20,36 @@
   --lh: 1.55;
 }
 h1, h2, h3 { text-transform: uppercase; letter-spacing: -0.01em; font-weight: 400; }
-.eyebrow { color: #000000; background: var(--accent-2); display: inline-block; padding: 2px 8px; }
-.hero-title { background: #000000; color: #ffffff; display: inline; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: 0 0.15em; line-height: 1.1; }
-.hero-eyebrow { background: var(--accent-2); color: #000000; display: inline-block; padding: 4px 10px; }
+.eyebrow { color: #003c50; background: var(--accent-2); display: inline-block; padding: 2px 8px; }
+.hero-title { background: #003c50; color: #ffffff; display: inline; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: 0 0.15em; line-height: 1.1; }
+.hero-eyebrow { background: var(--accent-2); color: #003c50; display: inline-block; padding: 4px 10px; }
 .hero-bullets { margin-top: 24px; }
-.hero-bullets li { background: #ffffff; color: #000000; padding: 4px 10px; }
+.hero-bullets li { background: #ffffff; color: #003c50; padding: 4px 10px; }
 .hero-bullets li::before { display: none; }
-.card, .feature .pillar, .form, .step, .stat, .bento-item, .scroll-card, .tabs [role="tabpanel"] { border: 3px solid #000000; box-shadow: var(--shadow); background: #ffffff; }
-.btn { border: 3px solid #000000; border-radius: 0; box-shadow: 4px 4px 0 #000000; }
-.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #000000; }
-.btn-primary { background: #000000; color: var(--accent-fg); }
-.btn-ghost { background: #ffffff; color: #000000; }
-.hero .btn-ghost { color: #000000; }
-.section { border-top: 3px solid #000000; }
+.card, .feature .pillar, .form, .step, .stat, .bento-item, .scroll-card, .tabs [role="tabpanel"] { border: 3px solid #003c50; box-shadow: var(--shadow); background: #ffffff; }
+.btn { border: 3px solid #003c50; border-radius: 0; box-shadow: 4px 4px 0 #003c50; }
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #003c50; }
+.btn-ghost { background: #ffffff; color: #003c50; }
+.hero .btn-ghost { color: #003c50; }
+.section { border-top: 3px solid #003c50; }
 .intro { position: relative; overflow: hidden; padding-top: calc(var(--section-y) + 48px); }
-.intro::before { content: "SHAPING SUSTAINABLE GRIDS — PROJEKTSTEUERUNG — ENERGIEINFRASTRUKTUR — SHAPING SUSTAINABLE GRIDS — PROJEKTSTEUERUNG — ENERGIEINFRASTRUKTUR — "; position: absolute; top: 0; left: 0; white-space: nowrap; font-family: var(--font-heading); font-size: 1.4rem; padding: 10px 0; background: var(--accent-2); color: #000000; width: max-content; animation: marquee 40s linear infinite; border-bottom: 3px solid #000000; }
+.intro::before { content: "SHAPING SUSTAINABLE GRIDS — PROJEKTSTEUERUNG — ENERGIEINFRASTRUKTUR — SHAPING SUSTAINABLE GRIDS — PROJEKTSTEUERUNG — ENERGIEINFRASTRUKTUR — "; position: absolute; top: 0; left: 0; white-space: nowrap; font-family: var(--font-heading); font-size: 1.4rem; padding: 10px 0; background: var(--accent-2); color: #003c50; width: max-content; animation: marquee 40s linear infinite; border-bottom: 3px solid #003c50; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.acc-list { border-top: 3px solid #000000; }
-.acc { border-bottom: 3px solid #000000; }
+.acc-list { border-top: 3px solid #003c50; }
+.acc { border-bottom: 3px solid #003c50; }
 .acc-trigger { font-family: var(--font-heading); font-size: clamp(1.1rem, 2.4vw, 1.8rem); text-transform: uppercase; }
 .acc-trigger[aria-expanded="true"] { background: var(--accent-2); }
-.table th, .table td { border: 3px solid #000000; }
-.cta-box { background: var(--accent-2); color: #000000; border: 3px solid #000000; box-shadow: var(--shadow); }
-.cta-box .btn-primary { background: #000000; color: var(--accent-2); border-color: #000000; }
-.word-grid li { border: 3px solid #000000; background: #ffffff; }
-.site-footer { background: #000000; color: #ffffff; border-top: 0; }
+.table th, .table td { border: 3px solid #003c50; }
+.cta-box { background: var(--accent-2); color: #003c50; border: 3px solid #003c50; box-shadow: var(--shadow); }
+.word-grid li { border: 3px solid #003c50; background: #ffffff; }
+.site-footer { background: #003c50; color: #ffffff; border-top: 0; }
 .site-footer a, .site-footer .footer-copy { color: #ffffff; }
 .site-footer .iso-badge { border-color: var(--accent-2); color: var(--accent-2); }
-.site-footer .btn-primary { background: var(--accent-2); color: #000000; border-color: var(--accent-2); box-shadow: 4px 4px 0 #ffffff; }
-.nav-overlay { background: var(--accent-2); color: #000000; }
+.site-footer .btn-primary { box-shadow: 4px 4px 0 #ffffff; }
+.nav-overlay { background: var(--accent-2); color: #003c50; }
 .nav-overlay a { font-family: var(--font-heading); text-transform: uppercase; }
-.nav-hamburger.is-scrolled, body.nav-hamburger-layout:not(.page-home) .nav-hamburger:not(.is-scrolled) { border-bottom: 3px solid #000000; }
-.page-hero { background: #ffffff; border-bottom: 3px solid #000000; }
+.nav-hamburger.is-scrolled, body.nav-hamburger-layout:not(.page-home) .nav-hamburger:not(.is-scrolled) { border-bottom: 3px solid #003c50; }
+.page-hero { background: #ffffff; border-bottom: 3px solid #003c50; }
 .lang-toggle { border: 2px solid currentColor; border-radius: 0; }
 .demo-badge-wrap { border-radius: 0; border: 2px solid #ffffff; }
 /* Phone sizes: the phone rules come last so they win over the uppercase and size rules above. */

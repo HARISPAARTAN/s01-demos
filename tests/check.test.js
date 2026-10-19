@@ -62,6 +62,7 @@ test('checkPage requires the six links inside the main navigation and a toggle l
 
 test('checkTheme requires tokens and 4.5:1 contrast in the :root block', () => {
   assert.deepEqual(checkTheme('x', ':root{--bg:#ffffff;--fg:#212121;--accent:#1863dc;--accent-fg:#ffffff;}'), []);
+  assert.deepEqual(checkTheme('x', ':root{--bg:#ffffff;--fg:#212121;--accent:#1863dc;--accent-fg:#ffffff;--cta-bg:#e6ff80;--cta-fg:#ffffff;}'), ['demos/x/theme.css: contrast --cta-fg on --cta-bg is 1.11 (< 4.5)'], 'the CTA pair is checked when a theme defines it');
   const low = checkTheme('x', ':root{--bg:#ffffff;--fg:#999999;--accent:#1863dc;--accent-fg:#ffffff;}');
   assert.deepEqual(low, ['demos/x/theme.css: contrast --fg on --bg is 2.85 (< 4.5)']);
   const missing = checkTheme('x', ':root{--bg:#ffffff;--fg:#212121;}');

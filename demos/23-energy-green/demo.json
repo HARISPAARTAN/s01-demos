@@ -1,10 +1,10 @@
 {
   "id": "23-energy-green",
   "order": 23,
-  "name": "Energy Green",
+  "name": "Energy",
   "description": {
-    "de": "Smaragd und Limette, Nachhaltigkeits-Fokus, Windpark-Video, Kennzahlen und grüner Verlauf-CTA.",
-    "en": "Emerald and lime, sustainability focus, wind-farm video, key figures and a green gradient CTA."
+    "de": "Slate Teal und Limette, Nachhaltigkeits-Fokus, Windpark-Video, Kennzahlen und Teal-Verlauf-CTA.",
+    "en": "Slate teal and lime, sustainability focus, wind-farm video, key figures and a teal gradient CTA."
   },
   "scheme": "light",
   "accent": "#047857",

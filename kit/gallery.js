@@ -34,7 +34,7 @@ export function renderGallery({ demos, slugs, thumbExists, manifest, credits }) 
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <style>
-:root { --bg: #0b0d10; --fg: #f3f4f6; --muted: #9aa3ad; --card: #141821; --border: #232a35; --accent: #1d5fd6; }
+:root { --bg: #003c50; --fg: #f8f8f6; --muted: #b7cdd4; --card: #0a3242; --border: #2f6072; --accent: #e6ff80; --accent-fg: #262c30; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.55; }
 a { color: inherit; }
@@ -53,7 +53,7 @@ h2 { margin: 0 0 8px; font-size: 1.35rem; }
 .body p { margin: 0 0 8px; }
 .en, .meta { color: var(--muted); font-size: 0.9rem; }
 .links { display: flex; gap: 10px; margin-top: auto; padding-top: 16px; }
-.btn { flex: 1; text-align: center; padding: 10px 14px; border-radius: 8px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
+.btn { flex: 1; text-align: center; padding: 10px 14px; border-radius: 8px; background: var(--accent); color: var(--accent-fg); text-decoration: none; font-weight: 600; }
 .btn.ghost { background: transparent; border: 1px solid var(--border); color: var(--fg); }
 footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
 footer ul { padding-left: 1.2em; }
