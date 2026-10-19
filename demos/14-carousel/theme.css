@@ -34,3 +34,7 @@ h1, h2 { letter-spacing: -0.03em; }
 .nav-transparent.is-scrolled { background: rgba(38, 44, 48, 0.92); color: var(--fg); }
 .page-hero { background: var(--surface); }
 .form input:not([type="checkbox"]), .form textarea { background: #262c30; }
+/* Projects page: white page around the dark project cards (user request 2026-10-19). */
+body.page-projects { --bg: #ffffff; --fg: #262c30; --muted: #676f6b; --border: #e6e2dc; --accent: #003c50; --accent-fg: #ffffff; background: var(--bg); color: var(--fg); }
+body.page-projects .card, body.page-projects .cta-box, body.page-projects .site-footer { --fg: #f8f8f6; --muted: #b7cdd4; --accent: #b7cdd4; --border: #46525a; color: var(--fg); }
+body.page-projects .cta-box { background: #003c50; }
