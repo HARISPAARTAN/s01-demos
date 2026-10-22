@@ -36,6 +36,8 @@ export function build({ root = ROOT, out } = {}) {
   cpSync(join(root, 'assets'), join(out, 'assets'), { recursive: true, filter: (src) => basename(src) !== 'sources.json' });
   cpSync(join(root, 'kit/base.css'), join(out, 'kit/base.css'));
   cpSync(join(root, 'kit/base.js'), join(out, 'kit/base.js'));
+  cpSync(join(root, 'kit/motion-cinematic.js'), join(out, 'kit/motion-cinematic.js'));
+  cpSync(join(root, 'kit/vendor'), join(out, 'kit/vendor'), { recursive: true });
 
   let pages = 0;
   demos.forEach((demo, i) => {

@@ -96,6 +96,14 @@ function editorialCopy(ctx) {
 <div class="hero-actions"><a class="btn btn-primary" href="${ctx.paths.toPage(h.primary.page)}">${esc(h.primary.label)}</a><a class="link-more" href="${ctx.paths.toPage(h.secondary.page, h.secondary.hash)}">${esc(h.secondary.label)}</a></div></div>`;
 }
 
+function appleCopy(ctx) {
+  const h = ctx.t.pages.home.hero;
+  return `<div class="hero-content container"><p class="hero-eyebrow">${esc(h.eyebrow)}</p>
+<h1 class="hero-title">${esc(h.title)}</h1></div>
+<div class="hero-after container"><p class="hero-lead">${h.bullets.map(esc).join(' · ')}</p>
+<div class="hero-actions"><a class="btn btn-primary" href="${ctx.paths.toPage(h.primary.page)}">${esc(h.primary.label)}</a><a class="link-more" href="${ctx.paths.toPage(h.secondary.page, h.secondary.hash)}">${esc(h.secondary.label)}</a></div></div>`;
+}
+
 function spacexCopy(ctx) {
   const h = ctx.t.pages.home.hero;
   return `<p class="hero-eyebrow">${esc(h.eyebrow)}</p>
@@ -108,6 +116,7 @@ export const hero = {
   centered: (ctx) => section('hero-centered', `${heroVideo(ctx)}${heroPlay(ctx)}<div class="hero-content container">${heroCopy(ctx)}</div>${scrollCue(ctx)}`),
   glass: (ctx) => section('hero-glass', `${heroVideo(ctx)}${heroPlay(ctx)}<div class="hero-content container"><div class="glass-panel">${heroCopy(ctx)}</div></div>${scrollCue(ctx)}`),
   split: (ctx) => section('hero-split', `<div class="hero-split-media">${heroVideo(ctx)}${heroPlay(ctx)}</div><div class="hero-content">${heroCopy(ctx)}</div>`),
+  apple: (ctx) => section('hero-apple', `<div class="hero-stage">${heroVideo(ctx)}${heroPlay(ctx)}${appleCopy(ctx)}</div>`),
   editorial: (ctx) => section('hero-editorial', `${editorialCopy(ctx)}<div class="hero-media-box container">${heroVideo(ctx)}${heroPlay(ctx)}</div>`),
   tesla: (ctx) => section('hero-tesla hero-top-center', `${heroVideo(ctx)}${heroPlay(ctx)}${teslaCopy(ctx)}<a class="scroll-cue" href="#services" aria-label="${esc(ctx.t.meta.ui.scrollDown)}"><span></span></a>`)
     + ['services', 'projects', 'company', 'careers', 'contact'].map((key) => teslaPanel(ctx, key)).join('\n'),

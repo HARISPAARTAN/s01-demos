@@ -28,7 +28,7 @@ h1, h2, h3 { font-weight: 500; letter-spacing: -0.015em; }
 .hero .btn { border-radius: 0; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.72rem; font-weight: 700; padding: 15px 30px; border-width: 2px; }
 .hero .btn-ghost { border-color: #ffffff; color: #ffffff; background: transparent; }
 .hero .btn-ghost:hover { background: #ffffff; color: #003c50; }
-.nav-transparent.is-scrolled { background: rgba(255, 255, 255, 0.96); color: var(--fg); }
+.nav-transparent.is-scrolled { background: rgba(255, 255, 255, 0.84); color: var(--fg); }
 .eyebrow { text-transform: none; letter-spacing: 0.04em; font-size: 0.8rem; }
 .card { border: 0; background: transparent; }
 .card-body { padding: 18px 0 0; }

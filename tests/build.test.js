@@ -34,6 +34,8 @@ test('build writes all demos, languages, pages and shared files', { skip: !haveA
   assert.ok(existsSync(join(out, '.nojekyll')));
   assert.ok(existsSync(join(out, 'kit/base.css')));
   assert.ok(existsSync(join(out, 'kit/base.js')));
+  assert.ok(existsSync(join(out, 'kit/motion-cinematic.js')));
+  assert.ok(existsSync(join(out, 'kit/vendor/lenis.min.js')));
   assert.ok(existsSync(join(out, 'assets/video/trailer.mp4')));
   assert.ok(!existsSync(join(out, 'assets/sources.json')));
   assert.ok(existsSync(join(out, '01-spacex-stack/theme.css')));
@@ -43,4 +45,9 @@ test('build writes all demos, languages, pages and shared files', { skip: !haveA
   assert.ok(home.includes('class="site-header nav-transparent nav-spacex nav-autohide"'));
   assert.ok(home.includes('Demo 05/'));
   assert.ok(home.includes('../../assets/video/powerlines.mp4'));
+  assert.ok(!home.includes('motion-cinematic'), 'refined demos load no cinematic script');
+  const apple = readFileSync(join(out, '06-apple-cinematic/de/index.html'), 'utf8');
+  assert.ok(apple.includes('class="demo-06-apple-cinematic scheme-light page-home nav-solid-layout hero-apple-layout motion-cinematic"'));
+  assert.ok(apple.includes('<script src="../../kit/vendor/lenis.min.js" defer></script>'));
+  assert.ok(apple.includes('<script src="../../kit/motion-cinematic.js" defer></script>'));
 });

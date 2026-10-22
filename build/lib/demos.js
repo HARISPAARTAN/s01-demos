@@ -22,6 +22,9 @@ export function validateDemo(demo, folder, registry, videoKeys) {
       throw new Error(`${where}: unknown ${key} variant "${name}". Valid: ${valid.join(', ')}`);
     }
   }
+  if (demo.motion !== undefined && !['refined', 'cinematic'].includes(demo.motion)) {
+    throw new Error(`${where}: motion must be "refined" (default) or "cinematic"`);
+  }
   if (!videoKeys.includes(demo.video)) {
     throw new Error(`${where}: unknown video "${demo.video}". Valid: ${videoKeys.join(', ')}`);
   }

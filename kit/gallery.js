@@ -16,7 +16,7 @@ export function renderGallery({ demos, slugs, thumbExists, manifest, credits }) 
 <h2>${esc(d.name)}</h2>
 <p>${esc(d.description.de)}</p>
 <p class="en">${esc(d.description.en)}</p>
-<p class="meta">Video: ${esc(manifest[d.video].label)}</p>
+<p class="meta">Video: ${esc(manifest[d.video].label)} · Motion: ${d.motion === 'cinematic' ? 'cinematic (inertia scrolling, word reveals, scroll stage)' : 'refined (scroll reveals, parallax, page transitions)'}</p>
 <div class="links"><a class="btn" href="${home('de')}">Deutsch</a><a class="btn ghost" href="${home('en')}">English</a></div>
 </div>
 </article>`;
@@ -57,7 +57,10 @@ h2 { margin: 0 0 8px; font-size: 1.35rem; }
 .btn.ghost { background: transparent; border: 1px solid var(--border); color: var(--fg); }
 footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
 footer ul { padding-left: 1.2em; }
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
 </style>
+<script>(function(){try{["pageswap","pagereveal"].forEach(function(t){addEventListener(t,function(e){var v=e.viewTransition;if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){v[k]&&v[k].catch&&v[k].catch(function(){})})})})}catch(e){}})()</script>
 </head>
 <body>
 <div class="wrap">

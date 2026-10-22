@@ -1,6 +1,6 @@
 # S01 Projektmanagement – Website demos
 
-5 shareable demo redesigns of https://www.s01-pm.de/, generated from one bilingual content source.
+6 shareable demo redesigns of https://www.s01-pm.de/, generated from one bilingual content source.
 Each demo is fully navigable (8 pages, DE/EN) and opens with a full-screen video hero.
 
 Live gallery: https://harispaartan.github.io/s01-demos/
@@ -20,7 +20,7 @@ Live gallery: https://harispaartan.github.io/s01-demos/
 ## Adding a demo
 
 1. Copy a folder under `demos/`, rename it `NN-slug`, set `id` in `demo.json` to the same name.
-2. Pick variants (`nav`, `hero`, `services`, `feature`, `projects`, `faq`, `footer`, `contact`), fonts and a video key.
+2. Pick variants (`nav`, `hero`, `services`, `feature`, `projects`, `faq`, `footer`, `contact`), fonts, a video key and optionally `"motion": "cinematic"` (default `refined`).
 3. Edit `theme.css` tokens (`--bg`, `--fg`, `--accent`, `--accent-fg` must be 6-digit hex with 4.5:1 contrast).
 4. `npm run build && npm run check && npm run shots NN-slug`, commit, push. GitHub Actions deploys.
 
@@ -39,6 +39,10 @@ Beyond `npm test`, `npm run check` and `npm run shots`, three Playwright scripts
 - `DEMOS=01-original,02-cinematic node tools/hero-contrast.mjs` samples video frames and reports the worst-frame contrast of every hero text line.
 
 Words of 18 letters or more are allowed to hyphenate (`hyphens: auto`); the Playwright Chrome profile has no German dictionary, so such words appear as plain breaks in test screenshots only.
+
+## Motion
+
+Every demo has the refined motion level (scroll reveals with stagger, hero entrance, parallax, counting key figures, hover lifts and image zooms, blurred translucent headers, cross-document page transitions). Demos with `"motion": "cinematic"` additionally load the vendored Lenis library (`kit/vendor`, MIT) for inertia scrolling, split headlines into words that rise out of a clipped line (768 px and up) and drive the Apple-style scroll stage of the `apple` hero. Everything is gated on `html.js-motion`, set by an inline head script only when the visitor has no reduced-motion preference; with reduced motion or without JS nothing is hidden or moved. Section 18 of the design spec has the details.
 
 ## Corporate palette
 

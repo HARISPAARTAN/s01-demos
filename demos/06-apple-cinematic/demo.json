@@ -1,0 +1,27 @@
+{
+  "id": "06-apple-cinematic",
+  "order": 6,
+  "name": "Apple Cinematic",
+  "description": {
+    "de": "Nach apple.com: schmale dunkle Leiste, große zentrierte Headlines, Video, das beim Scrollen zu einer Karte schrumpft, abwechselnd helle und dunkle Vollbild-Abschnitte, Kacheln mit großen Radien. Kinoreife Bewegung: Trägheits-Scrolling, Wort-für-Wort-Headlines.",
+    "en": "After apple.com: thin dark bar, big centered headlines, a video that shrinks into a card as you scroll, alternating light and dark full-bleed sections, tiles with large radii. Cinematic motion: inertia scrolling, word-by-word headlines."
+  },
+  "scheme": "light",
+  "accent": "#003c50",
+  "fonts": [
+    "Geist:wght@400;500;600",
+    "Sometype+Mono:wght@400;700"
+  ],
+  "variants": {
+    "nav": "solid",
+    "hero": "apple",
+    "services": "grid",
+    "feature": "stats",
+    "projects": "cards",
+    "faq": "accordion",
+    "footer": "columns",
+    "contact": "centered"
+  },
+  "video": "trailer",
+  "motion": "cinematic"
+}

@@ -24,3 +24,7 @@ Stock photos (Pexels license, free to use):
 | assets/img/office.jpg | Kindel Media – https://www.pexels.com/photo/people-in-the-office-discussing-a-project-7688336/ |
 
 Fonts: Google Fonts (SIL Open Font License), loaded from fonts.googleapis.com.
+
+## Libraries
+
+- Lenis 1.3.11 (smooth scrolling), MIT License, darkroom.engineering, https://github.com/darkroomengineering/lenis – vendored as `kit/vendor/lenis.min.js`, license in `kit/vendor/LICENSE-lenis.txt`.

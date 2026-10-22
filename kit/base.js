@@ -146,6 +146,106 @@
     }
   }
 
+  // Refined motion: reveal on scroll, hero entrance, parallax, counting key figures.
+  // Only when the inline head script set html.js-motion (no reduced-motion preference, IntersectionObserver present).
+  var html = doc.documentElement;
+  if (html.classList.contains('js-motion')) {
+    try {
+      var REVEAL = '.section-head, .statement, .lead, .card, .pillar, .step, .num-item, .tl-item, .bento-item, .scroll-card, .row, .stat, .acc, .faq-item, .cta-box, .word-grid li, .contact-block, .form, .footer-top, .table-wrap, .grid-list li, .quality .grid-2 > div, .narrow > .eyebrow, .narrow > h2, .narrow > p, .narrow > .btn, .legal h2, .panel-content';
+      var observerFired = false;
+      var perParent = new Map();
+      var targets = [];
+      doc.querySelectorAll(REVEAL).forEach(function (el) {
+        if (el.closest('.hero, .page-hero, .site-header')) return;
+        if (el.parentElement && el.parentElement.closest('[data-reveal]')) return;
+        var n = perParent.get(el.parentElement) || 0;
+        perParent.set(el.parentElement, n + 1);
+        el.style.setProperty('--reveal-i', String(Math.min(n, 7)));
+        el.setAttribute('data-reveal', '');
+        targets.push(el);
+      });
+      var revealIo = new IntersectionObserver(function (entries) {
+        observerFired = true;
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          en.target.classList.add('is-visible');
+          revealIo.unobserve(en.target);
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0 });
+      targets.forEach(function (el) { revealIo.observe(el); });
+      // Fail-safe: the observer reports every target once right after observe(); if that never happens, give the content back.
+      setTimeout(function () { if (targets.length && !observerFired) html.classList.remove('js-motion'); }, 3000);
+
+      // Hero entrance: the media settles from a slight zoom once the first frame is on screen.
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          doc.querySelectorAll('.hero, .page-hero').forEach(function (h) { h.classList.add('is-ready'); });
+        });
+      });
+
+      // Parallax: full-bleed media drifts at a quarter of the scroll speed while its section leaves the screen.
+      var drift = [];
+      doc.querySelectorAll('.hero-media, .panel-media, .page-hero-media').forEach(function (m) {
+        var host = m.closest('.hero, .panel, .page-hero');
+        if (!host || host.classList.contains('hero-apple')) return;
+        drift.push({ media: m, host: host });
+      });
+      if (drift.length) {
+        var driftPending = false;
+        var driftTick = function () {
+          driftPending = false;
+          var vh = window.innerHeight;
+          drift.forEach(function (d) {
+            var r = d.host.getBoundingClientRect();
+            if (r.bottom < 0 || r.top > vh) return;
+            var shift = r.top < 0 ? -r.top * 0.25 : 0;
+            d.media.style.translate = '0 ' + shift.toFixed(1) + 'px';
+          });
+        };
+        window.addEventListener('scroll', function () {
+          if (driftPending) return;
+          driftPending = true;
+          requestAnimationFrame(driftTick);
+        }, { passive: true });
+        driftTick();
+      }
+
+      // Key figures count up once, values that start with a digit only ("10+", "380 kV"; "ISO 9001" stays as it is).
+      var counters = [];
+      doc.querySelectorAll('.stat-value').forEach(function (el) {
+        var text = el.textContent.trim();
+        var m = /^(\d[\d.]*)(.*)$/.exec(text);
+        if (!m) return;
+        var target = parseFloat(m[1].replace(/\./g, ''));
+        if (!isFinite(target)) return;
+        counters.push({ el: el, target: target, suffix: m[2], final: text });
+      });
+      if (counters.length) {
+        var countIo = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (!en.isIntersecting) return;
+            countIo.unobserve(en.target);
+            var c = counters.filter(function (x) { return x.el === en.target; })[0];
+            if (!c) return;
+            var start = null;
+            var dur = 1400;
+            var step = function (now) {
+              if (start === null) start = now;
+              var p = Math.min(1, (now - start) / dur);
+              var eased = 1 - Math.pow(1 - p, 3);
+              c.el.textContent = (p < 1 ? String(Math.round(c.target * eased)) + c.suffix : c.final);
+              if (p < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+          });
+        }, { threshold: 0.4 });
+        counters.forEach(function (c) { countIo.observe(c.el); });
+      }
+    } catch (err) {
+      html.classList.remove('js-motion');
+    }
+  }
+
   // Demo badge
   var badge = doc.querySelector('[data-badge]');
   if (badge) {

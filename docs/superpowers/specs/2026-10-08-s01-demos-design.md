@@ -366,3 +366,31 @@ Kit additions: hero variants `tesla` and `editorial` (`kit/components/hero.js`, 
 ### 17a. Correction (2026-10-22): SpaceX instead of Tesla
 
 The supervisor wanted spacex.com, not tesla.com, as the first reference. Demos 01 and 02 are therefore `01-spacex-stack` (the SpaceX replica of section 16, restored: hero variant `spacex`, nav `spacex`) and `02-spacex-mission` (SpaceX mission-page style on charcoal: nav `spacex`, single full-screen video hero with uppercase headline, big key figures, numbered services, projects as a timeline). `05-hybrid` now opens SpaceX-style (nav `spacex`, hero `bottom-left` with uppercase headline) above the Arup editorial sections. The `tesla` hero variant stays in the kit, unused and tested.
+
+## 18. Motion and demo 06 (2026-10-23)
+
+The user asked for smooth scrolling and transitions on every demo, built "as for a billion-dollar company". Decisions (multiple choice): all five demos get the *refined* motion level; a sixth demo modelled on apple.com gets the *cinematic* level.
+
+### 18.1 Refined motion (every demo, kit)
+
+- An inline head script sets `html.js-motion` when the visitor has no reduced-motion preference and IntersectionObserver exists. Without it nothing is ever hidden or moved; `@media (prefers-reduced-motion: reduce)` also switches every animation and transition off and turns the page transitions off.
+- Reveal on scroll: `kit/base.js` tags section heads, statements, cards, pillars, steps, numbered items, timeline items, bento tiles, stats, accordion rows, FAQ items, CTA boxes, contact blocks, forms, panel copy and narrow-column paragraphs with `data-reveal`, staggered 70 ms per sibling (`--reveal-i`, max 7), and adds `is-visible` once (observer root margin -10 %). Hero and header content are excluded. Reveals use `opacity` + `translate`, hovers use `transform`, so the two never fight. Fail-safe: if the observer never reports, `js-motion` is removed after 3 s.
+- Hero entrance: hero and page-hero media settle from `scale(1.08)` to 1 over 2.4 s once `is-ready` is set; hero copy rises in with 120 ms steps (`rise`, fill-mode backwards so progress-driven styles can take over afterwards).
+- Parallax: full-bleed hero, panel and page-hero media drift at a quarter of the scroll speed while their section leaves the screen (`translate`, rAF-throttled). The split and editorial media boxes clip (`overflow: hidden`).
+- Key figures count up once when visible (values starting with a digit: "10+", "380 kV"; "ISO 9001" and "PMP®" stay static) and end on the exact source text.
+- Hover: cards and bento tiles lift 4 px with the theme shadow, images zoom 4 % over 1.1 s, the arrow of `.link-more` nudges 4 px.
+- Header: scrolled transparent headers and solid headers are translucent (`color-mix` 85–86 %) with a 16 px backdrop blur on a `::before` pseudo-element (a blur on the header itself would make it the containing block of the fixed phone drawer and create horizontal overflow).
+- Page transitions: `@view-transition { navigation: auto }` cross-fades between the pages of a demo (Chrome 126+, Safari 18.2+; others swap instantly). `base.js` settles the browser's ViewTransition promises on `pageswap`/`pagereveal` so an interrupted transition stays silent.
+
+### 18.2 Cinematic motion (`"motion": "cinematic"` in demo.json)
+
+`kit/render.js` adds the body class `motion-cinematic` and loads `kit/vendor/lenis.min.js` (Lenis 1.3.11, MIT, vendored, no CDN) and `kit/motion-cinematic.js`:
+- Inertia scrolling with Lenis (`lerp` 0.085, native scroll position stays the source of truth, anchors offset by the bar height, paused while the phone menu is open via a MutationObserver on the burger's `aria-expanded`).
+- Word-by-word headline reveals for `main .hero-title` and `main h2` from 768 px up: words become `.w > .wi` spans (clipped line, 50 ms stagger, heading keeps an `aria-label` with the full text). Headings with a word longer than 22 letters are left alone because inline-block words cannot hyphenate.
+- Scroll stage: `--p` (0..1) is the scroll progress through the 200svh hero; `stage-late` is set above 0.4.
+
+### 18.3 Demo 06 `06-apple-cinematic` (apple.com)
+
+New hero variant `apple` (`kit/components/hero.js`): a sticky 100svh stage with centered eyebrow + headline (`.hero-content`) and a second block (`.hero-after`) with the lead and the actions (primary button, text link). In cinematic mode the stage is 200svh high: as the visitor scrolls the video shrinks by 12 % into a 32 px rounded card, the headline lifts away and fades (gone at p 0.38) and the lead with the actions fades in (0.4–0.73). Without JS or with reduced motion the hero is a static centered hero with everything visible. Theme: thin dark translucent bar (52 px, `nav: solid` restyled), Geist 600 headlines with -0.03em tracking (h1 up to 5.6rem, h2 up to 3.4rem, kit phone sizes kept), centered section heads, pill buttons (980 px radius) with the Lime primary, `›` text links, Surface tiles with 24 px radii, the key-figure section as a dark Ink full-bleed band with 6rem figures (scoped tokens), quiet Surface CTA tile, light grey small-type footer. Variants: nav solid, hero apple, services grid, feature stats, projects cards, faq accordion, footer columns, contact centered; video trailer.
+
+Open production item: true frame-by-frame video scrubbing (Apple style) needs clips re-encoded with dense keyframes; ffmpeg is not available on this machine, so the stage scrubs the framing (scale, radius, copy), not the frames.

@@ -80,7 +80,7 @@ test('the real build passes every check', { skip: !haveAssets && 'assets not dow
   build({ root: ROOT, out });
   const { errors, files } = checkDist({ out, root: ROOT });
   assert.deepEqual(errors, []);
-  assert.ok(files >= 81);
+  assert.ok(files >= 97);
 });
 
 test('checkDist reports realistic damage with file names', { skip: !haveAssets && 'assets not downloaded' }, (t) => {

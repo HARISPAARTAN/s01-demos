@@ -14,6 +14,7 @@ export function bodyClasses(ctx) {
   const v = ctx.demo.variants;
   const cls = [`demo-${ctx.demo.id}`, `scheme-${ctx.demo.scheme}`, `page-${ctx.page}`, `nav-${v.nav}-layout`, `hero-${v.hero}-layout`];
   if (ctx.page === 'home' && v.hero === 'snap-stack') cls.push('snap-home');
+  if (ctx.demo.motion === 'cinematic') cls.push('motion-cinematic');
   return cls.join(' ');
 }
 
@@ -25,7 +26,11 @@ export function renderPage(ctx, C) {
 <link rel="stylesheet" href="${ctx.paths.theme()}">
 <link rel="alternate" hreflang="${ctx.lang}" href="${ctx.paths.toPage(ctx.page)}">
 <link rel="alternate" hreflang="${ctx.paths.other}" href="${ctx.paths.otherLang()}">
-<link rel="icon" href="${ctx.paths.asset('img/favicon.svg')}" type="image/svg+xml">`;
+<link rel="icon" href="${ctx.paths.asset('img/favicon.svg')}" type="image/svg+xml">
+<script>(function(){try{if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver" in window)document.documentElement.classList.add("js-motion");["pageswap","pagereveal"].forEach(function(t){addEventListener(t,function(e){var v=e.viewTransition;if(!v)return;["ready","finished","updateCallbackDone"].forEach(function(k){v[k]&&v[k].catch&&v[k].catch(function(){})})})})}catch(e){}})()</script>`;
+  const cinematic = ctx.demo.motion === 'cinematic'
+    ? `\n<script src="${ctx.paths.kit('vendor/lenis.min.js')}" defer></script>\n<script src="${ctx.paths.kit('motion-cinematic.js')}" defer></script>`
+    : '';
   const body = `<a class="skip-link" href="#main">${esc(t.meta.ui.skip)}</a>
 ${C.nav(ctx)}
 <main id="main">
@@ -40,6 +45,6 @@ ${badge(ctx)}`;
     head,
     bodyClass: bodyClasses(ctx),
     body,
-    scripts: `<script src="${ctx.paths.kit('base.js')}" defer></script>`,
+    scripts: `<script src="${ctx.paths.kit('base.js')}" defer></script>${cinematic}`,
   });
 }
