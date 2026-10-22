@@ -1,0 +1,26 @@
+{
+  "id": "01-spacex-stack",
+  "order": 1,
+  "name": "SpaceX Stack",
+  "description": {
+    "de": "Nach spacex.com: ein Vollbild-Panel pro Thema, Text unten links, Versalien-Labels, Rahmen-Buttons, Navigation blendet beim Scrollen aus. Slate Teal, Limette als Primäraktion, Schriften nach S01-Stylesheet.",
+    "en": "After spacex.com: one full-screen panel per topic, copy bottom-left, uppercase labels, outlined buttons, navigation that hides while scrolling. Slate teal, lime for the primary action, S01 stylesheet type."
+  },
+  "scheme": "dark",
+  "accent": "#003c50",
+  "fonts": [
+    "Geist:wght@400;500;600",
+    "Sometype+Mono:wght@400;700"
+  ],
+  "variants": {
+    "nav": "spacex",
+    "hero": "spacex",
+    "services": "numbered",
+    "feature": "stats",
+    "projects": "cards",
+    "faq": "two-column",
+    "footer": "minimal",
+    "contact": "split"
+  },
+  "video": "trailer"
+}

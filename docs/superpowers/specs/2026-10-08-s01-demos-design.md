@@ -362,3 +362,7 @@ The user replaced the 25 demos with five, all in the corporate colors and the st
 | 05 | hybrid | both | Tesla-like snapping full-screen video opening with dot navigation and bottom buttons, then Arup-like editorial sections with image teasers and project cards. |
 
 Kit additions: hero variants `tesla` and `editorial` (`kit/components/hero.js`, `kit/base.css`), the home page renders panels only for `tesla` and `spacex` heroes (`kit/pages.js`). Tests: `tests/tesla.test.js`, `tests/arup.test.js`; the build and checker tests name the new demo ids.
+
+### 17a. Correction (2026-10-22): SpaceX instead of Tesla
+
+The supervisor wanted spacex.com, not tesla.com, as the first reference. Demos 01 and 02 are therefore `01-spacex-stack` (the SpaceX replica of section 16, restored: hero variant `spacex`, nav `spacex`) and `02-spacex-mission` (SpaceX mission-page style on charcoal: nav `spacex`, single full-screen video hero with uppercase headline, big key figures, numbered services, projects as a timeline). `05-hybrid` now opens SpaceX-style (nav `spacex`, hero `bottom-left` with uppercase headline) above the Arup editorial sections. The `tesla` hero variant stays in the kit, unused and tested.

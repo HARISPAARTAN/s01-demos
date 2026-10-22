@@ -1,0 +1,26 @@
+{
+  "id": "02-spacex-mission",
+  "order": 2,
+  "name": "SpaceX Mission",
+  "description": {
+    "de": "Zweite SpaceX-Variante im Stil der Missionsseiten: Anthrazit statt Teal, ein Vollbild-Video-Hero mit Versalien-Headline, große Kennzahlen, nummerierte Leistungen, Projekte als Missions-Zeitstrahl.",
+    "en": "Second SpaceX variant in the style of its mission pages: charcoal instead of teal, one full-screen video hero with an uppercase headline, big key figures, numbered services, projects as a mission timeline."
+  },
+  "scheme": "dark",
+  "accent": "#262c30",
+  "fonts": [
+    "Geist:wght@400;500;600",
+    "Sometype+Mono:wght@400;700"
+  ],
+  "variants": {
+    "nav": "spacex",
+    "hero": "bottom-left",
+    "services": "numbered",
+    "feature": "stats",
+    "projects": "timeline",
+    "faq": "accordion",
+    "footer": "minimal",
+    "contact": "split"
+  },
+  "video": "substation"
+}
