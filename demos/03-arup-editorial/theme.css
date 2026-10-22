@@ -1,0 +1,45 @@
+:root {
+  --bg: #ffffff;
+  --fg: #262c30;
+  --muted: #676f6b;
+  --surface: #f8f8f6;
+  --surface-2: #f5f4f1;
+  --border: #e6e2dc;
+  --accent: #003c50;
+  --accent-fg: #ffffff;
+  --accent-2: #8fb2be;
+  --hero-fg: #ffffff;
+  --hero-overlay: linear-gradient(180deg, rgba(0, 60, 80, 0.4), rgba(38, 44, 48, 0.7));
+  --font-heading: "Geist", "Aptos", system-ui, sans-serif;
+  --font-body: "Geist", "Aptos", system-ui, sans-serif;
+  --radius: 0px;
+  --radius-lg: 0px;
+  --shadow: none;
+  --h1: clamp(2rem, 5vw, 4.4rem);
+  --h2: clamp(1.8rem, 3.4vw, 2.8rem);
+  --max-width: 1360px;
+}
+.eyebrow, .hero-eyebrow, .panel-label, .site-nav a, .lang-toggle, .btn, .breadcrumb, .label, .num, .footer-copy, .stat-label, .demo-badge-wrap { font-family: "Sometype Mono", ui-monospace, monospace; }
+h1, h2 { font-weight: 400; letter-spacing: -0.02em; }
+h3 { font-weight: 500; }
+.link-more, .cta-box .btn-ghost { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--fg); border-radius: 999px; padding: 10px 20px; text-decoration: none; }
+.eyebrow, .hero-eyebrow { text-transform: none; letter-spacing: 0.04em; font-size: 0.8rem; }
+.hero-title { max-width: 16ch; font-weight: 400; }
+.hero-media-box { border-radius: 4px; }
+.hero-editorial .link-more { color: var(--accent); }
+.site-nav a { font-size: 0.8rem; }
+.section { border-top: 1px solid var(--border); }
+.hero + .section, .page-hero + .section { border-top: 0; }
+.card { border: 0; background: transparent; }
+.card-body { padding: 18px 0 0; }
+.card-media { aspect-ratio: 3 / 2; }
+.card-media img { transition: transform 0.6s ease; }
+.card:hover .card-media img { transform: scale(1.03); }
+.link-more::after { content: " \2192"; }
+.project-card { border: 0; border-top: 1px solid var(--border); background: transparent; padding-inline: 0; }
+.feature .pillar { border: 0; background: transparent; border-top: 2px solid var(--accent); border-radius: 0; padding-inline: 0; }
+.btn { border-radius: 0; }
+.cta-box { border-radius: 0; }
+.site-footer { background: var(--fg); color: #ffffff; border-top: 0; }
+.site-footer a, .site-footer .footer-copy, .site-footer .logo { color: #ffffff; }
+.site-footer .iso-badge { border-color: var(--accent-2); color: var(--accent-2); }

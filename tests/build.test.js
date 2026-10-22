@@ -36,11 +36,11 @@ test('build writes all demos, languages, pages and shared files', { skip: !haveA
   assert.ok(existsSync(join(out, 'kit/base.js')));
   assert.ok(existsSync(join(out, 'assets/video/trailer.mp4')));
   assert.ok(!existsSync(join(out, 'assets/sources.json')));
-  assert.ok(existsSync(join(out, '01-original/theme.css')));
-  for (const f of ['index.html', 'services.html', 'projekte.html', 'unternehmen.html', 'karriere.html', 'kontakt.html', 'impressum.html', 'datenschutz.html']) assert.ok(existsSync(join(out, '01-original/de', f)), f);
-  for (const f of ['index.html', 'services.html', 'projects.html', 'company.html', 'careers.html', 'contact.html', 'imprint.html', 'privacy.html']) assert.ok(existsSync(join(out, '02-cinematic/en', f)), f);
-  const home = readFileSync(join(out, '02-cinematic/de/index.html'), 'utf8');
+  assert.ok(existsSync(join(out, '01-tesla-stack/theme.css')));
+  for (const f of ['index.html', 'services.html', 'projekte.html', 'unternehmen.html', 'karriere.html', 'kontakt.html', 'impressum.html', 'datenschutz.html']) assert.ok(existsSync(join(out, '01-tesla-stack/de', f)), f);
+  for (const f of ['index.html', 'services.html', 'projects.html', 'company.html', 'careers.html', 'contact.html', 'imprint.html', 'privacy.html']) assert.ok(existsSync(join(out, '02-tesla-light/en', f)), f);
+  const home = readFileSync(join(out, '05-hybrid/de/index.html'), 'utf8');
   assert.ok(home.includes('class="site-header nav-transparent"'));
-  assert.ok(home.includes('Demo 02/'));
+  assert.ok(home.includes('Demo 05/'));
   assert.ok(home.includes('../../assets/video/powerlines.mp4'));
 });

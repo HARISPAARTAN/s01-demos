@@ -14,7 +14,7 @@ export function renderMain(ctx, C) {
   const t = ctx.t.pages;
   switch (ctx.page) {
     case 'home':
-      if (ctx.demo.variants.hero === 'spacex') return C.hero(ctx);
+      if (ctx.demo.variants.hero === 'spacex' || ctx.demo.variants.hero === 'tesla') return C.hero(ctx);
       return [C.hero(ctx), intro(ctx), C.services(ctx), closing(ctx), C.feature(ctx), C.faq(ctx, t.home.faq), cta(ctx)].join('\n');
     case 'services':
       return [pageHero(ctx, t.services.hero, pageImages.services), C.services(ctx), calm(ctx), C.faq(ctx, t.services.faq), cta(ctx)].join('\n');

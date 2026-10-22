@@ -244,6 +244,26 @@ body.nav-transparent-layout:not(.page-home) .nav-transparent:not(.is-scrolled), 
 .nav-autohide { transition: transform 0.35s ease, background var(--transition); }
 .nav-autohide.is-hidden { transform: translateY(-100%); }
 @media (prefers-reduced-motion: reduce) { .panel-video { display: none; } }
+/* Tesla layout: title at the top, buttons at the bottom of every full-screen panel */
+.hero-top-center { align-items: flex-start; }
+.hero-top-center .hero-content, .panel-tesla .panel-content { text-align: center; margin-inline: auto; padding-top: calc(var(--nav-h) + 56px); padding-bottom: 0; }
+.hero-top-center .hero-title, .panel-tesla .panel-title { margin-inline: auto; }
+.hero-top-center .hero-actions, .panel-tesla .panel-actions { position: absolute; left: 0; right: 0; bottom: 9vh; z-index: 1; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; padding-inline: var(--gutter); }
+.hero-top-center .btn, .panel-tesla .btn { min-width: min(264px, 100%); justify-content: center; text-align: center; }
+.panel-tesla { align-items: flex-start; }
+.panel-tesla .panel-label { text-transform: none; letter-spacing: 0; font-size: 1.05rem; font-weight: 400; max-width: 60ch; margin-inline: auto; }
+.hero-top-center .scroll-cue { bottom: calc(9vh + 72px); }
+html:has(body.hero-tesla-layout.page-home) { scroll-snap-type: y mandatory; }
+body.hero-tesla-layout.page-home .hero, body.hero-tesla-layout.page-home .panel { scroll-snap-align: start; }
+/* Editorial hero: headline block on the page background, media in an inset box below it */
+.hero-editorial { min-height: 0; display: block; color: var(--fg); padding-top: calc(var(--nav-h) + 40px); }
+.hero-editorial .hero-content { padding-top: 24px; padding-bottom: 32px; }
+.hero-editorial .hero-eyebrow { color: var(--accent); opacity: 1; }
+.hero-editorial .hero-title { max-width: 16ch; }
+.hero-lead { color: var(--muted); max-width: 62ch; margin-bottom: 24px; }
+.hero-editorial .hero-actions { align-items: center; gap: 24px; }
+.hero-media-box { position: relative; height: min(68svh, 760px); min-height: 320px; border-radius: var(--radius-lg); overflow: hidden; isolation: isolate; }
+.hero-media-box .hero-play { top: 24px; }
 /* snap mode */
 html:has(body.snap-home) { scroll-snap-type: y proximity; scroll-padding-top: 0; }
 body.snap-home main > section { scroll-snap-align: start; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; }

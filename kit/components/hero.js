@@ -67,6 +67,35 @@ ${panelMedia(ctx, key)}
 </section>`;
 }
 
+function teslaPanel(ctx, key) {
+  const p = ctx.t.pages[key];
+  const more = ctx.t.meta.ui.more;
+  const contact = ctx.t.pages.home.hero.primary.label;
+  const actions = key === 'contact'
+    ? `<a class="btn btn-primary" href="${ctx.paths.toPage(key)}">${esc(contact)}</a>`
+    : `<a class="btn btn-primary" href="${ctx.paths.toPage(key)}">${esc(more)}</a><a class="btn btn-ghost" href="${ctx.paths.toPage('contact')}">${esc(contact)}</a>`;
+  return `<section id="${key}" class="panel panel-tesla">
+${panelMedia(ctx, key)}
+<div class="panel-content container"><h2 class="panel-title">${esc(p.title)}</h2><p class="panel-label">${esc(p.hero.lead)}</p></div>
+<div class="panel-actions">${actions}</div>
+</section>`;
+}
+
+function teslaCopy(ctx) {
+  const h = ctx.t.pages.home.hero;
+  return `<div class="hero-content container"><p class="hero-eyebrow">${esc(h.eyebrow)}</p>
+<h1 class="hero-title">${esc(h.title)}</h1></div>
+<div class="hero-actions"><a class="btn btn-primary" href="${ctx.paths.toPage(h.primary.page)}">${esc(h.primary.label)}</a><a class="btn btn-ghost" href="${ctx.paths.toPage(h.secondary.page, h.secondary.hash)}">${esc(h.secondary.label)}</a></div>`;
+}
+
+function editorialCopy(ctx) {
+  const h = ctx.t.pages.home.hero;
+  return `<div class="hero-content container"><p class="hero-eyebrow">${esc(h.eyebrow)}</p>
+<h1 class="hero-title">${esc(h.title)}</h1>
+<p class="hero-lead">${h.bullets.map(esc).join(' · ')}</p>
+<div class="hero-actions"><a class="btn btn-primary" href="${ctx.paths.toPage(h.primary.page)}">${esc(h.primary.label)}</a><a class="link-more" href="${ctx.paths.toPage(h.secondary.page, h.secondary.hash)}">${esc(h.secondary.label)}</a></div></div>`;
+}
+
 function spacexCopy(ctx) {
   const h = ctx.t.pages.home.hero;
   return `<p class="hero-eyebrow">${esc(h.eyebrow)}</p>
@@ -79,6 +108,9 @@ export const hero = {
   centered: (ctx) => section('hero-centered', `${heroVideo(ctx)}${heroPlay(ctx)}<div class="hero-content container">${heroCopy(ctx)}</div>${scrollCue(ctx)}`),
   glass: (ctx) => section('hero-glass', `${heroVideo(ctx)}${heroPlay(ctx)}<div class="hero-content container"><div class="glass-panel">${heroCopy(ctx)}</div></div>${scrollCue(ctx)}`),
   split: (ctx) => section('hero-split', `<div class="hero-split-media">${heroVideo(ctx)}${heroPlay(ctx)}</div><div class="hero-content">${heroCopy(ctx)}</div>`),
+  editorial: (ctx) => section('hero-editorial', `${editorialCopy(ctx)}<div class="hero-media-box container">${heroVideo(ctx)}${heroPlay(ctx)}</div>`),
+  tesla: (ctx) => section('hero-tesla hero-top-center', `${heroVideo(ctx)}${heroPlay(ctx)}${teslaCopy(ctx)}<a class="scroll-cue" href="#services" aria-label="${esc(ctx.t.meta.ui.scrollDown)}"><span></span></a>`)
+    + ['services', 'projects', 'company', 'careers', 'contact'].map((key) => teslaPanel(ctx, key)).join('\n'),
   spacex: (ctx) => section('hero-spacex hero-bottom-left', `${heroVideo(ctx)}${heroPlay(ctx)}<div class="hero-content container">${spacexCopy(ctx)}</div><a class="scroll-cue" href="#services" aria-label="${esc(ctx.t.meta.ui.scrollDown)}"><span></span></a>`)
     + ['services', 'projects', 'company', 'careers', 'contact'].map((key, i) => panel(ctx, key, i + 1)).join('\n'),
   'snap-stack': (ctx) => section('hero-snap-stack hero-bottom-left', `${heroVideo(ctx)}${heroPlay(ctx)}<div class="hero-content container">${heroCopy(ctx, { bullets: false })}</div>${scrollCue(ctx)}`) + snapDots(ctx),

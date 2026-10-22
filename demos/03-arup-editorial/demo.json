@@ -1,0 +1,26 @@
+{
+  "id": "03-arup-editorial",
+  "order": 3,
+  "name": "Arup Editorial",
+  "description": {
+    "de": "Nach arup.com: weiße Seite, großes Statement als Überschrift, bildgeführte Teaser-Karten mit Kategorie-Label, ruhige Serifenlose, Textlinks statt Buttons, umfangreicher Footer.",
+    "en": "After arup.com: white page, a big statement headline, image-led teaser cards with category labels, calm sans type, text links instead of buttons, extensive footer."
+  },
+  "scheme": "light",
+  "accent": "#003c50",
+  "fonts": [
+    "Geist:wght@400;500;600",
+    "Sometype+Mono:wght@400;700"
+  ],
+  "variants": {
+    "nav": "solid",
+    "hero": "editorial",
+    "services": "grid",
+    "feature": "columns",
+    "projects": "cards",
+    "faq": "two-column",
+    "footer": "mega",
+    "contact": "split"
+  },
+  "video": "trailer"
+}

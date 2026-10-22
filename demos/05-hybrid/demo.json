@@ -1,0 +1,26 @@
+{
+  "id": "05-hybrid",
+  "order": 5,
+  "name": "Hybrid",
+  "description": {
+    "de": "Beste Kombination: Tesla-artiger Vollbild-Video-Einstieg mit einrastenden Abschnitten und Punktnavigation, danach Arup-artige redaktionelle Abschnitte mit Bild-Teasern, Projektkarten und großem Footer.",
+    "en": "Best of both: a Tesla-like full-screen video opening with snapping sections and dot navigation, then Arup-like editorial sections with image teasers, project cards and a large footer."
+  },
+  "scheme": "light",
+  "accent": "#003c50",
+  "fonts": [
+    "Geist:wght@400;500;600",
+    "Sometype+Mono:wght@400;700"
+  ],
+  "variants": {
+    "nav": "transparent",
+    "hero": "snap-stack",
+    "services": "grid",
+    "feature": "columns",
+    "projects": "cards",
+    "faq": "two-column",
+    "footer": "mega",
+    "contact": "split"
+  },
+  "video": "powerlines"
+}

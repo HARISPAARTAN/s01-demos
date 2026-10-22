@@ -1,6 +1,6 @@
 # S01 Projektmanagement – Website demos
 
-25 shareable demo redesigns of https://www.s01-pm.de/, generated from one bilingual content source.
+5 shareable demo redesigns of https://www.s01-pm.de/, generated from one bilingual content source.
 Each demo is fully navigable (8 pages, DE/EN) and opens with a full-screen video hero.
 
 Live gallery: https://harispaartan.github.io/s01-demos/

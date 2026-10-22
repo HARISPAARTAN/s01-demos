@@ -348,3 +348,17 @@ Derived values, documented because the palette has no entries for them: `--surfa
 ## 16. Demo 25: SpaceX replica (2026-10-19)
 
 The user asked for a demo that duplicates the spacex.com design with the S01 content and the corporate colors. Demo `25-spacex` adds two kit variants: `nav: spacex` (transparent header, uppercase mono links, hides while scrolling down and returns on scrolling up, teal veil once scrolled) and `hero: spacex` (the home page is the video hero followed by one full-screen panel per inner page: services, projects, company, careers, contact; each panel has a clip or photo, a numbered uppercase label, the page lead as uppercase headline and a white outlined button; the hero keeps the single Lime primary button). Inner pages use the standard sections. Type follows the S01 stylesheet v1.0 fallbacks: Geist for headlines and text, Sometype Mono for labels, navigation, buttons, tags and credits. On phones the uppercase headlines switch to mixed case so no word breaks.
+
+## 17. Reset to five demos (2026-10-22)
+
+The user replaced the 25 demos with five, all in the corporate colors and the stylesheet fonts (Geist, Sometype Mono); the earlier demos remain in git history before commit "Replace the 25 demos with five".
+
+| # | id | Reference | Layout |
+|---|---|---|---|
+| 01 | tesla-stack | tesla.com | Dark slate teal. New hero variant `tesla`: one full-screen panel per topic, title centered at the top, lead below it, two fixed-width buttons at the bottom, panels snap (mandatory). |
+| 02 | tesla-light | tesla.com (light) | White, centered section headings, services as alternating image and text rows, big key figures, fixed-width buttons at the bottom of the hero. |
+| 03 | arup-editorial | arup.com/de | White, large light-weight statement headline above an inset media box (new hero variant `editorial`), image-led teaser cards with category labels, pill text links with arrows, dark footer. |
+| 04 | arup-insights | arup.com/de | Off-white, split hero with a sand panel, question-style bento tiles, pill tabs, projects on a timeline, dark footer. |
+| 05 | hybrid | both | Tesla-like snapping full-screen video opening with dot navigation and bottom buttons, then Arup-like editorial sections with image teasers and project cards. |
+
+Kit additions: hero variants `tesla` and `editorial` (`kit/components/hero.js`, `kit/base.css`), the home page renders panels only for `tesla` and `spacex` heroes (`kit/pages.js`). Tests: `tests/tesla.test.js`, `tests/arup.test.js`; the build and checker tests name the new demo ids.

@@ -8,7 +8,7 @@ import { makeCtx, demoFixture, count } from './support/ctx.js';
 test('registry exposes every variant listed in the spec', () => {
   const expected = {
     nav: ['transparent', 'solid', 'sidebar', 'hamburger', 'pill', 'spacex'],
-    hero: ['bottom-left', 'centered', 'glass', 'split', 'snap-stack', 'spacex'],
+    hero: ['bottom-left', 'centered', 'glass', 'split', 'snap-stack', 'spacex', 'tesla', 'editorial'],
     services: ['grid', 'numbered', 'bento', 'scroll', 'accordion', 'rows', 'timeline'],
     feature: ['columns', 'tabs', 'stats'],
     projects: ['cards', 'timeline', 'table', 'masonry'],

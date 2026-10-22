@@ -1,0 +1,26 @@
+{
+  "id": "04-arup-insights",
+  "order": 4,
+  "name": "Arup Insights",
+  "description": {
+    "de": "Zweite Arup-Variante: Off-White-Seite, geteilter Hero mit Video links, Leistungen als Kacheln mit Frage-Charakter, Tabs, Projekte als Zeitstrahl, Sand-Flächen.",
+    "en": "Second Arup variant: off-white page, split hero with the video on the left, services as question-style tiles, tabs, projects as a timeline, sand surfaces."
+  },
+  "scheme": "light",
+  "accent": "#003c50",
+  "fonts": [
+    "Geist:wght@400;500;600",
+    "Sometype+Mono:wght@400;700"
+  ],
+  "variants": {
+    "nav": "solid",
+    "hero": "split",
+    "services": "bento",
+    "feature": "tabs",
+    "projects": "timeline",
+    "faq": "two-column",
+    "footer": "mega",
+    "contact": "split"
+  },
+  "video": "substation"
+}
