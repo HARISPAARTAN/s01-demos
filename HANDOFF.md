@@ -13,13 +13,14 @@ Sechs Demo-Entwürfe der S01-Website, jeder vollständig klickbar (8 Seiten, DE/
 
 Alle Texte, Bilder, Videos und der Generator liegen im Repository. Es braucht nur Node.js 22 oder neuer; kein Download-Schritt, keine Datenbank.
 
-### Code holen (eine der drei Möglichkeiten)
+### Code holen (Git wird nicht benötigt)
 
-1. **Mit Git:** `git clone https://github.com/HARISPAARTAN/s01-demos.git`
-2. **Ohne Git:** auf https://github.com/HARISPAARTAN/s01-demos auf „Code“ → „Download ZIP“ klicken und entpacken.
-3. **Mit eigenem GitHub-Konto (empfohlen, wenn Änderungen zurückfließen sollen):** auf der Repository-Seite „Fork“ klicken, dann den eigenen Fork klonen oder in Claude Code im Browser (https://claude.ai/code) über die GitHub-Verbindung öffnen.
+1. **ZIP herunterladen:** https://github.com/HARISPAARTAN/s01-demos/archive/refs/heads/main.zip laden und entpacken (ergibt den Ordner `s01-demos-main`) (ca. 17 MB, alle Videos enthalten). Alternativ enthält der Ordner, der per E-Mail kam, dieselben Dateien.
+2. **Mit Git (optional):** `git clone https://github.com/HARISPAARTAN/s01-demos.git`
 
 ### Lokal starten
+
+Einmalig Node.js 22 oder neuer installieren: https://nodejs.org/ (LTS, Standardinstallation). Dann im entpackten Ordner `s01-demos` ein Terminal öffnen (Windows: Rechtsklick im Ordner → „Im Terminal öffnen“) und ausführen:
 
 ```
 npm install
@@ -31,7 +32,7 @@ Danach http://127.0.0.1:8080/ öffnen. Nach jeder Änderung erneut `npm run buil
 
 ### Änderungen mit Claude
 
-Im Projektordner Claude Code starten. Die Datei `CLAUDE.md` erklärt Claude den Aufbau, die Befehle und wo Texte, Farben, Layout-Varianten und Videos liegen. Beispiele für Anweisungen:
+Claude Code (Desktop-App oder Terminal, https://claude.ai/code) braucht kein Git; Node.js genügt. Im Projektordner Claude Code starten. Die Datei `CLAUDE.md` erklärt Claude den Aufbau, die Befehle und wo Texte, Farben, Layout-Varianten und Videos liegen. Beispiele für Anweisungen:
 
 - „Ändere im Demo 05 die Akzentfarbe auf Deep Teal #1A4E60 und baue neu.“
 - „Ersetze den Text der Startseiten-Headline in DE und EN durch …“
@@ -41,11 +42,11 @@ Im Projektordner Claude Code starten. Die Datei `CLAUDE.md` erklärt Claude den 
 
 Vor dem Zurückgeben bitte `npm test && npm run build && npm run check` laufen lassen; dieselben Schritte laufen bei der Veröffentlichung, ein Fehler blockiert sie.
 
-### Änderungen zurückgeben (eine der drei Möglichkeiten)
+### Änderungen zurückgeben
 
-1. **Pull Request (empfohlen):** im eigenen Fork committen und pushen, dann auf GitHub „Contribute“ → „Open pull request“ gegen `HARISPAARTAN/s01-demos`, Branch `main`. Claude Code kann das auf Wunsch übernehmen („commit, push und öffne einen Pull Request“).
-2. **Ordner schicken:** den geänderten Projektordner ohne `node_modules` und `dist` zippen und senden.
-3. **Direktzugriff:** den GitHub-Benutzernamen mitteilen, dann wird er als Mitwirkender eingetragen und kann direkt auf `main` pushen. Jeder Push auf `main` wird automatisch gebaut und unter der Galerie-Adresse veröffentlicht (etwa 1 bis 2 Minuten).
+**Ordner schicken (ohne Git):** den geänderten Projektordner `s01-demos` zippen und per E-Mail oder Dateifreigabe senden. Die Unterordner `node_modules` und `dist` vorher löschen oder weglassen, sie werden neu erzeugt. Claude Code kann das vorbereiten („lösche node_modules und dist und erstelle ein ZIP des Projektordners“). Die Änderungen werden dann eingespielt und unter der Galerie-Adresse veröffentlicht.
+
+Mit GitHub-Konto geht alternativ ein Fork und ein Pull Request gegen `HARISPAARTAN/s01-demos` (Branch `main`), oder ein direkter Push nach Freischaltung als Mitwirkender; jeder Push auf `main` wird automatisch gebaut und veröffentlicht.
 
 ### Hinweise
 
@@ -64,13 +65,14 @@ Six demo redesigns of the S01 website, each fully navigable (8 pages, DE/EN) wit
 
 All text, images, videos and the generator are in the repository. It needs only Node.js 22 or newer; no download step, no database.
 
-### Get the code (one of three ways)
+### Get the code (no Git required)
 
-1. **With Git:** `git clone https://github.com/HARISPAARTAN/s01-demos.git`
-2. **Without Git:** on https://github.com/HARISPAARTAN/s01-demos click "Code" → "Download ZIP" and unpack it.
-3. **With your own GitHub account (recommended if changes should come back):** click "Fork" on the repository page, then clone your fork or open it in Claude Code on the web (https://claude.ai/code) through the GitHub connection.
+1. **Download the ZIP:** download https://github.com/HARISPAARTAN/s01-demos/archive/refs/heads/main.zip and unpack it (gives the folder `s01-demos-main`) (about 17 MB, all videos included). The folder sent by e-mail contains the same files.
+2. **With Git (optional):** `git clone https://github.com/HARISPAARTAN/s01-demos.git`
 
 ### Run locally
+
+Install Node.js 22 or newer once: https://nodejs.org/ (LTS, default installation). Then open a terminal in the unpacked `s01-demos` folder (Windows: right-click in the folder → "Open in Terminal") and run:
 
 ```
 npm install
@@ -82,7 +84,7 @@ Then open http://127.0.0.1:8080/. After every change run `npm run build` again (
 
 ### Making changes with Claude
 
-Start Claude Code in the project folder. `CLAUDE.md` tells Claude the structure, the commands and where text, colors, layout variants and videos live. Example instructions:
+Claude Code (desktop app or terminal, https://claude.ai/code) does not need Git; Node.js is enough. Start Claude Code in the project folder. `CLAUDE.md` tells Claude the structure, the commands and where text, colors, layout variants and videos live. Example instructions:
 
 - "Change the accent color of demo 05 to Deep Teal #1A4E60 and rebuild."
 - "Replace the home page headline in DE and EN with …"
@@ -92,11 +94,11 @@ Start Claude Code in the project folder. `CLAUDE.md` tells Claude the structure,
 
 Before handing back, run `npm test && npm run build && npm run check`; the same steps run on publication and a failure blocks it.
 
-### Handing changes back (one of three ways)
+### Handing changes back
 
-1. **Pull request (recommended):** commit and push in your fork, then on GitHub "Contribute" → "Open pull request" against `HARISPAARTAN/s01-demos`, branch `main`. Claude Code can do this on request ("commit, push and open a pull request").
-2. **Send the folder:** zip the changed project folder without `node_modules` and `dist` and send it.
-3. **Direct access:** share your GitHub username to be added as a collaborator and push to `main` directly. Every push to `main` is built and published automatically under the gallery address (about 1 to 2 minutes).
+**Send the folder (no Git):** zip the changed `s01-demos` project folder and send it by e-mail or file share. Delete or leave out the `node_modules` and `dist` subfolders first, they are regenerated. Claude Code can prepare this ("delete node_modules and dist and create a zip of the project folder"). The changes are then merged and published under the gallery address.
+
+With a GitHub account, a fork and a pull request against `HARISPAARTAN/s01-demos` (branch `main`) also works, or a direct push after being added as a collaborator; every push to `main` is built and published automatically.
 
 ### Notes
 
