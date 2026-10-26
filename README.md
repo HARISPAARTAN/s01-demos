@@ -5,6 +5,8 @@ Each demo is fully navigable (8 pages, DE/EN) and opens with a full-screen video
 
 Live gallery: https://harispaartan.github.io/s01-demos/
 
+Handoff guide for editing the demos with Claude and sending changes back: `HANDOFF.md` (DE/EN). `CLAUDE.md` briefs Claude Code on the project.
+
 ## Commands
 
 | Command | Purpose |
